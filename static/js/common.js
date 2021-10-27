@@ -6,7 +6,7 @@ var companyName = "MyAskGif";
 var companyLogo = "https://raw.githubusercontent.com/askgifdotcom/icon/main/android-chrome-192x192.png";
 var favicon = "/static/images/favicon.ico";
 var googleSearch = "https://cse.google.com/cse.js?cx=9ad79e1c9671fd821";
-var ampDomain = "https://amp.askgif.com;
+var ampDomain = "https://amp.askgif.com";
 var canonicalDomain = "https://askgif.com";
 
 var siteConfig = {
