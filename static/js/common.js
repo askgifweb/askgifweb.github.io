@@ -2,6 +2,183 @@
 var logoImage = "../../App/Template/AdminLTE-master/img/m2eV3.png";
 var gifBasePath = "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/";
 
+var companyName = "MyAskGif";
+var companyLogo = "https://raw.githubusercontent.com/askgifdotcom/icon/main/android-chrome-192x192.png";
+var favicon = "/static/images/favicon.ico";
+var googleSearch = "https://cse.google.com/cse.js?cx=9ad79e1c9671fd821";
+
+var siteConfig = {
+    gifCdn: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs",
+    blogCdn: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs",
+    movieCdn: "https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies",
+
+    copyrightYear: "2021",
+    lastCached: "2020",
+    site: "Test"
+};
+
+var Model = {
+    MetaTags: {
+        Author: "Sumit Chourasia",
+        Description: companyName + " is the place to explore and share the awesome Gifs with a comic punch.",
+        Keywords: "Best Gifs, Unique Gifs, Updated Gifs, Funny Gifs",
+        Robots: "FOLLOW,INDEX",
+        Amphtml: "amphtml",
+        Canonical: "canonical",
+        OgDescription: companyName + " is the place to explore and share the awesome GIFs with a comic punch.",
+        OgTitle: "AskGif - Find And Share All Gifs At One Place",
+        OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
+        Title: "AskGif - Find And Share All Gifs At One Place"
+    },
+    datePublished: "2021/10/23",
+    dateModified: "2021/10/24",
+    lang: "hi",
+    Pagination: {
+        PageCount: 121,
+        CurrentPage: 1,
+        Total: 1452,
+        hasPrevious: false,
+        urlPrefix: "/gif",
+        previousPageNumber: 1,
+        pageRange: [1, 2, 3, 4, 5, 6],
+        hasNext: true,
+        nextPageNumber: 2
+
+    },
+    TopMenuList: [
+        { name: "Blog", url: "/blog" },
+        { name: "Movies", url: "/movie" },
+        { name: "Org", url: "/company" }
+    ]
+};
+
+var BlogModel = {
+    MetaTags: {
+        Author: "Sumit Chourasia",
+        Description: companyName + " is the place to explore and share the awesome Blogs with a comic punch.",
+        Keywords: "Best Gifs, Unique Gifs, Updated Gifs, Funny Gifs",
+        Robots: "FOLLOW,INDEX",
+        Amphtml: "amphtml",
+        Canonical: "canonical",
+        OgDescription: companyName + " is the place to explore and share the awesome Blogs with a comic punch.",
+        OgTitle: "AskGif - Find And Share All Blogs At One Place",
+        OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
+        Title: "AskGif - Find And Share All Blogs At One Place"
+    },
+    datePublished: "2021/10/23",
+    dateModified: "2021/10/24",
+    lang: "hi",
+    Pagination: {
+        PageCount: 144,
+        CurrentPage: 1,
+        Total: 1722,
+        hasPrevious: false,
+        urlPrefix: "/blog",
+        previousPageNumber: 1,
+        pageRange: [1, 2, 3, 4, 5, 6],
+        hasNext: true,
+        nextPageNumber: 2
+
+    },
+    TopMenuList: [
+        { name: "Blog", url: "/blog" },
+        { name: "Movies", url: "/movie" },
+        { name: "Org", url: "/company" }
+    ],
+    AllCategory: [
+        { name: "life-hacks", url: "/blog/category/life-hacks" },
+        { name: "tutorials", url: "/blog/category/tutorials" },
+        { name: "story", url: "/blog/category/story" },
+        { name: "recipe", url: "/blog/category/recipe" },
+        { name: "puzzles", url: "/blog/category/puzzles" },
+        { name: "travel", url: "/blog/category/travel" },
+        { name: "health-and-fitness", url: "/blog/category/health-and-fitness" },
+        { name: "coding", url: "/blog/category/coding" },
+        { name: "informatives", url: "/blog/category/informatives" },
+        { name: "news", url: "/blog/category/news" }
+    ]
+};
+
+var MovieModel = {
+    MetaTags: {
+        Author: "Sumit Chourasia",
+        Description: companyName + " is the place to explore and share the awesome Movies with a comic punch.",
+        Keywords: "Best Gifs, Unique Gifs, Updated Gifs, Funny Gifs",
+        Robots: "FOLLOW,INDEX",
+        Amphtml: "amphtml",
+        Canonical: "canonical",
+        OgDescription: companyName + " is the place to explore and share the awesome Movies with a comic punch.",
+        OgTitle: "AskGif - Find And Share All Movies At One Place",
+        OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
+        Title: "AskGif - Find And Share All Movies At One Place"
+    },
+    datePublished: "2021/10/23",
+    dateModified: "2021/10/24",
+    lang: "hi",
+    Pagination: {
+        PageCount: 3268,
+        CurrentPage: 1,
+        Total: 39213,
+        hasPrevious: false,
+        urlPrefix: "/movie",
+        previousPageNumber: 1,
+        pageRange: [1, 2, 3, 4, 5, 6],
+        hasNext: true,
+        nextPageNumber: 2
+
+    },
+    TopMenuList: [
+        { name: "Blog", url: "/blog" },
+        { name: "Movies", url: "/movie" },
+        { name: "Org", url: "/company" }
+    ]    
+};
+
+var footerContent = {
+    heading1: "About AskGif Test Github",
+    content1: "AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission to make people smile.Keep smiling and keep sharing.",
+
+    tnc: {
+        heading1: "1. TERMS",
+        content1: "By accessing the website at " + companyName + ", you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.",
+
+        heading2: "2. USE LICENSE",
+        content21: "Permission is granted to temporarily download one copy of the materials (information or software) on AskGif's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:",
+        contentArr: [
+            "modify or copy the materials;",
+            "use the materials for any commercial purpose, or for any public display (commercial or non-commercial);",
+            "attempt to decompile or reverse engineer any software contained on AskGif's website;",
+            "remove any copyright or other proprietary notations from the materials; or",
+            "transfer the materials to another person or 'mirror' the materials on any other server."
+        ],
+        content22:"This license shall automatically terminate if you violate any of these restrictions and may be terminated by AskGif at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format."
+    }, 
+
+    links: [
+        { name: "Learnings1", url: "/learn" },
+        { name: "GeetCode2", url: "/learn/geetcode" },
+        { name: "Shopping3", url: "/shopping" },
+        { name: "CAFE EL CARPEDIEM4", url: "https://askgif.com/cafe-el-carpediem" }
+    ],
+
+    links2: [
+        { name: "English", url: "" },
+        { name: "हिंदी", url: "" },
+        { name: "Terms of Service", url: "/terms-of-service" },
+        { name: "Privacy Policy", url: "/privacy-policy" },
+        { name: "Editor", url: "/editor" },
+        { name: "Developers & Contributors", url: "/contributors" },
+        { name: "Site Map2", url: "/sitemap.xml" }        
+    ],
+    social: [
+        { uiclass: "fab fa-facebook-f", url: "https://www.facebook.com/askgifdotcom/" },
+        { uiclass: "fab fa-twitter", url: "https://twitter.com/askgifdotcom" },
+        { uiclass: "fab fa-pinterest", url: "https://www.pinterest.com/askgifdotcom/" },
+        { uiclass: "fab fa-instagram", url: "https://www.instagram.com/askgifdotcom/" },
+        { uiclass: "fab fa-tumblr", url: "https://www.tumblr.com/blog/askgifdotcom" }
+    ]
+};
+
 (function () {
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -43,280 +220,41 @@ var statusCodes = {
     '401': 401
 };
 
-var navbar_dark_skins = [
-    'navbar-primary',
-    'navbar-secondary',
-    'navbar-info',
-    'navbar-success',
-    'navbar-danger',
-    'navbar-indigo',
-    'navbar-purple',
-    'navbar-pink',
-    'navbar-navy',
-    'navbar-lightblue',
-    'navbar-teal',
-    'navbar-cyan',
-    'navbar-dark',
-    'navbar-gray-dark',
-    'navbar-gray'
-];
-
-var navbar_light_skins = [
-    'navbar-light',
-    'navbar-warning',
-    'navbar-white',
-    'navbar-orange'
-];
-var navbar_all_colors = navbar_dark_skins.concat(navbar_light_skins)
-
-var sidebar_colors = [
-    'bg-primary',
-    'bg-warning',
-    'bg-info',
-    'bg-danger',
-    'bg-success',
-    'bg-indigo',
-    'bg-lightblue',
-    'bg-navy',
-    'bg-purple',
-    'bg-fuchsia',
-    'bg-pink',
-    'bg-maroon',
-    'bg-orange',
-    'bg-lime',
-    'bg-teal',
-    'bg-olive'
-]
-
-var accent_colors = [
-    'accent-primary',
-    'accent-warning',
-    'accent-info',
-    'accent-danger',
-    'accent-success',
-    'accent-indigo',
-    'accent-lightblue',
-    'accent-navy',
-    'accent-purple',
-    'accent-fuchsia',
-    'accent-pink',
-    'accent-maroon',
-    'accent-orange',
-    'accent-lime',
-    'accent-teal',
-    'accent-olive'
-]
-
-var sidebar_skins = [
-    'sidebar-dark-primary',
-    'sidebar-dark-warning',
-    'sidebar-dark-info',
-    'sidebar-dark-danger',
-    'sidebar-dark-success',
-    'sidebar-dark-indigo',
-    'sidebar-dark-lightblue',
-    'sidebar-dark-navy',
-    'sidebar-dark-purple',
-    'sidebar-dark-fuchsia',
-    'sidebar-dark-pink',
-    'sidebar-dark-maroon',
-    'sidebar-dark-orange',
-    'sidebar-dark-lime',
-    'sidebar-dark-teal',
-    'sidebar-dark-olive',
-    'sidebar-light-primary',
-    'sidebar-light-warning',
-    'sidebar-light-info',
-    'sidebar-light-danger',
-    'sidebar-light-success',
-    'sidebar-light-indigo',
-    'sidebar-light-lightblue',
-    'sidebar-light-navy',
-    'sidebar-light-purple',
-    'sidebar-light-fuchsia',
-    'sidebar-light-pink',
-    'sidebar-light-maroon',
-    'sidebar-light-orange',
-    'sidebar-light-lime',
-    'sidebar-light-teal',
-    'sidebar-light-olive'
-];
-var logo_skins = navbar_all_colors;
-
 
 function getQueryStringValue(key) {
     return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
 }  
 
-function comparePassword(val1, val2) {
-    var lable = val2 + 'Label';
-    if ($(val1).val() === $(val2).val()) {
-        $(lable).hide();
+function getPaginationRange(start,end,current) {
+    var i = parseInt(current) - 3;
+    var pageRange = [];
+    var count = 0;
+    for (var j = i; j < i+10; j++) {
+        if (j < start) {
+            continue;
+        }
+        if (j > end || count === 6) {
+            break;
+        }
+        pageRange.push(j);
+        count++;
     }
-    else {
-        isFormValid = false;
-        $(lable).show();
-    }
-}
 
-function validateEmail(id) {
-    var lable = id + 'Label';
-    if (isEmail($(id).val())) {
-        $(lable).hide();
-        $(id).removeClass("is-invalid");
-    }
-    else {
-        isFormValid = false;
-        $(lable).show();
-        $(id).addClass("is-invalid");
-    }
-}
+    return pageRange;
+} 
 
-function toggleLable(id) {
-    var lable = id + 'Label';
-    if (IsNullOrEmpty($(id).val())) {
-        isFormValid = false;
-        $(lable).show();
-        $(id).addClass("is-invalid");
-    }
-    else {
-        $(lable).hide();
-        $(id).removeClass("is-invalid");
-    }
+function loadjscssfile(filename) {
+    var fileref = document.createElement('script')
+    fileref.setAttribute("type", "text/javascript")
+    fileref.setAttribute("src", filename)
+    if (typeof fileref != "undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
 }
 
 function IsNullOrEmpty(val) {
     return val.replace(/^\s+|\s+$/g, "").length === 0;
 }
 
-function isEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
 
-function ajaxPost(url, formData, handleData) {
-    $.ajax({
-        url: url,
-        type: "POST",
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(formData),
-        success: function (data, textStatus, jqXHR) {
-            handleData(data);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            toastr.error(textStatus + ' : some error occured.', errorThrown);
-            if (errorThrown === "Unauthorized") {
-                eraseCookie(CookieName.token);
-                window.location.href = '/user/Login';
-            }  
-        }
-    });
-}
-
-function ajaxGet(url, handleData) {
-    $.ajax({
-        url: url,
-        type: "GET",
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', 'Bearer ' + getCookie(CookieName.token));
-        },
-        success: function (data, textStatus, jqXHR) {
-            handleData(data);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {            
-            toastr.error(textStatus + ' : some error occured.', errorThrown);
-            if (errorThrown === "Unauthorized") {
-                eraseCookie(CookieName.token);
-                window.location.href = '/user/Login';
-            }
-        }
-    });
-}
-
-var CookieName = {
-    token: 'token'
-};
-
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
-
-function logoutUser() {
-    eraseCookie(CookieName.token);
-    window.location.href = '/user/Login';
-};
-
-function eraseCookie(name) {
-    setCookie(name, '', -1);
-}
-
-function isCookieAvailable(name) {
-    return getCookie(name) !== null && getCookie(name) !== '';
-}
-
-var mobileDevice = detectmob();
-var ipadDevice = detectipad();
-var isAndroidDevice = detectAndroid();
-function detectmob() {
-    return (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i));
-}
-function detectipad() {
-    return (navigator.userAgent.match(/iPad/i) !== null);
-}
-function detectAndroid() {
-    return (navigator.userAgent.match(/Android/i) !== null);
-}
-
-
-//(function () {
-//    function id(v) { return document.getElementById(v); }
-//    function loadbar() {
-//        var ovrl = id("overlay"),
-//            prog = id("progress"),
-//            stat = id("progstat"),
-//            img = document.images,
-//            c = 0;
-//        tot = img.length;
-
-//        function imgLoaded() {
-//            c += 1;
-//            var perc = ((100 / tot * c) << 0) + "%";
-//            prog.style.width = perc;
-//            stat.innerHTML = "Loading " + perc;
-//            if (c === tot) return doneLoading();
-//        }
-//        function doneLoading() {
-//            ovrl.style.opacity = 0;
-//            setTimeout(function () {
-//                ovrl.style.display = "none";
-//            }, 1200);
-//        }
-//        for (var i = 0; i < tot; i++) {
-//            var tImg = new Image();
-//            tImg.onload = imgLoaded;
-//            tImg.onerror = imgLoaded;
-//            tImg.src = img[i].src;
-//        }
-//    }
-//    document.addEventListener('DOMContentLoaded', loadbar, false);
-//}());
+//loadjscssfile("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
+loadjscssfile("https://cse.google.com/cse.js?cx=9ad79e1c9671fd821");
