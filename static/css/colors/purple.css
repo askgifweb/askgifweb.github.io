@@ -1,0 +1,172 @@
+a:hover, a:focus {
+	color: #ee82ee;
+}
+
+.site_logo h1 {
+	color: #ee82ee;
+}
+#access .menu ul li a:hover {
+	color: #ee82ee;         
+} 
+#access .menu ul li a.active {
+	color: #ee82ee;
+}
+#access .menu ul li ul {
+	border-top: 3px solid #ee82ee;
+}
+#access .menu ul li ul li a:hover,
+#access .menu ul li ul li.active a,
+#access .menu ul li ul li a.selected {
+	background: #ee82ee url(../images/spacer.gif) no-repeat center bottom;
+}
+.big_text1 {
+	color: #ee82ee;
+}
+.big_text2 i {
+	color: #ee82ee;
+}
+.fullwidthbanner-container{
+	background: url(../../images/colors/purple/slider-bg.jpg) no-repeat center top;
+}
+.hosting_plans .hostplan .title {
+	border-top: 2px solid #e174e1;
+	background: url(../../images/colors/purple/hostplan-title-bg.png) no-repeat left top;
+}
+.twitter_feed {
+	background: url(../../images/colors/purple/tweets-bg.png) no-repeat center top;
+}
+.hosting_plans .hostplan ul {
+	background: #fbfbfb url(../../images/colors/purple/down-arrow.png) no-repeat center top;
+}
+.hosting_plans .hostplan ul:hover {
+	background: #f3f3f3 url(../../images/colors/purple/down-arrow.png) no-repeat center top;
+}
+.ad_one h1 {
+	color: #ee82ee;
+}
+.ad_two h1 {
+	color: #ee82ee;
+}
+#footer .newsletter .input_submit {
+	background-color: #ee82ee;
+}
+#footer .social_list li a:hover {
+	background-color: #ee82ee;
+}
+.iosSlider {
+	background: url(../../images/colors/purple/slider-bg.jpg) no-repeat center top;
+}
+.page_title {
+	background: url(../../images/colors/purple/slider-bg.jpg) no-repeat center top;
+}
+.punchline_text_box {
+	border-left: 5px solid #ee82ee;
+}
+.punchline_text_box2 {
+	border-left: 5px solid #ee82ee;
+}
+a.knowmore_but {
+	background-color: #ee82ee;
+}
+a.knowmore_but:hover {
+	color: #fff;
+	background-color: #ff8aff;
+}
+a.ordernow_but {
+	background-color: #ee82ee;
+}
+a.ordernow_but:hover {
+	color: #fff;
+	background-color: #ff8aff;
+}
+a.but_hand_right {
+	background: #ee82ee url(../../images/elements/hand_right.png) no-repeat 16px 12px;
+}
+a.but_hand_right:hover {
+	color: #fff;
+	background-color: #ff8aff;
+}
+a.but_goback {
+	background: #ee82ee url(../../images/arrow_left.png) no-repeat 18px 13px;
+}
+a.but_goback:hover {
+	color: #fff;
+	background-color: #ff8aff;
+}
+.hosting_page_plan .ordernow h4 {
+	color: #ee82ee;
+}
+.hosting_page_plan .price {
+	color: #ee82ee;
+}
+.our_products li h5 {
+	color: #ee82ee;
+}
+.our_products li h3 {
+	color: #ee82ee;
+}
+.sidebar_widget ul.arrows_list1 li a:hover {
+	color: #ee82ee;
+}
+.recent_posts_list li a:hover {
+	color: #ee82ee;
+}
+blockquote {
+	border-left: 5px solid #ee82ee;
+}
+.acc-trigger a { background: url(../../images/colors/purple/accordion-ico.png) no-repeat 20px 13px;}
+.acc-trigger a:hover, .acc-trigger.active a, .acc-trigger.active a:hover { color: #ee82ee;  }
+html ul.tabs li.active, html ul.tabs li.active a,  html ul.tabs li.active a:hover  { 
+	border-top: 2px solid #ee82ee;
+}
+html ul.tabs-two li.active, html ul.tabs-two li.active a,  html ul.tabs-two li.active a:hover  { 
+	color:#ee82ee;
+}
+.sideimg_list li a {
+	color: #ee82ee;
+}
+.blog_post h3 a:hover {
+	color: #ee82ee;
+}
+.blog_post a.date strong {
+	color: #ee82ee;
+}
+.blog_post a.date i {
+	background-color: #ee82ee;
+}
+.about_author a {
+	color: #ee82ee;
+}
+#site-searchform #searchsubmit{
+	background: #ee82ee url(../../images/site-search-icon.png) no-repeat center 9px;
+}
+.our_support h5 {
+	color: #ee82ee;
+}
+.address-info a {
+	color: #ee82ee;
+}
+
+.pricing-tables-helight .title {
+	background-color: #e67ae6;
+	border-top: 3px solid #dc73dc;
+	border-bottom: 1px solid #f58cf5;
+}
+.pricing-tables-helight .price {
+	background-color: #ee82ee;
+}
+.pricing-tables-helight-two .title {
+	background-color: #e67ae6;
+	border-top: 3px solid #dc73dc;
+	border-bottom: 1px solid #f58cf5;
+}
+.pricing-tables-helight-two .price {
+	background-color: #ee82ee;
+}
+.button.small.colorchan{
+	color: #fff;
+	background-color: #ee82ee;
+}
+.features_section .sections:hover {
+	border-bottom: 2px solid #ee82ee;
+}
