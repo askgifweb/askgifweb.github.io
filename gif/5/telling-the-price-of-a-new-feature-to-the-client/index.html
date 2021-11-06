@@ -381,12 +381,13 @@
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.gif = response.data;
+                var gifTitle = response.data.title;
 
                 $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + "/gif/" + $scope.gif.id + "/" + $scope.gif.slug;
                 $scope.Model.MetaTags.Canonical = canonicalDomain + "/gif/" + $scope.gif.id + "/" + $scope.gif.slug + (lang != 'hi' ? "" : "?lang=hi");
-                $scope.Model.MetaTags.Title = Model.MetaTags.SingleTitle.replace('{title}', $scope.gif.title);
-                $scope.Model.MetaTags.Description = Model.MetaTags.SingleDescription.replace('{title}', $scope.gif.title);
-                $scope.Model.MetaTags.OgDescription = Model.MetaTags.SingleDescription.replace('{title}', $scope.gif.title);
+                $scope.Model.MetaTags.Title = Model.MetaTags.SingleTitle.replace('{title}', gifTitle);
+                $scope.Model.MetaTags.Description = Model.MetaTags.SingleDescription.replace('{title}', gifTitle);
+                $scope.Model.MetaTags.OgDescription = Model.MetaTags.SingleDescription.replace('{title}', gifTitle);
 
                 $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
                 $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
