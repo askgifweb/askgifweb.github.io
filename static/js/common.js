@@ -1,4 +1,4 @@
-﻿var googleAnalyticsAppID = "UA-118778979-1";
+var googleAnalyticsAppID = "UA-118778979-1";
 var logoImage = "../../App/Template/AdminLTE-master/img/m2eV3.png";
 var gifBasePath = "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/";
 
