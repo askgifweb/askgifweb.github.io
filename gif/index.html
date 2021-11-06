@@ -354,7 +354,7 @@
                 //console.log(response.data);
                 $scope.gifList = response.data;
                 $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + "/gif/";
-                $scope.Model.MetaTags.Canonical = canonicalDomain + "/gif/";
+                $scope.Model.MetaTags.Canonical = canonicalDomain + "/gif/" +(lang != 'hi' ? "" : "?lang=hi");
                 $scope.Model.MetaTags.Title = Model.MetaTags.Title + titlePostFix;
 
                 $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
