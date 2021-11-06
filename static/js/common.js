@@ -36,7 +36,9 @@ var Model = {
         OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
         Title: "AskGif - Find And Share All Gifs At One Place",
         TagTitle: "{tag} GIFs - All Gifs At One Place",
-        TagDescription: "AskGif is the place to explore and share the awesome {tag} GIFs with a comic punch"
+        TagDescription: "AskGif is the place to explore and share the awesome {tag} GIFs with a comic punch",
+        SingleTitle: "{title} - Find And Share On AskGif",
+        SingleDescription:"Share this {title} gif and explore more"
     },
     datePublished: "2021/10/23",
     dateModified: "2021/10/24",
