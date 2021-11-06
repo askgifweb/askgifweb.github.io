@@ -126,7 +126,9 @@ var MovieModel = {
         OgDescription: companyName + " is the place to explore and share the awesome Movies with a comic punch.",
         OgTitle: "AskGif - Find And Share All Movies At One Place",
         OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
-        Title: "AskGif - Find And Share All Movies At One Place"
+        Title: "AskGif - Find And Share All Movies At One Place",
+        TagTitle: "{typeKey} - Movie - {pageType} - Find All Movies Information at Single Place",
+        TagDescription: "Share this {typeKey} - Movie - {pageType} Movie Information and explore more"
     },
     datePublished: "2021/10/23",
     dateModified: "2021/10/24",
