@@ -78,8 +78,8 @@ var BlogModel = {
         TagDescription: "AskGif is the place to explore and share the awesome {tag} Blogs with a comic punch",
         CategoryTitle: "{category} Related Blogs - Find Best Reads of All Time",
         CategoryDescription:"AskGif is the place to explore and share the awesome {category} Blogs with a comic punch",
-        SingleTitle: "{title} - Find And Share On AskGif",
-        SingleDescription: "Share this {title} gif and explore more"
+        SingleTitle: "{title} - Blog - Find Best Reads of All Time on AskGif",
+        SingleDescription: "Share this {title} blog and explore more"
     },
     datePublished: "2021/10/23",
     dateModified: "2021/10/24",
