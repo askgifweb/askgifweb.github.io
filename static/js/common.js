@@ -76,6 +76,8 @@ var BlogModel = {
         Title: "AskGif Blogs - Find Best Reads of All Time",
         TagTitle: "{tag} Blogs - Find Best Reads of All Time",
         TagDescription: "AskGif is the place to explore and share the awesome {tag} Blogs with a comic punch",
+        CategoryTitle: "{category} Related Blogs - Find Best Reads of All Time",
+        CategoryDescription:"AskGif is the place to explore and share the awesome {category} Blogs with a comic punch",
         SingleTitle: "{title} - Find And Share On AskGif",
         SingleDescription: "Share this {title} gif and explore more"
     },
