@@ -1,4 +1,4 @@
-var googleAnalyticsAppID = "UA-118778979-1";
+﻿var googleAnalyticsAppID = "UA-118778979-1";
 var logoImage = "../../App/Template/AdminLTE-master/img/m2eV3.png";
 var gifBasePath = "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/";
 
@@ -7,6 +7,7 @@ var companyLogo = "https://raw.githubusercontent.com/askgifdotcom/icon/main/andr
 var favicon = "/static/images/favicon.ico";
 var googleSearch = "https://cse.google.com/cse.js?cx=9ad79e1c9671fd821";
 var ampDomain = "https://amp.askgif.com";
+var ampDomainHi = "https://amphi.askgif.com";
 var canonicalDomain = "https://askgif.com";
 var apiUrl = "https://apitest.askgif.com";
 

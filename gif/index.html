@@ -319,10 +319,11 @@
 
             var page = getQueryStringValue('page');
             var lang = getQueryStringValue('lang');
-
+            
             if (lang != 'hi') {
                 lang = 'en';
                 $scope.Model.lang = 'en';
+
             }
 
             if (page != null && page != undefined && page != '') {
@@ -352,7 +353,7 @@
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.gifList = response.data;
-                $scope.Model.MetaTags.Amphtml = ampDomain + "/gif/";
+                $scope.Model.MetaTags.Amphtml = lang != 'hi' ? ampDomain : ampDomainHi + "/gif/";
                 $scope.Model.MetaTags.Canonical = canonicalDomain + "/gif/";
                 $scope.Model.MetaTags.Title = Model.MetaTags.Title + titlePostFix;
 
