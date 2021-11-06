@@ -10,6 +10,8 @@ var ampDomain = "https://amp.askgif.com";
 var ampDomainHi = "https://amphi.askgif.com";
 var canonicalDomain = "https://askgif.com";
 var apiUrl = "https://apitest.askgif.com";
+var isGifNamePresentInUrlAmp = true;
+var isGifNamePresentInUrlCanonical = false;
 
 var siteConfig = {
     gifCdn: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs",
@@ -32,7 +34,9 @@ var Model = {
         OgDescription: companyName + " is the place to explore and share the awesome GIFs with a comic punch.",
         OgTitle: "AskGif - Find And Share All Gifs At One Place",
         OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
-        Title: "AskGif - Find And Share All Gifs At One Place"
+        Title: "AskGif - Find And Share All Gifs At One Place",
+        TagTitle: "{tag} GIFs - All Gifs At One Place",
+        TagDescription: "AskGif is the place to explore and share the awesome {tag} GIFs with a comic punch"
     },
     datePublished: "2021/10/23",
     dateModified: "2021/10/24",
@@ -259,6 +263,22 @@ function IsNullOrEmpty(val) {
     return val.replace(/^\s+|\s+$/g, "").length === 0;
 }
 
+function titleize(str) {
+    let upper = true;
+    let newStr = "";
+    for (let i = 0, l = str.length; i < l; i++) {
+        // Note that you can also check for all kinds of spaces  with
+        // str[i].match(/\s/)
+        if (str[i] === " " || str[i] === "-") {
+            upper = true;
+            newStr += str[i];
+            continue;
+        }
+        newStr += upper ? str[i].toUpperCase() : str[i].toLowerCase();
+        upper = false;
+    }
+    return newStr;
+}
 
 //loadjscssfile("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
 loadjscssfile("https://cse.google.com/cse.js?cx=9ad79e1c9671fd821");
