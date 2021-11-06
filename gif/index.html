@@ -352,8 +352,8 @@
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.gifList = response.data;
-                $scope.Model.MetaTags.Amphtml = ampDomain;
-                $scope.Model.MetaTags.Canonical = canonicalDomain;
+                $scope.Model.MetaTags.Amphtml = ampDomain + "/gif/";
+                $scope.Model.MetaTags.Canonical = canonicalDomain + "/gif/";
                 $scope.Model.MetaTags.Title = Model.MetaTags.Title + titlePostFix;
 
                 $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
