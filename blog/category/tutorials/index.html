@@ -230,7 +230,7 @@
                     <div class="list-group">
                         <a class="list-group-item no-padding"><i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>&nbsp; <b>Categories</b></a>
                         
-                        <a ng-repeat="category in Model.AllCategory" class="list-group-item no-padding" href="{{category.url}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>&nbsp; {{category.name}}</a>
+                        <a ng-repeat="category in Model.AllCategory" class="list-group-item no-padding" href="{{category.url}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>&nbsp; {{Model.lang == 'hi' ?  category.nameHi: category.name}}</a>
                         
                     </div>
 
@@ -360,8 +360,9 @@
                 favicon: favicon,
                 googleSearch: googleSearch
             };
-            $scope.Model = BlogModel;
-
+            $scope.Model = BlogModel;            
+            $scope.siteConfig = siteConfig;
+            $scope.footerContent = footerContent;
             var page = getQueryStringValue('page');
             var lang = getQueryStringValue('lang');
 

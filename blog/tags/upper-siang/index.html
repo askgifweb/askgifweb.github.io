@@ -197,13 +197,13 @@
                                 <ul class="pagination justify-content-center m-0">
                                     <li class="page-item"><a class="page-link"> Page {{Model.Pagination.CurrentPage}} of {{Model.Pagination.PageCount}} ({{Model.Pagination.Total}})</a></li>
 
-                                    <li class="page-item"><a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{Model.Pagination.previousPageNumber}}&{{Model.lang == 'hi' ? 'lang=hi' : ''}}">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{Model.Pagination.previousPageNumber}}{{Model.lang == 'hi' ? '&lang=hi' : ''}}">Previous</a></li>
 
                                     <li class="page-item {{page == Model.Pagination.CurrentPage ? 'active' : ''}}" ng-repeat="page in Model.Pagination.pageRange">
-                                        <a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{page}}&{{Model.lang == 'hi' ? 'lang=hi' : ''}}">{{page}}</a>
+                                        <a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{page}}{{Model.lang == 'hi' ? '&lang=hi' : ''}}">{{page}}</a>
                                     </li>
 
-                                    <li class="page-item"><a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{Model.Pagination.nextPageNumber}}&{{Model.lang == 'hi' ? 'lang=hi' : ''}}">Next</a></li>
+                                    <li class="page-item"><a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{Model.Pagination.nextPageNumber}}{{Model.lang == 'hi' ? '&lang=hi' : ''}}">Next</a></li>
 
                                 </ul>
                             </nav>
@@ -230,7 +230,7 @@
                     <div class="list-group">
                         <a class="list-group-item no-padding"><i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>&nbsp; <b>Categories</b></a>
                         
-                        <a ng-repeat="category in Model.AllCategory" class="list-group-item no-padding" href="{{category.url}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>&nbsp; {{category.name}}</a>
+                        <a ng-repeat="category in Model.AllCategory" class="list-group-item no-padding" href="{{category.url}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>&nbsp; {{Model.lang == 'hi' ?  category.nameHi: category.name}}</a>
                         
                     </div>
 
@@ -412,8 +412,8 @@
                 $scope.Model.Pagination.pageRange = getPaginationRange(1, $scope.Model.Pagination.PageCount, $scope.Model.Pagination.CurrentPage);
                 $scope.Model.Pagination.urlPrefix = "/blog/tags/" + $scope.tagName;
 
-                $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + (isGifNamePresentInUrlAmp ? "/blog" : "" )  + $scope.Model.Pagination.urlPrefix;
-                $scope.Model.MetaTags.Canonical = canonicalDomain + (isGifNamePresentInUrlCanonical ? "/blog" : "" ) + $scope.Model.Pagination.urlPrefix + (lang != 'hi' ? "" : "?lang=hi");
+                $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + $scope.Model.Pagination.urlPrefix;
+                $scope.Model.MetaTags.Canonical = canonicalDomain + $scope.Model.Pagination.urlPrefix + (lang != 'hi' ? "" : "?lang=hi");
                 $scope.Model.MetaTags.Title = BlogModel.MetaTags.TagTitle.replace('{tag}', titleCaseTag) + titlePostFix;
                 $scope.Model.MetaTags.Description = BlogModel.MetaTags.TagDescription.replace('{tag}', titleCaseTag);
                 $scope.Model.MetaTags.OgDescription = BlogModel.MetaTags.TagDescription.replace('{tag}', titleCaseTag);

@@ -102,16 +102,16 @@ var BlogModel = {
         { name: "Org", url: "/company" }
     ],
     AllCategory: [
-        { name: "life-hacks", url: "/blog/category/life-hacks" },
-        { name: "tutorials", url: "/blog/category/tutorials" },
-        { name: "story", url: "/blog/category/story" },
-        { name: "recipe", url: "/blog/category/recipe" },
-        { name: "puzzles", url: "/blog/category/puzzles" },
-        { name: "travel", url: "/blog/category/travel" },
-        { name: "health-and-fitness", url: "/blog/category/health-and-fitness" },
-        { name: "coding", url: "/blog/category/coding" },
-        { name: "informatives", url: "/blog/category/informatives" },
-        { name: "news", url: "/blog/category/news" }
+        { nameHi: "लाइफ़-हैक्स", name: "life-hacks", url: "/blog/category/life-hacks" },
+        { nameHi: "शिक्षण", name: "tutorials", url: "/blog/category/tutorials" },
+        { nameHi: "कहानी", name: "story", url: "/blog/category/story" },
+        { nameHi: "विधि", name: "recipe", url: "/blog/category/recipe" },
+        { nameHi: "पहेली", name: "puzzles", url: "/blog/category/puzzles" },
+        { nameHi: "यात्रा", name: "travel", url: "/blog/category/travel" },
+        { nameHi: "स्वास्थ्य-और-तंदुस्र्स्ती", name: "health-and-fitness", url: "/blog/category/health-and-fitness" },
+        { nameHi: "coding", name: "coding", url: "/blog/category/coding" },
+        { nameHi: "लेख", name: "informatives", url: "/blog/category/informatives" },
+        { nameHi: "समाचार", name: "news", url: "/blog/category/news" }
     ]
 };
 
