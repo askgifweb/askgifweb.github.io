@@ -6,6 +6,9 @@ var companyName = "MyAskGif";
 var companyLogo = "https://raw.githubusercontent.com/askgifdotcom/icon/main/android-chrome-192x192.png";
 var favicon = "/static/images/favicon.ico";
 var googleSearch = "https://cse.google.com/cse.js?cx=9ad79e1c9671fd821";
+var ampDomain = "https://amp.askgif.com";
+var canonicalDomain = "https://askgif.com";
+var apiUrl = "https://apitest.askgif.com";
 
 var siteConfig = {
     gifCdn: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs",
@@ -162,8 +165,8 @@ var footerContent = {
     ],
 
     links2: [
-        { name: "English", url: "" },
-        { name: "हिंदी", url: "" },
+        { name: "English", url: "/" },
+        { name: "हिंदी", url: "/?lang=hi" },
         { name: "Terms of Service", url: "/terms-of-service" },
         { name: "Privacy Policy", url: "/privacy-policy" },
         { name: "Editor", url: "/editor" },
