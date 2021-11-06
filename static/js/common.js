@@ -71,9 +71,13 @@ var BlogModel = {
         Amphtml: "amphtml",
         Canonical: "canonical",
         OgDescription: companyName + " is the place to explore and share the awesome Blogs with a comic punch.",
-        OgTitle: "AskGif - Find And Share All Blogs At One Place",
+        OgTitle: "AskGif Blogs - Find Best Reads of All Time",
         OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
-        Title: "AskGif - Find And Share All Blogs At One Place"
+        Title: "AskGif Blogs - Find Best Reads of All Time",
+        TagTitle: "{tag} Blogs - Find Best Reads of All Time",
+        TagDescription: "AskGif is the place to explore and share the awesome {tag} Blogs with a comic punch",
+        SingleTitle: "{title} - Find And Share On AskGif",
+        SingleDescription: "Share this {title} gif and explore more"
     },
     datePublished: "2021/10/23",
     dateModified: "2021/10/24",
