@@ -1,4 +1,5 @@
-<html lang="en" ng-app="app" ng-controller="HelloWorldCtrl">
+﻿
+<html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118778979-1"></script>
@@ -10,7 +11,7 @@
         gtag('config', 'UA-118778979-1');
     </script>
 
-    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-1068871795581451",
@@ -19,57 +20,99 @@
     </script>
 
     <!-- Set the viewport width to device width for mobile -->
-    <meta name="author" content="{{Model.MetaTags.Author}}">
-    <meta name="description" content="{{Model.MetaTags.Description}}" />
-    <meta name="keywords" content="{{Model.MetaTags.Keywords}}" />
+    <meta name="author" content="Sumit">
+    <meta name="description" content="AskGif is the place to explore and share the awesome GIFs with a comic punch." />
+    <meta name="keywords" content="Best Gifs, Unique Gifs, Updated Gifs, Funny Gifs" />
 
-    <meta name="robots" content="{{Model.MetaTags.Robots}}">
+        <meta name="robots" content="FOLLOW,INDEX">
+            <link rel="amphtml" href="https://askgif.com/amp/">
+            <link rel="canonical" href="https://askgif.com/">
 
-    <link rel="amphtml" href="{{Model.MetaTags.Amphtml}}">
+    <meta property="og:image" content="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg" />
+    <meta property="og:title" content="AskGif &#x2013; Find And Share All Gifs At One Place" />
+    <meta property="og:description" content="AskGif is the place to explore and share the awesome GIFs with a comic punch." />
 
-    <link rel="canonical" href="{{Model.MetaTags.Canonical}}">
-
-    <meta property="og:image" content="{{Model.MetaTags.OgImage}}" />
-    <meta property="og:title" content="{{Model.MetaTags.OgTitle}}" />
-    <meta property="og:description" content="{{Model.MetaTags.OgDescription}}" />
-
-    <meta name="twitter:image" content="{{Model.MetaTags.OgImage}}" />
-    <meta name="twitter:title" content="{{Model.MetaTags.OgTitle}}" />
-    <meta name="twitter:description" content="{{Model.MetaTags.OgDescription}}" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg" />
+    <meta name="twitter:title" content="AskGif &#x2013; Find And Share All Gifs At One Place" />
+    <meta name="twitter:description" content="AskGif is the place to explore and share the awesome GIFs with a comic punch." />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@@askgifdotcom">
+    <meta name="twitter:creator" content="@askgifdotcom">
 
-    <title>{{Model.MetaTags.Title}}</title>
+    <title>AskGif &#x2013; Find And Share All Gifs At One Place</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{siteInfo.favicon}}">
+    <link rel="shortcut icon" href="https://shotcutdotcom.github.io/static/images/favicon.ico">
 
     <!-- this styles only adds some repairs on idevices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://askgifweb.github.io/AdminLTE-3/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://shotcutdotcom.github.io/AdminLTE-3/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="https://askgifweb.github.io/AdminLTE-3/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://shotcutdotcom.github.io/AdminLTE-3/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://askgifweb.github.io/static/css/jquery-ui.css">
-    
-    <link href="https://askgifweb.github.io/AdminLTE-3/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://shotcutdotcom.github.io/static/css/jquery-ui.css">
+    <link href="https://shotcutdotcom.github.io/static/css/toastr.min.css" rel="stylesheet" />
+    <link href="https://shotcutdotcom.github.io/AdminLTE-3/css/style.css" rel="stylesheet" />
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://askgif.com/",
+        "headline": "AskGif",
+        "datePublished": "2021/11/13",
+        "dateModified":  "2021/11/13",
+        "description": "AskGif is the place to explore and share the awesome GIFs with a comic punch.",
+        "author": {
+        "@type": "Person",
+        "name": "Sumit Chourasia"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Askgif",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/data/master/askgif-static/askgif_logo.png"
+        }
+        },
+        "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
+        "height": 1280,
+        "width": 857
+        }
+        }
+    </script>
 
-    <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=5b0d8f8e27d17e001197493c&product=inline-share-buttons"></script>
-    <script type="text/javascript" src="https://askgifweb.github.io/static/js/common.js"></script>
-    <script src="https://askgifweb.github.io/static/js/pace.min.js"></script>
-    <script type="text/javascript" src="https://askgifweb.github.io/static/js/jquery.js"></script>
-    <script src="https://askgifweb.github.io/App/js/askgifi18n.js"></script>
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "AskGif",
+        "url": "https://askgif.com",
+        "sameAs": [
+        "https://plus.google.com/u/0/107945721466786266483",
+        "https://twitter.com/askgifdotcom",
+        "https://www.facebook.com/askgifdotcom",
+        "https://in.pinterest.com/askgifdotcom/",
+        "https://www.tumblr.com/blog/askgifdotcom"
+        ]
+        }
+    </script>
 
+    <script async src="//platform-api.sharethis.com/js/sharethis.js#property=5b0d8f8e27d17e001197493c&product=inline-share-buttons"></script>
+    <script type="text/javascript" src="https://shotcutdotcom.github.io/static/js/common.js"></script>
+    <script src="https://shotcutdotcom.github.io/static/js/pace.min.js"></script>
+    <script type="text/javascript" src="https://shotcutdotcom.github.io/static/js/jquery.js"></script>
+    <script src="https://shotcutdotcom.github.io/App/js/askgifi18n.js"></script>
 </head>
 <body class="hold-transition layout-top-nav layout-navbar-fixed">
     <div id="floater">
-
+        
         <!-- BlogRightSide -->
         <ins class="adsbygoogle"
              style="display:block"
@@ -82,7 +125,7 @@
         </script>
     </div>
     <div id="floater-left">
-
+        
         <!-- BlogRightSide -->
         <ins class="adsbygoogle"
              style="display:block"
@@ -95,14 +138,16 @@
         </script>
     </div>
 
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0"></script>
+
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
             <div class="container">
-                <a href="/{{Model.lang == 'hi' ? '?lang=hi' : ''}}" class="navbar-brand">
-                    <img ng-src="{{siteInfo.companyLogo}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-                         style="opacity: .8">
-                    <span class="brand-text font-weight-light" ng-bind="siteInfo.companyName"></span>
+                <a href="/" class="navbar-brand">
+                    <img src="https://shotcutdotcom.github.io/AdminLTE-3/dist/img/AskGifLogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                    <span class="brand-text font-weight-light" data-i18n="askgif">AskGif</span>
                 </a>
 
                 <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,129 +155,1580 @@
                 </button>
                 <div class="collapse navbar-collapse order-3 width100perc" id="navbarCollapse">
                     <!-- SEARCH FORM -->
-                    
+                    <script async src="https://cse.google.com/cse.js?cx=9ad79e1c9671fd821"></script>                    
                     <div class="gcse-search" enableAutoComplete="true"></div>
                 </div>
                 <!-- Right navbar links -->
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-                    <li class="nav-item" ng-repeat="menu in Model.TopMenuList">
-                        <a href="{{menu.url}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}" class="nav-link">{{menu.name}}</a>
-                    </li>                    
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link" data-i18n="beforeLoginMasterPageBlog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/movie/" class="nav-link" data-i18n="beforeLoginMasterPageMovies">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/company/" class="nav-link"> Org.</a>
+                    </li>
                 </ul>
             </div>
         </nav>
         <!-- /.navbar -->
         <!-- Content Wrapper. Contains page content -->
-        <div class="container">
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Gifs Hub</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">Home</a></li>
-                                <li class="breadcrumb-item"><a href="/gif/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">Gifs</a></li>
-                                <li class="breadcrumb-item active">Gifs Hub</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div><!-- /.container-fluid -->
-            </section>
-            <div class="row">
-                <div class="col-12 col-sm-1"></div>
-                <div class="col-12 col-sm-10">
-                    <!-- Main content -->
-                    <section class="content">
-                        <!-- Default box -->
-                        <div class="card card-solid">
-                            <div class="card-body pb-0">
-                                <div class="row d-flex align-items-stretch">
+        
+<style type="text/css">
+    .carousel-multi-item .carousel-indicators .active {
+        width: 1.56rem;
+        max-width: 1.56rem;
+        height: 1.56rem;
+        background-color: #4285f4;
+        border-radius: 50%;
+    }
 
-                                    <div class="col-12 col-sm-6 col-md-3 d-flex align-items-stretch" ng-repeat="gif in gifList">
-                                        <div class="card bg-light">
-                                            <div class="card-header text-muted border-bottom-0">
-                                                
-                                            </div>
-                                            <div class="card-body pt-0">
-                                                <a href="/gif/{{gif.id}}/{{gif.slug}}/"><img class="full-height-width" ng-src="{{siteConfig.gifCdn}}/{{gif.imageUrl}}" alt="{{gif.title}}" /></a>
-                                            </div>
-                                            <div class="card-footer">
-                                                <a href="/gif/{{gif.id}}/{{gif.slug}}/">{{gif.title}}</a>
-                                            </div>
-                                            <div class="card-footer">
-                                                <span class="small">Contributed By: <b>{{ gif.contributedBy}}</b></span>
-                                            </div>
+    .carousel-multi-item .carousel-indicators li {
+        width: 1.25rem;
+        max-width: 1.25rem;
+        height: 1.25rem;
+        margin-bottom: -3.75rem;
+        background-color: #4285f4;
+    }
+
+    .carousel .carousel-indicators li {
+        width: .625rem;
+        height: .625rem;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .carousel-indicators .active {
+        opacity: 1;
+    }
+
+    .carousel-indicators li {
+        box-sizing: content-box;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        width: 30px;
+        height: 3px;
+        margin-right: 3px;
+        margin-left: 3px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #fff;
+        background-clip: padding-box;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        opacity: .5;
+        transition: opacity .6s ease;
+    }
+
+    .card-img-top{
+        height:250px;
+    }
+
+    .controls-top{
+        text-align:center;
+        font-size:25px;
+    }
+
+    .card-title {
+        text-align: center;
+        font-weight: bold;
+    }
+    .learning-title-background {
+        background-color: aliceblue;
+    }
+    .learning-title {
+        font-size: 25px;
+    }
+</style>
+
+<div class="container">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Gifs Hub</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Gifs</a></li>
+                        <li class="breadcrumb-item active">Gifs Hub</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <div class="row">
+        <div class="col-12 col-sm-1"></div>
+        <div class="col-12 col-sm-10">
+            <!-- Main content -->
+            <section class="content">
+                <!-- Default box -->
+                    <div class="container my-4 learning-title-background">
+
+                        <p class="font-weight-bold learning-title">
+                            <svg width="25" height="20" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="5.615%" y1="77.472%" x2="100%" y2="26.124%" id="trending"><stop stop-color="#3191FF" offset="0%"></stop><stop stop-color="#0CF" offset="100%"></stop></linearGradient></defs><path d="M25.333 4.635l-6.45-.032a.47.47 0 00-.471.468l.004 1.575.008.085a.47.47 0 00.462.383h2.94l-7.544 8.101-3.878-3.125a1.119 1.119 0 00-1.631-.009l-7.584 7.73a1 1 0 00-.002 1.4l.288.295a1 1 0 001.431 0L9.652 14.6l3.782 3.042.093.1c.442.442.964.541 1.498.145l8.43-8.998v3.103c0 .25.197.456.446.468l1.407.069a.47.47 0 00.491-.446V5.104a.47.47 0 00-.466-.469z" fill="url(#trending)" fill-rule="nonzero" transform="rotate(-5 -21.505 23.157)"></path></svg> 
+                            <a href="gif/">
+Trending Gifs
+                            </a> 
+                        </p>
+
+                        <!--Carousel Wrapper-->
+                        <div id="trending-gifs" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                            <!--Controls-->
+                            <div class="controls-top">
+                                <a class="btn-floating" href="#trending-gifs" data-slide="prev"><i class="fa fa-chevron-left"></i> Prev</a>
+                                <a class="btn-floating" href="#trending-gifs" data-slide="next">| Next <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <!--/.Controls-->
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                    <li data-target="#trending-gifs" data-slide-to="0" class="active"></li>
+                                    <li data-target="#trending-gifs" data-slide-to="1" class=""></li>
+                                    <li data-target="#trending-gifs" data-slide-to="2" class=""></li>
+
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/aishwarya-rai/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/icon_f12c64dc-c4c8-478e-b8dc-e03fefb19cb4-9f9795c27f080fd0839a486735042b3b.gif"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/aishwarya-rai/">
+                                                                <h4 class="card-title">
+
+Aishwarya Rai Bachchan Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/funny/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/icon_b2de4f70-4de8-4893-86af-6e7cb2773bab-tenor.gif"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/funny/">
+                                                                <h4 class="card-title">
+
+Funny Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/selena-gomez/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/edc66c14-34e7-440a-896e-ebebb6a007d8_selena1_wm_icon.gif"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/selena-gomez/">
+                                                                <h4 class="card-title">
+
+Selena Gomez Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                         </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/hollywood/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/icon-fa707c43-edd7-476f-8761-99a3071be8b8-Ashley-Olsen.gif"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/hollywood/">
+                                                                <h4 class="card-title">
+
+Hollywood Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/shocked/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/icon_80b973f6-f9f1-4cff-afc3-89739de4d9c7-tenor.gif?itemid=16287279"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/shocked/">
+                                                                <h4 class="card-title">
+
+Shocked Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/lord-ram/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/icon-35770e2c-b873-4cad-91c9-2aec0fb6ce93-jai_shree_Ram.gif"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/lord-ram/">
+                                                                <h4 class="card-title">
+
+Lord Ram Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/rain/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/8d587d74-c812-47ee-915f-8437f716dd37_ariana-grande-wm-icon.gif"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/rain/">
+                                                                <h4 class="card-title">
+
+Rain Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/quotes/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/icon_f53a185b-fca6-4371-9110-6a2bf6030788-38528.gif"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/quotes/">
+                                                                <h4 class="card-title">
+
+Quotes Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="tags/work-out/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/icon-90c852ad-ccab-4183-aa0c-1da9430d9157-Julianne-Hough.gif"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="tags/work-out/">
+                                                                <h4 class="card-title">
+
+Work Out Gifs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
                                     </div>
 
-                                </div>
                             </div>
+                            <!--/.Slides-->
 
-                            
-                                <div class="card-footer">
-                                    <nav aria-label="Contacts Page Navigation">
-                                        <ul class="pagination justify-content-center m-0">
-                                            <li class="page-item"><a class="page-link"> Page {{Model.Pagination.CurrentPage}} of {{Model.Pagination.PageCount}} ({{Model.Pagination.Total}})</a></li>
-                                            
-                                                <li class="page-item"><a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{Model.Pagination.previousPageNumber}}&{{Model.lang == 'hi' ? 'lang=hi' : ''}}">Previous</a></li>
-                                            
-                                                <li class="page-item {{page == Model.Pagination.CurrentPage ? 'active' : ''}}" ng-repeat="page in Model.Pagination.pageRange">
-                                                    <a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{page}}&{{Model.lang == 'hi' ? 'lang=hi' : ''}}">{{page}}</a>
-                                                </li>
-                                            
-                                                <li class="page-item"><a class="page-link" href="{{Model.Pagination.urlPrefix}}/?page={{Model.Pagination.nextPageNumber}}&{{Model.lang == 'hi' ? 'lang=hi' : ''}}">Next</a></li>
-                                            
-                                        </ul>
-                                    </nav>
-                                </div>
-                            
-                            <!-- /.card-body -->
-                            <!-- /.card-footer -->
                         </div>
-                        <div class="container">
+                        <!--/.Carousel Wrapper-->
 
-                            <!-- HorizontalAdBlock -->
-                            <ins class="adsbygoogle"
-                                 style="display:block"
-                                 data-ad-client="ca-pub-1068871795581451"
-                                 data-ad-slot="9883858879"
-                                 data-ad-format="auto"
-                                 data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
+
+                    </div>
+                    <hr class="my-4">
+                    <div class="container my-4 learning-title-background">
+
+                        <p class="font-weight-bold learning-title">
+                            <svg width="25" height="20" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="5.615%" y1="77.472%" x2="100%" y2="26.124%" id="trending"><stop stop-color="#3191FF" offset="0%"></stop><stop stop-color="#0CF" offset="100%"></stop></linearGradient></defs><path d="M25.333 4.635l-6.45-.032a.47.47 0 00-.471.468l.004 1.575.008.085a.47.47 0 00.462.383h2.94l-7.544 8.101-3.878-3.125a1.119 1.119 0 00-1.631-.009l-7.584 7.73a1 1 0 00-.002 1.4l.288.295a1 1 0 001.431 0L9.652 14.6l3.782 3.042.093.1c.442.442.964.541 1.498.145l8.43-8.998v3.103c0 .25.197.456.446.468l1.407.069a.47.47 0 00.491-.446V5.104a.47.47 0 00-.466-.469z" fill="url(#trending)" fill-rule="nonzero" transform="rotate(-5 -21.505 23.157)"></path></svg> 
+                            <a href="blog/">
+Trending Blogs
+                            </a> 
+                        </p>
+
+                        <!--Carousel Wrapper-->
+                        <div id="trending-blogs" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                            <!--Controls-->
+                            <div class="controls-top">
+                                <a class="btn-floating" href="#trending-blogs" data-slide="prev"><i class="fa fa-chevron-left"></i> Prev</a>
+                                <a class="btn-floating" href="#trending-blogs" data-slide="next">| Next <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <!--/.Controls-->
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                    <li data-target="#trending-blogs" data-slide-to="0" class="active"></li>
+                                    <li data-target="#trending-blogs" data-slide-to="1" class=""></li>
+                                    <li data-target="#trending-blogs" data-slide-to="2" class=""></li>
+
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/life-hacks/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/a1c9e4d2-79fc-4cc8-9c77-f2d1b12978cd_love.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/life-hacks/">
+                                                                <h4 class="card-title">
+
+Life Hacks Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/tutorials/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_f983d8a0-6ee2-4024-8702-47973c582627.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/tutorials/">
+                                                                <h4 class="card-title">
+
+Tutorials Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/story/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/ab276dff-0bc2-4cf7-9b04-260eca318130-diampled-smile.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/story/">
+                                                                <h4 class="card-title">
+
+Story Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/recipe/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/d2e35b71-a09a-4b27-89ea-3a154eee6163_broast.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/recipe/">
+                                                                <h4 class="card-title">
+
+Recipe Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/travel/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/176b73dd-bd15-4046-88ff-913854cc3d3b_Udham-Singh-Nagar.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/travel/">
+                                                                <h4 class="card-title">
+
+Travel Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/health-and-fitness/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/ed55e586-58e8-4e38-919f-09c94068c7c1-1519825466-f.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/health-and-fitness/">
+                                                                <h4 class="card-title">
+
+Health And Fitness Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/coding/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_85c66994-0911-4abb-b06f-a20a0a11dcd4.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/coding/">
+                                                                <h4 class="card-title">
+
+Coding Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/informatives/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_0d39be0b-b842-4c41-9c17-50366da0de66.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/informatives/">
+                                                                <h4 class="card-title">
+
+Informatives Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="blog/category/news/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/868ecd1b-d9ec-4cf9-9f89-79e5df8a8106_Chandrayaan-2.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="blog/category/news/">
+                                                                <h4 class="card-title">
+
+News Blog                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                            <!--/.Slides-->
+
                         </div>
-                        <!-- /.card -->
-                    </section>
-                    <!-- /.content -->
+                        <!--/.Carousel Wrapper-->
+
+
+                    </div>
+                    <hr class="my-4">
+                    <div class="container my-4 learning-title-background">
+
+                        <p class="font-weight-bold learning-title">
+                            <svg width="25" height="20" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="5.615%" y1="77.472%" x2="100%" y2="26.124%" id="trending"><stop stop-color="#3191FF" offset="0%"></stop><stop stop-color="#0CF" offset="100%"></stop></linearGradient></defs><path d="M25.333 4.635l-6.45-.032a.47.47 0 00-.471.468l.004 1.575.008.085a.47.47 0 00.462.383h2.94l-7.544 8.101-3.878-3.125a1.119 1.119 0 00-1.631-.009l-7.584 7.73a1 1 0 00-.002 1.4l.288.295a1 1 0 001.431 0L9.652 14.6l3.782 3.042.093.1c.442.442.964.541 1.498.145l8.43-8.998v3.103c0 .25.197.456.446.468l1.407.069a.47.47 0 00.491-.446V5.104a.47.47 0 00-.466-.469z" fill="url(#trending)" fill-rule="nonzero" transform="rotate(-5 -21.505 23.157)"></path></svg> 
+                            <a href="movie/">
+Trending Movies
+                            </a> 
+                        </p>
+
+                        <!--Carousel Wrapper-->
+                        <div id="trending-movies" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                            <!--Controls-->
+                            <div class="controls-top">
+                                <a class="btn-floating" href="#trending-movies" data-slide="prev"><i class="fa fa-chevron-left"></i> Prev</a>
+                                <a class="btn-floating" href="#trending-movies" data-slide="next">| Next <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <!--/.Controls-->
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                    <li data-target="#trending-movies" data-slide-to="0" class="active"></li>
+                                    <li data-target="#trending-movies" data-slide-to="1" class=""></li>
+                                    <li data-target="#trending-movies" data-slide-to="2" class=""></li>
+
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/action/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att1243957z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/action/">
+                                                                <h4 class="card-title">
+
+Action Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/adventure/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att1324999z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/adventure/">
+                                                                <h4 class="card-title">
+
+Adventure Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/animation/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att0473474z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/animation/">
+                                                                <h4 class="card-title">
+
+Animation Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/biography/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att4005402z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/biography/">
+                                                                <h4 class="card-title">
+
+Biography Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/comedy/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att1951261z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/comedy/">
+                                                                <h4 class="card-title">
+
+Comedy Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/crime/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att0096542z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/crime/">
+                                                                <h4 class="card-title">
+
+Crime Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/documentary/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att7658158z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/documentary/">
+                                                                <h4 class="card-title">
+
+Documentary Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/drama/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att0117737z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/drama/">
+                                                                <h4 class="card-title">
+
+Drama Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="movie/genre/horror/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies/att0076290z.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="movie/genre/horror/">
+                                                                <h4 class="card-title">
+
+Horror Genres                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                            <!--/.Slides-->
+
+                        </div>
+                        <!--/.Carousel Wrapper-->
+
+
+                    </div>
+                    <hr class="my-4">
+                    <div class="container my-4 learning-title-background">
+
+                        <p class="font-weight-bold learning-title">
+                            <svg width="25" height="20" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="5.615%" y1="77.472%" x2="100%" y2="26.124%" id="trending"><stop stop-color="#3191FF" offset="0%"></stop><stop stop-color="#0CF" offset="100%"></stop></linearGradient></defs><path d="M25.333 4.635l-6.45-.032a.47.47 0 00-.471.468l.004 1.575.008.085a.47.47 0 00.462.383h2.94l-7.544 8.101-3.878-3.125a1.119 1.119 0 00-1.631-.009l-7.584 7.73a1 1 0 00-.002 1.4l.288.295a1 1 0 001.431 0L9.652 14.6l3.782 3.042.093.1c.442.442.964.541 1.498.145l8.43-8.998v3.103c0 .25.197.456.446.468l1.407.069a.47.47 0 00.491-.446V5.104a.47.47 0 00-.466-.469z" fill="url(#trending)" fill-rule="nonzero" transform="rotate(-5 -21.505 23.157)"></path></svg> 
+                            <a href="company/">
+Trending Companies
+                            </a> 
+                        </p>
+
+                        <!--Carousel Wrapper-->
+                        <div id="trending-companies" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                            <!--Controls-->
+                            <div class="controls-top">
+                                <a class="btn-floating" href="#trending-companies" data-slide="prev"><i class="fa fa-chevron-left"></i> Prev</a>
+                                <a class="btn-floating" href="#trending-companies" data-slide="next">| Next <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <!--/.Controls-->
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                    <li data-target="#trending-companies" data-slide-to="0" class="active"></li>
+                                    <li data-target="#trending-companies" data-slide-to="1" class=""></li>
+                                    <li data-target="#trending-companies" data-slide-to="2" class=""></li>
+
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/accenture/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/34.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/accenture/">
+                                                                <h4 class="card-title">
+
+Accenture                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/cognizant-technology-solutions/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/57.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/cognizant-technology-solutions/">
+                                                                <h4 class="card-title">
+
+Cognizant Technology Solutions                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/adidas-india-marketing-pvt-ltd/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/55.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/adidas-india-marketing-pvt-ltd/">
+                                                                <h4 class="card-title">
+
+Adidas India Marketing Pvt Ltd                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/aditya-birla-money-ltd/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/61.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/aditya-birla-money-ltd/">
+                                                                <h4 class="card-title">
+
+Aditya Birla Money Ltd                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/reliance-mediaworks-ltd/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/65.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/reliance-mediaworks-ltd/">
+                                                                <h4 class="card-title">
+
+Reliance MediaWorks Ltd                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/amadeus-india-pvt-ltd/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/137.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/amadeus-india-pvt-ltd/">
+                                                                <h4 class="card-title">
+
+Amadeus India Pvt. Ltd.                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/bharti-airtel-ltd/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/143.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/bharti-airtel-ltd/">
+                                                                <h4 class="card-title">
+
+Bharti Airtel Ltd                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/amul-india/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/158.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/amul-india/">
+                                                                <h4 class="card-title">
+
+Amul India                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="company/anchor-electricals-pvt-ltd/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/164.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="company/anchor-electricals-pvt-ltd/">
+                                                                <h4 class="card-title">
+
+Anchor Electricals Pvt Ltd                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                            <!--/.Slides-->
+
+                        </div>
+                        <!--/.Carousel Wrapper-->
+
+
+                    </div>
+                    <hr class="my-4">
+                    <div class="container my-4 learning-title-background">
+
+                        <p class="font-weight-bold learning-title">
+                            <svg width="25" height="20" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="5.615%" y1="77.472%" x2="100%" y2="26.124%" id="trending"><stop stop-color="#3191FF" offset="0%"></stop><stop stop-color="#0CF" offset="100%"></stop></linearGradient></defs><path d="M25.333 4.635l-6.45-.032a.47.47 0 00-.471.468l.004 1.575.008.085a.47.47 0 00.462.383h2.94l-7.544 8.101-3.878-3.125a1.119 1.119 0 00-1.631-.009l-7.584 7.73a1 1 0 00-.002 1.4l.288.295a1 1 0 001.431 0L9.652 14.6l3.782 3.042.093.1c.442.442.964.541 1.498.145l8.43-8.998v3.103c0 .25.197.456.446.468l1.407.069a.47.47 0 00.491-.446V5.104a.47.47 0 00-.466-.469z" fill="url(#trending)" fill-rule="nonzero" transform="rotate(-5 -21.505 23.157)"></path></svg> 
+                            <a href="shopping/">
+Trending Shoppings
+                            </a> 
+                        </p>
+
+                        <!--Carousel Wrapper-->
+                        <div id="trending-shopping" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                            <!--Controls-->
+                            <div class="controls-top">
+                                <a class="btn-floating" href="#trending-shopping" data-slide="prev"><i class="fa fa-chevron-left"></i> Prev</a>
+                                <a class="btn-floating" href="#trending-shopping" data-slide="next">| Next <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <!--/.Controls-->
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                    <li data-target="#trending-shopping" data-slide-to="0" class="active"></li>
+                                    <li data-target="#trending-shopping" data-slide-to="1" class=""></li>
+                                    <li data-target="#trending-shopping" data-slide-to="2" class=""></li>
+
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Watches/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/411StE6MDxS._SL500_._SL160_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Watches/">
+                                                                <h4 class="card-title">
+
+Buy Watches                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Apparel-&amp;-Accessories/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/41&#x2B;X1piRaBS._SL500_._SL160_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Apparel-&amp;-Accessories/">
+                                                                <h4 class="card-title">
+
+Buy Apparel &amp; Accessories                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Books/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/41BrcfRAngS._SL500_._SL160_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Books/">
+                                                                <h4 class="card-title">
+
+Buy Books                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Computers/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/416PcZFCcGL._SL500_._SL160_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Computers/">
+                                                                <h4 class="card-title">
+
+Buy Computers                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Electronics/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/41q6oWpomwS._SL500_._SL160_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Electronics/">
+                                                                <h4 class="card-title">
+
+Buy Electronics                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Health-&amp;-Beauty/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/31PgfQoXh2L._SL500_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Health-&amp;-Beauty/">
+                                                                <h4 class="card-title">
+
+Health &amp; Beauty                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Movies-&amp;-TV/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/41AIXxJU9dL._SL500_._SL160_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Movies-&amp;-TV/">
+                                                                <h4 class="card-title">
+
+Movies &amp; TV                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Sports-&amp;-Outdoors/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/412ItrWlolL._SL500_._SL160_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Sports-&amp;-Outdoors/">
+                                                                <h4 class="card-title">
+
+Sports &amp; Outdoors                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="shopping/category/Video-Games/">
+                                                            <img class="card-img-top" src="https://m.media-amazon.com/images/I/618IQQNbvUL._SL500_._SL160_.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="shopping/category/Video-Games/">
+                                                                <h4 class="card-title">
+
+Video Games                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                            <!--/.Slides-->
+
+                        </div>
+                        <!--/.Carousel Wrapper-->
+
+
+                    </div>
+                    <hr class="my-4">
+                    <div class="container my-4 learning-title-background">
+
+                        <p class="font-weight-bold learning-title">
+                            <svg width="25" height="20" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="5.615%" y1="77.472%" x2="100%" y2="26.124%" id="trending"><stop stop-color="#3191FF" offset="0%"></stop><stop stop-color="#0CF" offset="100%"></stop></linearGradient></defs><path d="M25.333 4.635l-6.45-.032a.47.47 0 00-.471.468l.004 1.575.008.085a.47.47 0 00.462.383h2.94l-7.544 8.101-3.878-3.125a1.119 1.119 0 00-1.631-.009l-7.584 7.73a1 1 0 00-.002 1.4l.288.295a1 1 0 001.431 0L9.652 14.6l3.782 3.042.093.1c.442.442.964.541 1.498.145l8.43-8.998v3.103c0 .25.197.456.446.468l1.407.069a.47.47 0 00.491-.446V5.104a.47.47 0 00-.466-.469z" fill="url(#trending)" fill-rule="nonzero" transform="rotate(-5 -21.505 23.157)"></path></svg> 
+                            <a href="learn/geetcode/">
+Trending LeetCode Questions
+                            </a> 
+                        </p>
+
+                        <!--Carousel Wrapper-->
+                        <div id="trending-leetcode" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                            <!--Controls-->
+                            <div class="controls-top">
+                                <a class="btn-floating" href="#trending-leetcode" data-slide="prev"><i class="fa fa-chevron-left"></i> Prev</a>
+                                <a class="btn-floating" href="#trending-leetcode" data-slide="next">| Next <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <!--/.Controls-->
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                    <li data-target="#trending-leetcode" data-slide-to="0" class="active"></li>
+                                    <li data-target="#trending-leetcode" data-slide-to="1" class=""></li>
+                                    <li data-target="#trending-leetcode" data-slide-to="2" class=""></li>
+
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/two-sum/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/LeetCodeQuestionImage/main/two-sum.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/two-sum/">
+                                                                <h4 class="card-title">
+
+Two Sum                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/median-of-two-sorted-arrays/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/GeetCodeImage/main/unnamed.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/median-of-two-sorted-arrays/">
+                                                                <h4 class="card-title">
+
+Median of Two Sorted Arrays                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/container-with-most-water/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/GeetCodeImage/master/Images/11-question_11.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/container-with-most-water/">
+                                                                <h4 class="card-title">
+
+Container With Most Water                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/letter-combinations-of-a-phone-number/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/GeetCodeImage/master/Images/17-200px-Telephone-keypad2.svg.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/letter-combinations-of-a-phone-number/">
+                                                                <h4 class="card-title">
+
+Letter Combinations of a Phone Number                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/remove-nth-node-from-end-of-list/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/GeetCodeImage/master/Images/19-remove_ex1.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/remove-nth-node-from-end-of-list/">
+                                                                <h4 class="card-title">
+
+Remove Nth Node From End of List                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/merge-two-sorted-lists/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/GeetCodeImage/master/Images/21-merge_ex1.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/merge-two-sorted-lists/">
+                                                                <h4 class="card-title">
+
+Merge Two Sorted Lists                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/swap-nodes-in-pairs/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/GeetCodeImage/master/Images/24-swap_ex1.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/swap-nodes-in-pairs/">
+                                                                <h4 class="card-title">
+
+Swap Nodes in Pairs                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/reverse-nodes-in-k-group/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/GeetCodeImage/master/Images/25-reverse_ex1.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/reverse-nodes-in-k-group/">
+                                                                <h4 class="card-title">
+
+Reverse Nodes in k-Group                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="problems/valid-sudoku/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/sumitc91/GeetCodeImage/master/Images/36-250px-Sudoku-by-L2G-20050714.svg.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="problems/valid-sudoku/">
+                                                                <h4 class="card-title">
+
+Valid Sudoku                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                            <!--/.Slides-->
+
+                        </div>
+                        <!--/.Carousel Wrapper-->
+
+
+                    </div>
+                    <hr class="my-4">
+                    <div class="container my-4 learning-title-background">
+
+                        <p class="font-weight-bold learning-title">
+                            <svg width="25" height="20" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="5.615%" y1="77.472%" x2="100%" y2="26.124%" id="trending"><stop stop-color="#3191FF" offset="0%"></stop><stop stop-color="#0CF" offset="100%"></stop></linearGradient></defs><path d="M25.333 4.635l-6.45-.032a.47.47 0 00-.471.468l.004 1.575.008.085a.47.47 0 00.462.383h2.94l-7.544 8.101-3.878-3.125a1.119 1.119 0 00-1.631-.009l-7.584 7.73a1 1 0 00-.002 1.4l.288.295a1 1 0 001.431 0L9.652 14.6l3.782 3.042.093.1c.442.442.964.541 1.498.145l8.43-8.998v3.103c0 .25.197.456.446.468l1.407.069a.47.47 0 00.491-.446V5.104a.47.47 0 00-.466-.469z" fill="url(#trending)" fill-rule="nonzero" transform="rotate(-5 -21.505 23.157)"></path></svg> 
+                            <a href="#/">
+Trending Learning Modules ( Coming Soon )
+                            </a> 
+                        </p>
+
+                        <!--Carousel Wrapper-->
+                        <div id="trending-learning" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                            <!--Controls-->
+                            <div class="controls-top">
+                                <a class="btn-floating" href="#trending-learning" data-slide="prev"><i class="fa fa-chevron-left"></i> Prev</a>
+                                <a class="btn-floating" href="#trending-learning" data-slide="next">| Next <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <!--/.Controls-->
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                    <li data-target="#trending-learning" data-slide-to="0" class="active"></li>
+                                    <li data-target="#trending-learning" data-slide-to="1" class=""></li>
+
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="#/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/images/main/Competitive-Programming-1.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="#/">
+                                                                <h4 class="card-title">
+
+Data Structures And Algorithms                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="#/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/images/main/designpatterns02.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="#/">
+                                                                <h4 class="card-title">
+
+Design Patterns                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="#/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/images/main/1_pE2fOVDikEUwiQJlh4ggzg.jpeg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="#/">
+                                                                <h4 class="card-title">
+
+Web Development                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="#/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/images/main/Computer-Science-and-Engineering.jpg"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="#/">
+                                                                <h4 class="card-title">
+
+Computer Science And Engineering                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="#/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/images/main/home_OG.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="#/">
+                                                                <h4 class="card-title">
+
+System Design                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 clearfix d-none d-md-block">
+                                                    <div class="card mb-2">
+
+                                                        <a class="list-group-item no-padding" href="#/">
+                                                            <img class="card-img-top" src="https://raw.githubusercontent.com/askgifdotcom/images/main/prepare-interviews-featured.png"
+                                                                 alt="Card image cap">
+                                                        </a>
+
+                                                        <div class="card-body">
+                                                            <a class="list-group-item no-padding" href="#/">
+                                                                <h4 class="card-title">
+
+Interview Preparation                                                                </h4>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                            <!--/.Slides-->
+
+                        </div>
+                        <!--/.Carousel Wrapper-->
+
+
+                    </div>
+                    <hr class="my-4">
+
+
+                <div class="container">
+                    
+                    <!-- HorizontalAdBlock -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-1068871795581451"
+                         data-ad-slot="9883858879"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
-                <div class="col-12 col-sm-1"></div>
-            </div>
+                <!-- /.card -->
+            </section>
+            <!-- /.content -->
         </div>
+        <div class="col-12 col-sm-1"></div>
+    </div>    
+</div>
+
+
 
         <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+            <div class="p-3">
+                <h5>Title</h5>
+                <p>Sidebar content</p>
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
         <!-- Main Footer -->
         <!--footer starts from here-->
         <footer class="footer">
             <div class="container bottom_border">
                 <div class="row">
                     <div class=" col-sm-4 col-md col-sm-4  col-12 col">
-
-                        <h5 class="headin5_amrc col_white_amrc pt2">{{footerContent.heading1}}</h5>
+                        <h5 class="headin5_amrc col_white_amrc pt2">About AskGif</h5>
                         <p>
-                            {{footerContent.content1}}
+                            AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission
+                            to make people smile. Keep smiling and keep sharing
                         </p><br>
-                        <a href="/about-us/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">Read More</a>
+                        <a href="/about-us/">Read More</a>
 
                     </div>
 
                     <div class=" col-sm-4 col-md  col-6 col">
                         <h5 class="headin5_amrc col_white_amrc pt2">Links</h5>
-                        <p ng-repeat="link in footerContent.links">
-                            <a href="{{link.url}}">{{link.name}}</a>
-                        </p>
                         
                         <!--footer_ul_amrc ends here-->
                     </div>
@@ -241,8 +1737,8 @@
                         <h5 class="headin5_amrc col_white_amrc pt2">Sarkari Support &amp; Help</h5>
                         <!--headin5_amrc-->
                         <ul class="footer_ul_amrc">
-                            <li><a href="/faq/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">FAQs</a></li>
-                            <li>Have Questions? Email us @@ support[at]askgif[dot]com</li>
+                            <li><a href="/faq/">FAQs</a></li>
+                            <li>Have Questions? Email us @ support[at]askgif[dot]com</li>
                         </ul>
                         <!--footer_ul_amrc ends here-->
                     </div>
@@ -259,35 +1755,49 @@
 
             <div class="container color-white">
 
-                <h4>{{footerContent.tnc.heading1}}</h4>
+                <h4>1. TERMS</h4>
 
-                <p>{{footerContent.tnc.content1}}</p>
+                <p>By accessing the website at&nbsp;<a href="https://askgif.com/">https://askgif.com/</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
 
                 <p>&nbsp;</p>
 
-                <h4>{{footerContent.tnc.heading2}}</h4>
+                <h4>2. USE LICENSE</h4>
 
                 <ol type="a">
                     <li>
-                        {{footerContent.tnc.content21}}
+                        Permission is granted to temporarily download one copy of the materials (information or software) on AskGif's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
                         <ol type="i">
-                            <li ng-repeat="content in footerContent.tnc.contentArr">{{content}}</li>                            
+                            <li>modify or copy the materials;</li>
+                            <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+                            <li>attempt to decompile or reverse engineer any software contained on AskGif's website;</li>
+                            <li>remove any copyright or other proprietary notations from the materials; or</li>
+                            <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
                         </ol>
                     </li>
-                    <li>{{footerContent.tnc.content22}}</li>
+                    <li>This license shall automatically terminate if you violate any of these restrictions and may be terminated by AskGif at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</li>
                 </ol>
-                <a href="/terms-of-service/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">Read More</a>
+                <a href="/terms-of-service/">Read More</a>
 
             </div>
 
             <div class="container">
                 <ul class="foote_bottom_ul_amrc">
-                    <li ng-repeat="link in footerContent.links2"><a href="{{link.url}}">{{link.name}}</a></li>                    
+                    <li><a href="?lang=en">English</a></li>
+                    <li><a href="?lang=hi">हिंदी</a></li>
+                    <li><a href="/terms-of-service/">Terms of Service</a></li>
+                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="/editor/">Editor</a></li>
+                    <li><a href="/contributors/">Developers & Contributors</a></li>
+                    <li><a href="/sitemap.xml">Site Map</a></li>
                 </ul>
                 <!--foote_bottom_ul_amrc ends here-->
-                <p class="text-center">Copyright {{siteConfig.copyrightYear}} | Designed by <a href="/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">{{siteInfo.companyName}}</a> | Last Cached: {{siteConfig.lastCached}} UTC | {{siteConfig.site}}</p>
+                <p class="text-center">Copyright 2021 | Designed by <a href="https://askgif.com/">Askgif</a> | Last Cached: 11/13/2021 7:51:06 PM UTC | A</p>
                 <ul class="social_footer_ul">
-                    <li ng-repeat="social in footerContent.social"><a rel="ugc nofollow" href="{{social.url}}"><i class="{{social.uiclass}}"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.facebook.com/askgifdotcom/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://twitter.com/askgifdotcom"><i class="fab fa-twitter"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.pinterest.com/askgifdotcom/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.instagram.com/askgifdotcom/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.tumblr.com/blog/askgifdotcom"><i class="fab fa-tumblr"></i></a></li>
                 </ul>
                 <!--social_footer_ul ends here-->
             </div>
@@ -295,69 +1805,61 @@
 
     </div>
 
+
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://shotcutdotcom.github.io/static/js/jquery.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="https://askgifweb.github.io/AdminLTE-3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://shotcutdotcom.github.io/AdminLTE-3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- overlayScrollbars -->
-    <script src="https://askgifweb.github.io/AdminLTE-3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    
-    <script type="text/javascript" src="https://askgifweb.github.io/static/js/jquery-ui.js"></script>
-    <script type="text/javascript" src="https://askgifweb.github.io/static/js/jquery.blockUI.js"></script>
+    <script src="https://shotcutdotcom.github.io/AdminLTE-3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="https://shotcutdotcom.github.io/AdminLTE-3/dist/js/adminlte.min.js"></script>
 
-    <script src="https://askgifweb.github.io/static/js/angular.js"></script>
-    
-    <script>
-        $.blockUI();
-        angular.module("app", []).controller("HelloWorldCtrl", function ($scope, $http) {
+    <script type="text/javascript" src="https://shotcutdotcom.github.io/static/js/blazy.js"></script>
+    <script type="text/javascript" src="https://shotcutdotcom.github.io/static/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://shotcutdotcom.github.io/static/js/jquery.blockUI.js"></script>
 
-            $scope.siteInfo = {
-                companyName: companyName,
-                companyLogo: companyLogo,
-                favicon: favicon,
-                googleSearch: googleSearch
-            };
-            $scope.Model = Model;
-            $scope.siteConfig = siteConfig;
-            $scope.footerContent = footerContent;
+    <script type="text/javascript" src="https://shotcutdotcom.github.io/static/js/site.js"></script>
+    <script type="text/javascript" src="https://shotcutdotcom.github.io/static/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            window.askgif.i18nLocalizePage();
+        });
 
-            var page = getQueryStringValue('page');
-            var lang = getQueryStringValue('lang');
+        $(document).ready(function () {
 
-            if (lang != 'hi') {
-                lang = 'en';
-                $scope.Model.lang = 'en';
+            // unblock when ajax activity stops
+            $(document).ajaxStop($.unblockUI);
+            gaWeb('SiteInfo', 'A', window.location.href);
+        });
+
+        $(window).scroll(function (e) {
+            var scroller_anchor = $("#floater").offset().top;
+            if ($(this).scrollTop() > 5 && $('.scroller').css('position') != 'fixed') {
+                $('#floater').css({
+                    'position': 'fixed',
+                    'margin-top': '80px'
+                });
+
+                $('#floater-left').css({
+                    'position': 'fixed',
+                    'margin-top': '80px'
+                });
             }
+            else if ($('.scroller').css('position') != 'relative') {
+                $('#floater').css({
+                    'position': 'absolute',
+                    'margin-top': '80px'
+                });
 
-            if (page != null && page != undefined && page != '') {
-                $scope.Model.Pagination.CurrentPage = page;
-                $scope.Model.Pagination.previousPageNumber = page == 1 ? 1 : parseInt(page) - 1;
-                $scope.Model.Pagination.nextPageNumber = page == Model.Pagination.PageCount ? page : parseInt(page) + 1;
-                $scope.Model.Pagination.hasPrevious = page != 1;
-                $scope.Model.Pagination.hasNext = page != Model.Pagination.PageCount;
-                $scope.Model.Pagination.pageRange = getPaginationRange(1, Model.Pagination.PageCount, Model.Pagination.CurrentPage);
+                $('#floater-left').css({
+                    'position': 'absolute',
+                    'margin-top': '80px'
+                });
             }
-            else {
-                page = 1;
-            }
-            
-            var headers = {
-                'Content-Type': 'application/json'
-            };
-
-            $http({
-                method: 'GET',
-                url: 'https://apitest.askgif.com/gif/page/'+page+'-'+lang+'.json'
-            }).then(function (response) {
-                //console.log(response.data);
-                $scope.gifList = response.data;
-                $.unblockUI();
-            }, function (error) {
-                    console.log("failed");
-                    $.unblockUI();
-            });
-
-        })
+        });
     </script>
-
-    <script type="text/javascript" src="https://askgifweb.github.io/static/js/postcommon.js"></script>
 </body>
 </html>
