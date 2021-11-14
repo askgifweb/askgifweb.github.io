@@ -335,5 +335,5 @@ function titleize(str) {
     return newStr;
 }
 
-loadjscssfile("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
+//loadjscssfile("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
 loadjscssfile("https://cse.google.com/cse.js?cx=9ad79e1c9671fd821");

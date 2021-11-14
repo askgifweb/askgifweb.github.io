@@ -375,6 +375,7 @@
                 'Content-Type': 'application/json'
             };
 
+            gaWeb('PageType', 'gif', 'single');
             $http({
                 method: 'GET',
                 url: gifApiUrl + '/gif/id/'+ $scope.id +'-'+lang+'.json'
@@ -395,6 +396,7 @@
                 $.unblockUI();
             }, function (error) {
                     console.log("failed");
+                    gaWeb('AjaxError', 'gif', gifApiUrl + '/gif/id/'+ $scope.id +'-'+lang+'.json');
                     $.unblockUI();
             });
 
