@@ -1,9 +1,8 @@
 ﻿var googleAnalyticsAppID = "UA-118778979-1";
-var logoImage = "../../App/Template/AdminLTE-master/img/m2eV3.png";
+var logoImage = "../../App/Template/AdminLTE-master/img/AskGifLogo.png";
 var gifBasePath = "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs/";
-
-var companyName = "MyAskGif";
-var companyLogo = "https://raw.githubusercontent.com/askgifdotcom/icon/main/android-chrome-192x192.png";
+var companyName = "AskGif";
+var companyLogo = "/AdminLTE-3/dist/img/AskGifLogo.png";
 var favicon = "/static/images/favicon.ico";
 var googleSearch = "https://cse.google.com/cse.js?cx=9ad79e1c9671fd821";
 var ampDomain = "https://amp.askgif.com";
@@ -17,7 +16,7 @@ var siteConfig = {
     gifCdn: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Gifs",
     blogCdn: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs",
     movieCdn: "https://raw.githubusercontent.com/askgifdotcom/sumitc91.github.io/master/Movies",
-
+    companyCdn: "https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/",
     copyrightYear: "2021",
     lastCached: "2020",
     site: "Test"
@@ -128,7 +127,9 @@ var MovieModel = {
         OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
         Title: "AskGif - Find And Share All Movies At One Place",
         TagTitle: "{typeKey} - Movie - {pageType} - Find All Movies Information at Single Place",
-        TagDescription: "Share this {typeKey} - Movie - {pageType} Movie Information and explore more"
+        TagDescription: "Share this {typeKey} - Movie - {pageType} Movie Information and explore more",
+        SingleTitle: "{title} - Find All Movies Information at Single Place",
+        SingleDescription: "Share this {title} Movie  and explore more"
     },
     datePublished: "2021/10/23",
     dateModified: "2021/10/24",
@@ -152,6 +153,45 @@ var MovieModel = {
     ]    
 };
 
+var CompanyModel = {
+    MetaTags: {
+        Author: "Sumit Chourasia",
+        Description: companyName + " is the place to explore and share the awesome Companies with a comic punch.",
+        Keywords: "Best Gifs, Unique Gifs, Updated Gifs, Funny Gifs",
+        Robots: "FOLLOW,INDEX",
+        Amphtml: "amphtml",
+        Canonical: "canonical",
+        OgDescription: companyName + " is the place to explore and share the awesome Companies with a comic punch.",
+        OgTitle: "AskGif - Find And Share All Movies At One Place",
+        OgImage: "https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/99123253_2929029403813445_4489838762607509504_n.jpg",
+        Title: "AskGif - Find And Share All Companies At One Place",
+        TagTitle: "{industry} - Company - Industry - Find All Companies Information at Single Place",
+        TagDescription: "Share this {industry} - Company - Industry Information and explore more",
+        SingleTitle: "{title} - Find All Companies Information at Single Place",
+        SingleDescription: "Share this {title} Company  and explore more"
+    },
+    datePublished: "2021/10/23",
+    dateModified: "2021/10/24",
+    lang: "hi",
+    Pagination: {
+        PageCount: 3268,
+        CurrentPage: 1,
+        Total: 39213,
+        hasPrevious: false,
+        urlPrefix: "/company",
+        previousPageNumber: 1,
+        pageRange: [1, 2, 3, 4, 5, 6],
+        hasNext: true,
+        nextPageNumber: 2
+
+    },
+    TopMenuList: [
+        { name: "Blog", url: "/blog" },
+        { name: "Movies", url: "/movie" },
+        { name: "Org", url: "/company" }
+    ]
+};
+
 var footerContent = {
     heading1: "About AskGif Test Github",
     content1: "AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission to make people smile.Keep smiling and keep sharing.",
@@ -173,20 +213,20 @@ var footerContent = {
     }, 
 
     links: [
-        { name: "Learnings1", url: "/learn" },
-        { name: "GeetCode2", url: "/learn/geetcode" },
-        { name: "Shopping3", url: "/shopping" },
+        { name: "Learnings", url: "https://askgif.com/learn" },
+        { name: "GeetCode", url: "https://askgif.com/learn/geetcode" },
+        { name: "Shopping", url: "https://askgif.com/shopping" },
         { name: "CAFE EL CARPEDIEM4", url: "https://askgif.com/cafe-el-carpediem" }
     ],
 
     links2: [
-        { name: "English", url: "/" },
-        { name: "हिंदी", url: "/?lang=hi" },
-        { name: "Terms of Service", url: "/terms-of-service" },
-        { name: "Privacy Policy", url: "/privacy-policy" },
-        { name: "Editor", url: "/editor" },
-        { name: "Developers & Contributors", url: "/contributors" },
-        { name: "Site Map2", url: "/sitemap.xml" }        
+        { name: "English", url: "https://askgif.com/" },
+        { name: "हिंदी", url: "https://askgif.com/?lang=hi" },
+        { name: "Terms of Service", url: "https://askgif.com/terms-of-service" },
+        { name: "Privacy Policy", url: "https://askgif.com/privacy-policy" },
+        { name: "Editor", url: "https://askgif.com/editor" },
+        { name: "Developers & Contributors", url: "https://askgif.com/contributors" },
+        { name: "Site Map", url: "https://askgif.com/sitemap.xml" }        
     ],
     social: [
         { uiclass: "fab fa-facebook-f", url: "https://www.facebook.com/askgifdotcom/" },
@@ -290,5 +330,5 @@ function titleize(str) {
     return newStr;
 }
 
-//loadjscssfile("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
+loadjscssfile("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
 loadjscssfile("https://cse.google.com/cse.js?cx=9ad79e1c9671fd821");
