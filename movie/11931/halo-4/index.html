@@ -461,9 +461,10 @@
                 'Content-Type': 'application/json'
             };
 
+            gaWeb('PageType', 'movie', 'single');
             $http({
                 method: 'GET',
-                url: 'https://apitest.askgif.com/movie/id/'+ $scope.id +'-'+lang+'.json'
+                url: movieApiUrl + '/movie/id/'+ $scope.id +'-'+lang+'.json'
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.movie = response.data;
@@ -481,7 +482,8 @@
 
                 $.unblockUI();
             }, function (error) {
-                console.log("failed");
+                    console.log("failed");
+                    gaWeb('AjaxError', 'movie', movieApiUrl + '/movie/id/'+ $scope.id +'-'+lang+'.json');
                 $.unblockUI();
             });
 
