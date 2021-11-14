@@ -9,6 +9,11 @@ var ampDomain = "https://amp.askgif.com";
 var ampDomainHi = "https://amphi.askgif.com";
 var canonicalDomain = "https://askgif.com";
 var apiUrl = "https://apitest.askgif.com";
+var gifApiUrl = "https://apitest.askgif.com";
+var blogApiUrl = "https://apitest.askgif.com";
+var movieApiUrl = "https://apitest.askgif.com";
+var companyApiUrl = "https://apitest.askgif.com";
+
 var isGifNamePresentInUrlAmp = true;
 var isGifNamePresentInUrlCanonical = false;
 

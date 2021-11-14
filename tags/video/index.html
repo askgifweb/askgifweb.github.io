@@ -353,7 +353,7 @@
 
             $http({
                 method: 'GET',
-                url: 'https://apitest.askgif.com/gif/tag/'+$scope.tagName+'/'+page+'-'+lang+'.json'
+                url: gifApiUrl + '/gif/tag/'+$scope.tagName+'/'+page+'-'+lang+'.json'
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.gifList = response.data;
