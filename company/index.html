@@ -354,9 +354,10 @@
                 'Content-Type': 'application/json'
             };
 
+            gaWeb('PageType', 'company', 'root');
             $http({
                 method: 'GET',
-                url: 'https://apitest.askgif.com/company/page/' + page + '-' + lang + '.json'
+                url: companyApiUrl + '/company/page/' + page + '-' + lang + '.json'
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.companyList = response.data;
@@ -374,6 +375,7 @@
                 $.unblockUI();
             }, function (error) {
                 console.log("failed");
+                gaWeb('AjaxError', 'company', companyApiUrl + '/company/page/' + page + '-' + lang + '.json');
                 $.unblockUI();
             });
 
