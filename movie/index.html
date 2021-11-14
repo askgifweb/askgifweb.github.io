@@ -350,6 +350,7 @@
                 'Content-Type': 'application/json'
             };
 
+            gaWeb('PageType', 'movie', 'root');
             $http({
                 method: 'GET',
                 url: movieApiUrl + '/movie/page/'+page+'-'+lang+'.json'
@@ -370,6 +371,7 @@
                 $.unblockUI();
             }, function (error) {
                     console.log("failed");
+                    gaWeb('AjaxError', 'movie', movieApiUrl + '/movie/page/'+page+'-'+lang+'.json');
                     $.unblockUI();
             });
 
