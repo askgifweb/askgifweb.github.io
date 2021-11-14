@@ -401,7 +401,7 @@
 
             $http({
                 method: 'GET',
-                url: 'https://apitest.askgif.com/blog/tag/'+$scope.tagName+'/'+page+'-'+lang+'.json'
+                url: blogApiUrl + '/blog/tag/'+$scope.tagName+'/'+page+'-'+lang+'.json'
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.BlogList = response.data;
@@ -415,6 +415,7 @@
                 $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + $scope.Model.Pagination.urlPrefix;
                 $scope.Model.MetaTags.Canonical = canonicalDomain + $scope.Model.Pagination.urlPrefix + (lang != 'hi' ? "" : "?lang=hi");
                 $scope.Model.MetaTags.Title = BlogModel.MetaTags.TagTitle.replace('{tag}', titleCaseTag) + titlePostFix;
+                $scope.Model.MetaTags.OgTitle = BlogModel.MetaTags.TagTitle.replace('{tag}', titleCaseTag) + titlePostFix;
                 $scope.Model.MetaTags.Description = BlogModel.MetaTags.TagDescription.replace('{tag}', titleCaseTag);
                 $scope.Model.MetaTags.OgDescription = BlogModel.MetaTags.TagDescription.replace('{tag}', titleCaseTag);
 

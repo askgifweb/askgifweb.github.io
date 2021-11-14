@@ -399,7 +399,7 @@
 
             $http({
                 method: 'GET',
-                url: apiUrl + '/blog/page/'+page+'-'+lang+'.json'
+                url: blogApiUrl + '/blog/page/'+page+'-'+lang+'.json'
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.BlogList = response.data;
@@ -407,6 +407,7 @@
                 $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + "/blog/";
                 $scope.Model.MetaTags.Canonical = canonicalDomain + "/blog/" +(lang != 'hi' ? "" : "?lang=hi");
                 $scope.Model.MetaTags.Title = BlogModel.MetaTags.Title + titlePostFix;
+                $scope.Model.MetaTags.OgTitle = BlogModel.MetaTags.Title + titlePostFix;
                 $scope.Model.MetaTags.Description = BlogModel.MetaTags.Title;
                 $scope.Model.MetaTags.OgDescription = BlogModel.MetaTags.Title;
 
