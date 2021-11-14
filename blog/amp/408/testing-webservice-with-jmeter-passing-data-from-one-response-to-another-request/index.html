@@ -1,0 +1,854 @@
+﻿
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <link rel="shortcut icon" href="https://shotcutdotcom.github.io/static/images/favicon.ico" type="image/png">
+    <title>Testing Webservice with JMeter: Passing data from one response to another request - Blog - Find Best Reads of All Time on AskGif</title>
+
+    <link rel="canonical" href="https://askgif.com/blog/408/testing-webservice-with-jmeter-passing-data-from-one-response-to-another-request/">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://askgif.com/",
+        "headline": "AskGif",
+        "datePublished": "2019/06/25",
+        "dateModified":  "2019/06/25",
+        "description": "Share this Testing Webservice with JMeter: Passing data from one response to another request Blog and explore more",
+        "author": {
+        "@type": "Person",
+        "name": "Sumit Chourasia"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Askgif",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/data/master/askgif-static/askgif_logo.png"
+        }
+        },
+        "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/AmpImage/main/Blogs/5907634d-02c4-4db3-a12f-0e49d9e76563_jmeter-webservice.jpg",
+        "height": 1280,
+        "width": 857
+        }
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom=''>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            transition: all 0.2s linear;
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content-width {
+            width: 80%;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 50px 0px;
+            line-height: 160%;
+        }
+
+        h1 {
+            font-size: 240%;
+            line-height: 120%;
+            margin: 20px 0px;
+        }
+
+        h2 {
+            font-size: 140%;
+            margin: 30px 0px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .subtext {
+            text-align: left;
+            font-weight: 400;
+            color: #a5a5a5;
+            font-size: 90%;
+        }
+
+        .branding {
+            font-size: 90%;
+            color: #fff;
+        }
+
+            .branding a {
+                color: inherit;
+            }
+
+                .branding a:hover {
+                    color: #19B5FE;
+                }
+
+        .button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #19B5FE;
+            font-weight: 700;
+            text-align: center;
+        }
+
+            .button:hover {
+                background: #3ebf43;
+            }
+
+        /* Header */
+        header,
+        footer,
+        #sidebar {
+            background: #2c3e50;
+        }
+
+        header {
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        #sidebar {
+            width: 300px;
+            padding: 1.5rem;
+        }
+
+        .sidebar-menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .amp-custom-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem;
+            color: #fff;
+        }
+
+        #sidebar-close {
+            cursor: pointer;
+        }
+
+        .sidevar-nav-item {
+            padding: 10px 0px;
+            margin: 0px;
+            display: block;
+            list-style: none;
+            color: #021425;
+            text-transform: capitalize;
+            letter-spacing: .6px;
+            line-height: 2.0625;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .sidevar-nav-item:hover {
+                color: #19B5FE;
+            }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        #sidebar-menu-btn {
+            background: 0 0;
+            border: 0;
+            color: #fff;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        /* POST */
+        #article-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .article {
+            flex-basis: 70%;
+            padding-right: 30px;
+            border-right: 1px solid #e3e3e3;
+        }
+
+            .article h1 {
+                margin-top: 0px;
+            }
+
+        .article-image,
+        .article-body {
+            margin: 20px 0px;
+            width: 340px;
+        }
+
+        .author-info {
+            color: #9d9d9d;
+            font-weight: bold;
+        }
+
+        .article a {
+            color: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        pre {
+            font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            margin-bottom: 10px;
+            overflow: auto;
+            width: auto;
+            padding: 5px;
+            background-color: #eee;
+            width: 650px !ie7;
+            padding-bottom: 20px !ie7;
+            max-height: 600px;
+        }
+
+        .article a.button {
+            margin: 20px 10px 20px 0px;
+            display: inline-block;
+            width: 120px;
+        }
+
+            .article a.button,
+            .article a.button:hover {
+                color: #fff;
+            }
+
+        .article a:hover {
+            color: #19B5FE;
+        }
+
+        #additional-info {
+            flex-basis: 30%;
+            padding-left: 30px;
+        }
+
+            #additional-info:before {
+                display: block;
+                height: 6px;
+                background-color: #2c3e50;
+                content: ' ';
+                width: 50px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+        .promo,
+        .related-box ul li {
+            border: 1px solid #e3e3e3;
+        }
+
+        .promo {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .article-meta ul,
+        .related-box ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .related-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+            .related-box a.imp-link {
+                color: #3ebf43;
+                font-weight: 700;
+            }
+
+        .related-box ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+            .related-box ul li:hover,
+            .related-box a:hover {
+                text-decoration: underline;
+                background: #ebebeb;
+            }
+
+        .article-meta {
+            margin: 30px 0px;
+        }
+
+            .article-meta ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+        .article .article-meta a.tag {
+            margin-right: 5px;
+            background: #ebebeb;
+            font-size: 90%;
+            text-decoration: none;
+            padding: 5px;
+            color: #414141;
+            text-transform: uppercase;
+        }
+
+        .article .article-meta .tag:hover {
+            background: #dadada;
+        }
+
+        .article-meta li {
+            list-style: none;
+        }
+
+        .blockquote-wrapper {
+            position: relative;
+        }
+
+        .blockquote {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 90%;
+            font-style: italic;
+            text-align: justify;
+        }
+
+            .blockquote::before {
+                content: "“";
+                position: absolute;
+                top: 0.25em;
+                left: -0.15em;
+                color: #e7e6e4;
+                font-size: 170px;
+                z-index: -1;
+            }
+
+        cite {
+            display: block;
+            text-align: right;
+            padding: 10px 0px;
+        }
+
+        .amp-components .component {
+            margin: 30px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-darkturquoise {
+            background-color: darkturquoise;
+        }
+        /* Footer */
+        footer {
+            color: #fff;
+            text-align: center;
+        }
+
+        .article {
+            width: 100%;
+        }
+
+        #additional-info {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            h1 {
+                font-size: 140%;
+            }
+
+            .article {
+                padding-right: 20px;
+            }
+
+            #additional-info {
+                padding-left: 20px;
+            }
+
+            .related-box ul li, .promo p, .promo a {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .article,
+            #additional-info {
+                border: 0px;
+                flex-basis: 100%;
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 160%;
+            }
+
+            .article a.button,
+            .article .article-meta a.tag li {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 120%;
+            }
+
+            .content-width {
+                width: 90%;
+            }
+
+            .content {
+                padding: 30px 0px;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            header {
+                padding: 5px 0px;
+            }
+
+            #article-wrapper {
+                flex-direction: column;
+            }
+
+            .blockquote {
+                margin: 50px 0px;
+                font-size: 100%;
+            }
+
+            .article-meta ul {
+                flex-wrap: wrap;
+            }
+
+            .article-meta a.tag {
+                margin-bottom: 10px;
+            }
+
+            .article a.button {
+                margin: 10px 10px 10px 0px;
+            }
+
+            .branding p, .branding a {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!--sumitstart<script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>sumitend-->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+
+<body>
+    <!--sumitstart<amp-auto-ads type="adsense"
+                  data-ad-client="ca-pub-1068871795581451">
+    </amp-auto-ads>sumitend-->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+            {
+            "vars": {
+            "account": "UA-118778979-1"
+            },
+            "triggers": {
+            "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+            }
+            }
+            }
+        </script>
+    </amp-analytics>
+    <header>
+        <div class="menu content-width">
+            <div class="logo">
+                <a href="https://askgif.com/">
+                    AskGif<sup>TM</sup>
+                </a>
+            </div>
+            <button id="sidebar-menu-btn" on="tap:sidebar.toggle">☰</button>
+        </div>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="amp-custom-sidebar-header">
+            <div role="button" aria-label="close sidebar" on="tap:sidebar.toggle" tabindex="0" id="sidebar-close">✕</div>
+        </div>
+        <ul class="sidebar-menu">
+            <a href="https://askgif.com/" class="sidevar-nav-item">
+                <li>Gifs</li>
+            </a>
+            <a href="https://askgif.com/blog/" class="sidevar-nav-item">
+                <li>Blogs</li>
+            </a>
+        </ul>
+    </amp-sidebar>
+    <section class="content content-width" id="article-wrapper">
+            <div class="article">
+                <a href="/blog/408/testing-webservice-with-jmeter-passing-data-from-one-response-to-another-request">
+                    <h2 class="title">
+                        Testing Webservice with JMeter: Passing data from one response to another request
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Jun 25, 2019
+                </div>
+                <div class="article-image">
+                    <a href="/blog/408/testing-webservice-with-jmeter-passing-data-from-one-response-to-another-request/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/5907634d-02c4-4db3-a12f-0e49d9e76563_jmeter-webservice.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category/coding/"><li>coding</li></a>
+                            <a class="tag" href="/blog/tags/web-services/"><li>web-services</li></a>
+                            <a class="tag" href="/blog/tags/java/"><li>java</li></a>
+                            <a class="tag" href="/blog/tags/jmeter/"><li>jmeter</li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p><p>JMeter is great for functional and performance testing of many things, including web services (and to my surprise also LDAP). It also provides means for extracting data from a response and passing them to a subsequent request, which is exactly what I needed.&nbsp;</p>
+<p>&nbsp;</p>
+<p>The steps are:</p>
+<p>Create a web service (WS) test plan, as described in the tutorial (in my case it contains two WS calls)</p>
+<p>Add the User Defined Variables config element to the test plan and define there a variable for transferring the response data</p>
+<p>Add an XPath Extractor Post Processor to the first WS call to extract the value of interest into the user-defined variable (beware namespaces!)</p>
+<p>Add a BeanShell PreProcessor to the second call, which will replace a placeholder in the WS call's XML data with the value of that variable</p>
+<p>&nbsp;</p>
+<p>About the web service</p>
+<p>I needed to test a web service, which requires its client to call first its authenticate method, which returns an authentication token called 'certificate', which is then used in subsequent requests.</p>
+<p>&nbsp;</p>
+<p>A basic implementation</p>
+<p>&nbsp;</p>
+<p>0. Setup</p>
+<p>Download JMeter 2.3.4 and two dependencies, Java Mail API (mail.jar) and JavaBeans Activation Framework (activation.jar), necessary for the JMeter's web service sampler. Put the JARs in JMeter's lib/ folder.</p>
+<p>1. Create a web service (WS) test plan, as described in the tutorial (in my case it contains two WS calls)</p>
+<p>Well, follow the tutorial :-). Then duplicate the web service call sampler, call the first one WS: Authenticate with Saba and the other one WS: PF - Update employees.</p>
+<p>2. Add the User Defined Variables config element to the test plan and define there a variable for transferring the response data</p>
+<p>We will need a variable to hold the data that we want to transfer from the 1st response to a subsequent request. Therefore open the test plan, right-click on Thread Group &gt; Add &gt; Config Element &gt; User Defined Variables. Add there a variable named sabaCertificate. You can leave its Value empty.</p>
+<p>3. Add an XPath Extractor Post Processor to the first WS call to extract the value of interest into the user-defined variable</p>
+<p>Now we will extract the "certificate" data from the first response. The response may look like this (I used Eclipse' TCP Monitor to capture the SOAP communication):</p>
+<pre class="language-markup"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+ &lt;soapenv:Body&gt;
+ 	&lt;saba:certificate xmlns:saba="http://www.saba.com/xml/infoservices"&gt;31323930326436636637635&lt;/saba:certificate&gt;
+ &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</code></pre>
+<p>To extract the value of the element &lt;saba:certificate&gt;:</p>
+<p>Right-click on the first WS call (WS: Authenticate with Saba) and Add &gt; Post Processors &gt; XPath Extractor</p>
+<p>For the Reference Name, type sabaCertificate (the user variable we've created earlier)</p>
+<p>For the XPath query, type //*[local-name()='certificate']/text()</p>
+<p>Problem with namespaces: Beware that JMeter 2.3.4 supports only namespaces declared on the root element and thus the XPath query //saba:certificate wouldn't work. The documentation for XPath Extractor's attribute "Use Namespace?" provides a workaround based on using the functions local-name() and namespace-uri() to match the local tag name and the URI associated with its namespace, which I've partly used.</p>
+<p>You can test your XPath for example in the Allans Online XPath Tester</p>
+<p>&nbsp;</p>
+<p>4. Add a BeanShell PreProcessor to the second call, which will replace a placeholder in the WS call's XML data with the value of that variable</p>
+<p>Now we need to get the "certificate" into the subsequent web service request. I have put the placeholder "#sabaCertificate#" into the SOPA request, at the place where the actual authentication token shall be. Now we will arrange for its replacement with the actual value:</p>
+<p>Right-click on the second WS call (WS: PF - Update employees) and Add &gt; Pre Processors &gt; BeanShell PreProcessor (BeanShell is a scripting language with Java syntax and is included in JMeter)</p>
+<p>Type in the following script (notice that sampler is a variable provided by JMeter and refers to the parent WS call; check JavaDoc for details on the WebServiceSampler):</p>
+<p>&nbsp;</p>
+<p>Case 1: SOAP request specified directly in the attribute Soap/XML-RPC Data</p>
+<pre class="language-java"><code>import org.apache.jmeter.protocol.http.sampler.WebServiceSampler;
+WebServiceSampler wsSampler = (WebServiceSampler) sampler;
+String requestWithCertif = wsSampler.getXmlData().replaceFirst("#sabaCertificate#", vars.get("sabaCertificate"));
+wsSampler.setXmlData(requestWithCertif);</code></pre>
+<p>Case 2: The SOAP request is read from a file (attribute File with SOAP XML Data)</p>
+<p>If the request data is read from a file then it's a bit more complex because we need to load its content.</p>
+<pre class="language-java"><code>import org.apache.jmeter.protocol.http.sampler.WebServiceSampler;
+import java.io.*;
+
+WebServiceSampler wsSampler = (WebServiceSampler) sampler;
+
+BufferedReader xmlReader = new BufferedReader( new InputStreamReader(
+	new FileInputStream(wsSampler.getXmlFile())
+	, java.nio.charset.Charset.forName("UTF-8")
+));
+
+StringBuffer xmlData = new StringBuffer();
+
+String line;
+while( (line = xmlReader.readLine()) != null) { xmlData.append(line).append('\n'); }
+
+String requestWithCertif = xmlData.toString().replaceFirst("#sabaCertificate#", vars.get("sabaCertificate"));
+
+wsSampler.setXmlData(requestWithCertif);
+wsSampler.setXmlFile("") ; // a file would override the data
+
+// print("XML set: " + requestWithCertif); // print to the console JMeter was started from</code></pre>
+<p>Well, that's it!</p>
+<p>Going advanced: Reading requests from several files</p>
+<p>The approach described above makes it possible to send a request based on a single file. But what if we want to send a different data with each repetition of the test, e.g. to negate effects of caching? Well, there is a couple of ways to achieve that. I've chosen the most flexible one, though absolutely not the easiest one to implement.</p>
+<p>&nbsp;</p>
+<p>The trick is:</p>
+<p>Create a BeanShell Sampler. The sampler will list all files in a particular directory and store their paths into numbered variables (G_updateEmployeesWsRequestFile_1 etc., must start with 1), which will be then used by a ForEach Controller.</p>
+<p>Put all the test elements from the basic test plan under a ForEach Controller, which follows the BeanShell Sampler. Configure it to use the variables generated by the BeanShell Sampler and store the current file name in the variable G_updateEmployeesWsRequestFile.</p>
+<p>In the web service request element, replace the content of the Filename field with a reference to that variable: ${G_updateEmployeesWsRequestFile}</p>
+<p>The BeanShell Sampler "Generate WS request file names"</p>
+<pre class="language-java"><code>import java.io.*;
+
+print("Generating files...");
+log.info("BeanShell Sampler: Generating request file names...");
+
+File requestsDir = new File("/tmp/wsRequests");
+String[] requestFiles = requestsDir.list();
+
+for(int i=0; i&lt;requestFiles.length; ++i) {
+	String varName = "G_updateEmployeesWsRequestFile_" + (i+1);
+	vars.put(
+		varName
+		, requestsDir.getAbsolutePath()  + File.separatorChar  + requestFiles[i]
+	);
+	// print("var created: " + varName + "=" + vars.get(varName));
+}
+
+log.info("BeanShell Sampler: FINISHED generating request file names from dir " +
+	requestsDir + "; files are: " + java.util.Arrays.asList(requestFiles));
+
+return "soap input files generated";</code></pre>
+<p>The ForEach Controller "ForEach request file"</p>
+<p>The controller's configuration is simple:</p>
+<p>Input variable prefix: G_updateEmployeesWsRequestFile</p>
+<p>Output variable name: G_updateEmployeesWsRequestFile</p>
+<p>Add "_" before before number: [x] (checked)</p>
+<p>Summary</p>
+<p>We've parametrized the test by a set of files with SOAP requests that are read from a folder and supplied sequentially to the test thanks to the ForEach Controller.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p></p>
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+                </div>
+            </div>
+
+        <div class="article">
+            <div class="article-meta">
+                <ul class="tags">
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="additional-info">
+                <div class="related-box promo">
+                    <a href="/blog/41/find-total-number-of-set-having-given-combination-sum./">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/908c9230-4049-4395-ab26-8f67e2999302_combination-sum.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/41/find-total-number-of-set-having-given-combination-sum./">Find Total Number of Set Having given Combination Sum.</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/52/how-to-find-longest-common-subsequence-/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/c7357e0f-63f6-4670-b96d-4dc337b28500_longest-common-subsequence.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/52/how-to-find-longest-common-subsequence-/">How to Find Longest Common Subsequence ?</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/59/how-to-solve-coin-change-problem-using-dynamic-programming-for-minimum-number-of-ways-possible/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/450a3f20-633e-4f13-aa8e-dce34b85cf72_make-change.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/59/how-to-solve-coin-change-problem-using-dynamic-programming-for-minimum-number-of-ways-possible/">How to Solve Coin Change Problem using Dynamic Programming for Minimum number of ways possible?</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/90/how-to-detect-and-print-the-start-of-a-loop-in-a-circular-linked-list/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/af132682-62fb-4cb4-b899-5527cc0e05d0_circular-loop.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/90/how-to-detect-and-print-the-start-of-a-loop-in-a-circular-linked-list/">How to detect and print the start of a Loop in a circular Linked List?</a></p>
+                </div>
+            <!--sumitstart<amp-ad width="100vw" height="320"
+                    type="adsense"
+                    data-ad-client="ca-pub-1068871795581451"
+                    data-ad-slot="7001708883"
+                    data-auto-format="rspv"
+                    data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>sumitend-->
+
+            <div class="related-box">
+                <h3>Categories</h3>
+                <ul>
+                </ul>
+            </div>
+            <div class="related-box promo">
+                <!--sumitstart<amp-ad width="100vw" height="320"
+                        type="adsense"
+                        data-ad-client="ca-pub-1068871795581451"
+                        data-ad-slot="7001708883"
+                        data-auto-format="rspv"
+                        data-full-width="">
+                    <div overflow=""></div>
+                </amp-ad>sumitend-->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content content-width">
+            <div class="footer-menu">
+                <div class="footer-item">
+                    <h2>About AskGif</h2>
+                    <p>
+                        AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission
+                        to make people smile. Keep smiling and keep sharing
+                    </p><br>
+                    <a href="https://askgif.com/about-us/">Read More</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Sarkari Support &amp; Help</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/faq/">FAQs</a></li>
+                        <li>Have Questions? Email us @ support[at]askgif[dot]com</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2>Follow us</h2>
+                    <p>Adhe Idhar Jao Adhe Udhar Jao</p>
+                    <p>Baki hamare piche ao</p>
+                </div>
+                <div class="footer-item">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/?lang=en">English</a></li>
+                        <li><a href="https://askgif.com/?lang=hi">हिंदी</a></li>
+                        <li><a href="https://askgif.com/terms-of-service/">Terms of Service</a></li>
+                        <li><a href="https://askgif.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://askgif.com/editor/">Editor</a></li>
+                        <li><a href="https://askgif.com/contributors/">Developers & Contributors</a></li>
+                        <li><a href="https://askgif.com/sitemap.xml">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a rel="ugc nofollow" href="https://www.facebook.com/askgifdotcom/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://twitter.com/askgifdotcom"><i class="fab fa-twitter"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.pinterest.com/askgifdotcom/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.instagram.com/askgifdotcom/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.tumblr.com/blog/askgifdotcom"><i class="fab fa-tumblr"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="meta-content">
+                <p>Copyright 2021 | Designed by <a href="https://askgif.com/">Askgif</a> | Last Cached: 10/30/2021 9:09:37 AM | A</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

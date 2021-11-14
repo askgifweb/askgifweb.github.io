@@ -1,0 +1,857 @@
+﻿
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <link rel="shortcut icon" href="https://shotcutdotcom.github.io/static/images/favicon.ico" type="image/png">
+    <title>Implementing User Signup using Facebook Data. - Blog - Find Best Reads of All Time on AskGif</title>
+
+    <link rel="canonical" href="https://askgif.com/blog/439/implementing-user-signup-using-facebook-data/">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://askgif.com/",
+        "headline": "AskGif",
+        "datePublished": "2019/08/21",
+        "dateModified":  "2019/08/21",
+        "description": "Share this Implementing User Signup using Facebook Data. Blog and explore more",
+        "author": {
+        "@type": "Person",
+        "name": "Sumit Chourasia"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Askgif",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/data/master/askgif-static/askgif_logo.png"
+        }
+        },
+        "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/AmpImage/main/Blogs/9546540c-ed20-4ebe-8e98-38a73bb67167_fb-login.jpg",
+        "height": 1280,
+        "width": 857
+        }
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom=''>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            transition: all 0.2s linear;
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content-width {
+            width: 80%;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 50px 0px;
+            line-height: 160%;
+        }
+
+        h1 {
+            font-size: 240%;
+            line-height: 120%;
+            margin: 20px 0px;
+        }
+
+        h2 {
+            font-size: 140%;
+            margin: 30px 0px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .subtext {
+            text-align: left;
+            font-weight: 400;
+            color: #a5a5a5;
+            font-size: 90%;
+        }
+
+        .branding {
+            font-size: 90%;
+            color: #fff;
+        }
+
+            .branding a {
+                color: inherit;
+            }
+
+                .branding a:hover {
+                    color: #19B5FE;
+                }
+
+        .button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #19B5FE;
+            font-weight: 700;
+            text-align: center;
+        }
+
+            .button:hover {
+                background: #3ebf43;
+            }
+
+        /* Header */
+        header,
+        footer,
+        #sidebar {
+            background: #2c3e50;
+        }
+
+        header {
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        #sidebar {
+            width: 300px;
+            padding: 1.5rem;
+        }
+
+        .sidebar-menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .amp-custom-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem;
+            color: #fff;
+        }
+
+        #sidebar-close {
+            cursor: pointer;
+        }
+
+        .sidevar-nav-item {
+            padding: 10px 0px;
+            margin: 0px;
+            display: block;
+            list-style: none;
+            color: #021425;
+            text-transform: capitalize;
+            letter-spacing: .6px;
+            line-height: 2.0625;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .sidevar-nav-item:hover {
+                color: #19B5FE;
+            }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        #sidebar-menu-btn {
+            background: 0 0;
+            border: 0;
+            color: #fff;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        /* POST */
+        #article-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .article {
+            flex-basis: 70%;
+            padding-right: 30px;
+            border-right: 1px solid #e3e3e3;
+        }
+
+            .article h1 {
+                margin-top: 0px;
+            }
+
+        .article-image,
+        .article-body {
+            margin: 20px 0px;
+            width: 340px;
+        }
+
+        .author-info {
+            color: #9d9d9d;
+            font-weight: bold;
+        }
+
+        .article a {
+            color: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        pre {
+            font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            margin-bottom: 10px;
+            overflow: auto;
+            width: auto;
+            padding: 5px;
+            background-color: #eee;
+            width: 650px !ie7;
+            padding-bottom: 20px !ie7;
+            max-height: 600px;
+        }
+
+        .article a.button {
+            margin: 20px 10px 20px 0px;
+            display: inline-block;
+            width: 120px;
+        }
+
+            .article a.button,
+            .article a.button:hover {
+                color: #fff;
+            }
+
+        .article a:hover {
+            color: #19B5FE;
+        }
+
+        #additional-info {
+            flex-basis: 30%;
+            padding-left: 30px;
+        }
+
+            #additional-info:before {
+                display: block;
+                height: 6px;
+                background-color: #2c3e50;
+                content: ' ';
+                width: 50px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+        .promo,
+        .related-box ul li {
+            border: 1px solid #e3e3e3;
+        }
+
+        .promo {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .article-meta ul,
+        .related-box ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .related-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+            .related-box a.imp-link {
+                color: #3ebf43;
+                font-weight: 700;
+            }
+
+        .related-box ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+            .related-box ul li:hover,
+            .related-box a:hover {
+                text-decoration: underline;
+                background: #ebebeb;
+            }
+
+        .article-meta {
+            margin: 30px 0px;
+        }
+
+            .article-meta ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+        .article .article-meta a.tag {
+            margin-right: 5px;
+            background: #ebebeb;
+            font-size: 90%;
+            text-decoration: none;
+            padding: 5px;
+            color: #414141;
+            text-transform: uppercase;
+        }
+
+        .article .article-meta .tag:hover {
+            background: #dadada;
+        }
+
+        .article-meta li {
+            list-style: none;
+        }
+
+        .blockquote-wrapper {
+            position: relative;
+        }
+
+        .blockquote {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 90%;
+            font-style: italic;
+            text-align: justify;
+        }
+
+            .blockquote::before {
+                content: "“";
+                position: absolute;
+                top: 0.25em;
+                left: -0.15em;
+                color: #e7e6e4;
+                font-size: 170px;
+                z-index: -1;
+            }
+
+        cite {
+            display: block;
+            text-align: right;
+            padding: 10px 0px;
+        }
+
+        .amp-components .component {
+            margin: 30px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-darkturquoise {
+            background-color: darkturquoise;
+        }
+        /* Footer */
+        footer {
+            color: #fff;
+            text-align: center;
+        }
+
+        .article {
+            width: 100%;
+        }
+
+        #additional-info {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            h1 {
+                font-size: 140%;
+            }
+
+            .article {
+                padding-right: 20px;
+            }
+
+            #additional-info {
+                padding-left: 20px;
+            }
+
+            .related-box ul li, .promo p, .promo a {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .article,
+            #additional-info {
+                border: 0px;
+                flex-basis: 100%;
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 160%;
+            }
+
+            .article a.button,
+            .article .article-meta a.tag li {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 120%;
+            }
+
+            .content-width {
+                width: 90%;
+            }
+
+            .content {
+                padding: 30px 0px;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            header {
+                padding: 5px 0px;
+            }
+
+            #article-wrapper {
+                flex-direction: column;
+            }
+
+            .blockquote {
+                margin: 50px 0px;
+                font-size: 100%;
+            }
+
+            .article-meta ul {
+                flex-wrap: wrap;
+            }
+
+            .article-meta a.tag {
+                margin-bottom: 10px;
+            }
+
+            .article a.button {
+                margin: 10px 10px 10px 0px;
+            }
+
+            .branding p, .branding a {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!--sumitstart<script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>sumitend-->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+
+<body>
+    <!--sumitstart<amp-auto-ads type="adsense"
+                  data-ad-client="ca-pub-1068871795581451">
+    </amp-auto-ads>sumitend-->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+            {
+            "vars": {
+            "account": "UA-118778979-1"
+            },
+            "triggers": {
+            "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+            }
+            }
+            }
+        </script>
+    </amp-analytics>
+    <header>
+        <div class="menu content-width">
+            <div class="logo">
+                <a href="https://askgif.com/">
+                    AskGif<sup>TM</sup>
+                </a>
+            </div>
+            <button id="sidebar-menu-btn" on="tap:sidebar.toggle">☰</button>
+        </div>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="amp-custom-sidebar-header">
+            <div role="button" aria-label="close sidebar" on="tap:sidebar.toggle" tabindex="0" id="sidebar-close">✕</div>
+        </div>
+        <ul class="sidebar-menu">
+            <a href="https://askgif.com/" class="sidevar-nav-item">
+                <li>Gifs</li>
+            </a>
+            <a href="https://askgif.com/blog/" class="sidevar-nav-item">
+                <li>Blogs</li>
+            </a>
+        </ul>
+    </amp-sidebar>
+    <section class="content content-width" id="article-wrapper">
+            <div class="article">
+                <a href="/blog/439/implementing-user-signup-using-facebook-data">
+                    <h2 class="title">
+                        Implementing User Signup using Facebook Data.
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Aug 21, 2019
+                </div>
+                <div class="article-image">
+                    <a href="/blog/439/implementing-user-signup-using-facebook-data/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/9546540c-ed20-4ebe-8e98-38a73bb67167_fb-login.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category/coding/"><li>coding</li></a>
+                            <a class="tag" href="/blog/tags/php/"><li>php</li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p><p>Using Facebook registration plug-in users can easily sign up on your website using Facebook data. With one simple Facebook login, the form will be filled with user appropriate data. This plug-in is a simple iframe you can place it anywhere on your webpage. You can also add a custom field if Facebook doesn&rsquo;t have.</p>
+<p>&nbsp;</p>
+<p>1. Creating a Facebook App</p>
+<p>a) The first step is to create a Facebook App.</p>
+<p>b) Give a name for the Application and agree with the Terms and Conditions.</p>
+<p>c) On the Web Site tab give the values for siteURL and site domain</p>
+<p>d) Store the App ID and App Secret.</p>
+<p>&nbsp;</p>
+<p>2. Designing the Database</p>
+<p>Create a table depending upon the fields we required in the registration process.</p>
+<pre class="language-javascript"><code>CREATE TABLE users
+(
+uid int(11) PRIMARY KEY AUTO_INCREMENT,
+fullname varchar(50),
+email varchar(50) UNIQUE,
+password varchar(50),
+gender varchar(6),
+dob varchar(16)
+);</code></pre>
+<p>&nbsp;</p>
+<p>3. Designing the Registration Form</p>
+<p>a) We are using iframe provided by facebook to display the registration form.</p>
+<p>b) You all have to do is just replace client_id and redirect_uri with your Facebook App Id and the redirection url.</p>
+<p>c) In this tutorial, we are designing a form with name, email, password, gender, date of birth and captcha.</p>
+<p>&nbsp;</p>
+<p>registration.php</p>
+<pre class="language-javascript"><code>&lt;iframe allowtransparency="true" frameborder="no" height="600" scrolling="auto" src="http://www.facebook.com/plugins/registration.php?
+client_id=183620578322567&amp;
+redirect_uri=http://example.com/store_user_data.php?&amp;
+fields=[
+{"name":"name"},
+{"name":"email"},
+{"name":"password"},
+{"name":"gender"},
+{"name":"birthday"},
+{"name":"captcha"}
+]"
+scrolling="auto"
+frameborder="no" 
+style="border: none;" 
+width="500"
+height="600"&gt;
+&lt;/iframe&gt;</code></pre>
+<p>&nbsp;</p>
+<p>4. Reading and Storing the Callback Data</p>
+<p>store_user_data.php</p>
+<pre class="language-javascript"><code>&lt;?php
+define('FACEBOOK_APP_ID', 'your_app_id'); // Place your App Id here
+define('FACEBOOK_SECRET', 'your_app_secret'); // Place your App Secret Here
+
+// No need to change the function body
+function parse_signed_request($signed_request, $secret) 
+{
+list($encoded_sig, $payload) = explode('.', $signed_request, 2);
+// decode the data
+$sig = base64_url_decode($encoded_sig);
+$data = json_decode(base64_url_decode($payload), true);
+if (strtoupper($data['algorithm']) !== 'HMAC-SHA256')
+{
+error_log('Unknown algorithm. Expected HMAC-SHA256');
+return null;
+}
+
+// check sig
+$expected_sig = hash_hmac('sha256', $payload, $secret, $raw = true);
+if ($sig !== $expected_sig) 
+{
+error_log('Bad Signed JSON signature!');
+return null;
+}
+return $data;
+}
+function base64_url_decode($input) 
+{
+return base64_decode(strtr($input, '-_', '+/'));
+}
+if ($_REQUEST) 
+{
+$response = parse_signed_request($_REQUEST['signed_request'],
+FACEBOOK_SECRET);
+
+$name = $response["registration"]["name"];
+$email = $response["registration"]["email"];
+$password = $response["registration"]["password"];
+$gender = $response["registration"]["gender"];
+$dob = $response["registration"]["birthday"];
+
+// Connecting to database
+mysql_connect('DATABASE_HOST', 'YOUR_USERNAME', 'YOUR_PASSWORD');
+mysql_select_db('YOUR_DATABASE');
+
+// Inserting into users table
+$result = mysql_query("INSERT INTO users (name, email, password, gender, dob) VALUES ('$name', '$email', '$password', '$gender', '$dob')");
+
+if($result){
+// User successfully stored
+}
+else
+{
+// Error in storing
+}
+}
+else 
+{
+echo '$_REQUEST is empty';
+}
+?&gt;</code></pre>
+<p>&nbsp;</p>
+<p>Adding a custom field</p>
+<p>If you want to request user for additional information that facebook may not have then added a custom field in JSON string.</p>
+<pre class="language-javascript"><code>{"name":"phone", "description":"Phone Number", "type":"text"}</code></pre></p>
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+                </div>
+            </div>
+
+        <div class="article">
+            <div class="article-meta">
+                <ul class="tags">
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="additional-info">
+                <div class="related-box promo">
+                    <a href="/blog/441/implementing-flickr-style-live-title-edit-using-jquery-and-ajax/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/e54b9132-0922-4474-8092-61a5b3813615_flickr.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/441/implementing-flickr-style-live-title-edit-using-jquery-and-ajax/">Implementing Flickr Style Live Title Edit Using Jquery and Ajax</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/484/implementing-amazon-simple-email-service-smtp-using-php-mailer./">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/e7d81ae7-a27a-40d3-8006-c48f90b9ec83_phpmailer.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/484/implementing-amazon-simple-email-service-smtp-using-php-mailer./">Implementing Amazon Simple Email Service SMTP using PHP Mailer.</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/487/implementing-simple-drop-down-menu-using-jquery-and-css/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/5513261b-7a63-4914-8a75-031bdcbb2af4_dropdown.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/487/implementing-simple-drop-down-menu-using-jquery-and-css/">Implementing Simple Drop Down Menu Using Jquery and CSS</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/582/implementing-twitter-style-load-more-results-using-jquery-and-ajax./">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/613fae1a-b76a-4c7f-b0fc-e092dbd7b38a_twitter-load-more.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/582/implementing-twitter-style-load-more-results-using-jquery-and-ajax./">Implementing Twitter Style Load More Results using jQuery and Ajax.</a></p>
+                </div>
+            <!--sumitstart<amp-ad width="100vw" height="320"
+                    type="adsense"
+                    data-ad-client="ca-pub-1068871795581451"
+                    data-ad-slot="7001708883"
+                    data-auto-format="rspv"
+                    data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>sumitend-->
+
+            <div class="related-box">
+                <h3>Categories</h3>
+                <ul>
+                </ul>
+            </div>
+            <div class="related-box promo">
+                <!--sumitstart<amp-ad width="100vw" height="320"
+                        type="adsense"
+                        data-ad-client="ca-pub-1068871795581451"
+                        data-ad-slot="7001708883"
+                        data-auto-format="rspv"
+                        data-full-width="">
+                    <div overflow=""></div>
+                </amp-ad>sumitend-->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content content-width">
+            <div class="footer-menu">
+                <div class="footer-item">
+                    <h2>About AskGif</h2>
+                    <p>
+                        AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission
+                        to make people smile. Keep smiling and keep sharing
+                    </p><br>
+                    <a href="https://askgif.com/about-us/">Read More</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Sarkari Support &amp; Help</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/faq/">FAQs</a></li>
+                        <li>Have Questions? Email us @ support[at]askgif[dot]com</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2>Follow us</h2>
+                    <p>Adhe Idhar Jao Adhe Udhar Jao</p>
+                    <p>Baki hamare piche ao</p>
+                </div>
+                <div class="footer-item">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/?lang=en">English</a></li>
+                        <li><a href="https://askgif.com/?lang=hi">हिंदी</a></li>
+                        <li><a href="https://askgif.com/terms-of-service/">Terms of Service</a></li>
+                        <li><a href="https://askgif.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://askgif.com/editor/">Editor</a></li>
+                        <li><a href="https://askgif.com/contributors/">Developers & Contributors</a></li>
+                        <li><a href="https://askgif.com/sitemap.xml">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a rel="ugc nofollow" href="https://www.facebook.com/askgifdotcom/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://twitter.com/askgifdotcom"><i class="fab fa-twitter"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.pinterest.com/askgifdotcom/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.instagram.com/askgifdotcom/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.tumblr.com/blog/askgifdotcom"><i class="fab fa-tumblr"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="meta-content">
+                <p>Copyright 2021 | Designed by <a href="https://askgif.com/">Askgif</a> | Last Cached: 10/30/2021 9:09:42 AM | A</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

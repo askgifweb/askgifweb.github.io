@@ -1,0 +1,1008 @@
+﻿
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <link rel="shortcut icon" href="https://shotcutdotcom.github.io/static/images/favicon.ico" type="image/png">
+    <title>Hash-Table Blogs - Find Best Reads of All Time</title>
+
+    <link rel="canonical" href="https://askgif.com/blog/tags/hash-table/">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://askgif.com/",
+        "headline": "AskGif",
+        "datePublished": "2020/10/24",
+        "dateModified":  "0001/01/01",
+        "description": "AskGif is the place to explore and share the awesome Hash-Table Blogs with a comic punch",
+        "author": {
+        "@type": "Person",
+        "name": "Sumit Chourasia"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Askgif",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/data/master/askgif-static/askgif_logo.png"
+        }
+        },
+        "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/AmpImage/main/Blogs/b574251c-e9c0-4be6-9bc1-7c86f8da1806.jpg",
+        "height": 1280,
+        "width": 857
+        }
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom=''>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            transition: all 0.2s linear;
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content-width {
+            width: 80%;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 50px 0px;
+            line-height: 160%;
+        }
+
+        h1 {
+            font-size: 240%;
+            line-height: 120%;
+            margin: 20px 0px;
+        }
+
+        h2 {
+            font-size: 140%;
+            margin: 30px 0px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .subtext {
+            text-align: left;
+            font-weight: 400;
+            color: #a5a5a5;
+            font-size: 90%;
+        }
+
+        .branding {
+            font-size: 90%;
+            color: #fff;
+        }
+
+            .branding a {
+                color: inherit;
+            }
+
+                .branding a:hover {
+                    color: #19B5FE;
+                }
+
+        .button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #19B5FE;
+            font-weight: 700;
+            text-align: center;
+        }
+
+            .button:hover {
+                background: #3ebf43;
+            }
+
+        /* Header */
+        header,
+        footer,
+        #sidebar {
+            background: #2c3e50;
+        }
+
+        header {
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        #sidebar {
+            width: 300px;
+            padding: 1.5rem;
+        }
+
+        .sidebar-menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .amp-custom-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem;
+            color: #fff;
+        }
+
+        #sidebar-close {
+            cursor: pointer;
+        }
+
+        .sidevar-nav-item {
+            padding: 10px 0px;
+            margin: 0px;
+            display: block;
+            list-style: none;
+            color: #021425;
+            text-transform: capitalize;
+            letter-spacing: .6px;
+            line-height: 2.0625;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .sidevar-nav-item:hover {
+                color: #19B5FE;
+            }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        #sidebar-menu-btn {
+            background: 0 0;
+            border: 0;
+            color: #fff;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        /* POST */
+        #article-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .article {
+            flex-basis: 70%;
+            padding-right: 30px;
+            border-right: 1px solid #e3e3e3;
+        }
+
+            .article h1 {
+                margin-top: 0px;
+            }
+
+        .article-image,
+        .article-body {
+            margin: 20px 0px;
+        }
+
+        .author-info {
+            color: #9d9d9d;
+            font-weight: bold;
+        }
+
+        .article a {
+            color: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .article a.button {
+            margin: 20px 10px 20px 0px;
+            display: inline-block;
+            width: 120px;
+        }
+
+            .article a.button,
+            .article a.button:hover {
+                color: #fff;
+            }
+
+        .article a:hover {
+            color: #19B5FE;
+        }
+
+        #additional-info {
+            flex-basis: 30%;
+            padding-left: 30px;
+        }
+
+            #additional-info:before {
+                display: block;
+                height: 6px;
+                background-color: #2c3e50;
+                content: ' ';
+                width: 50px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+        .promo,
+        .related-box ul li {
+            border: 1px solid #e3e3e3;
+        }
+
+        .promo {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .article-meta ul,
+        .related-box ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .related-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+            .related-box a.imp-link {
+                color: #3ebf43;
+                font-weight: 700;
+            }
+
+        .related-box ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+            .related-box ul li:hover,
+            .related-box a:hover {
+                text-decoration: underline;
+                background: #ebebeb;
+            }
+
+        .article-meta {
+            margin: 30px 0px;
+        }
+
+            .article-meta ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+        .article .article-meta a.tag {
+            margin-right: 5px;
+            background: #ebebeb;
+            font-size: 90%;
+            text-decoration: none;
+            padding: 5px;
+            color: #414141;
+            text-transform: uppercase;
+        }
+
+        .article .article-meta .tag:hover {
+            background: #dadada;
+        }
+
+        .article-meta li {
+            list-style: none;
+        }
+
+        .blockquote-wrapper {
+            position: relative;
+        }
+
+        .blockquote {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 90%;
+            font-style: italic;
+            text-align: justify;
+        }
+
+            .blockquote::before {
+                content: "“";
+                position: absolute;
+                top: 0.25em;
+                left: -0.15em;
+                color: #e7e6e4;
+                font-size: 170px;
+                z-index: -1;
+            }
+
+        cite {
+            display: block;
+            text-align: right;
+            padding: 10px 0px;
+        }
+
+        .amp-components .component {
+            margin: 30px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-darkturquoise {
+            background-color: darkturquoise;
+        }
+        /* Footer */
+        footer {
+            color: #fff;
+            text-align: center;
+        }
+
+        .article {
+            width: 100%;
+        }
+
+        .article-body {
+            white-space: break-spaces;
+        }
+
+        #additional-info {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            h1 {
+                font-size: 140%;
+            }
+
+            .article {
+                padding-right: 20px;
+            }
+
+            #additional-info {
+                padding-left: 20px;
+            }
+
+            .related-box ul li, .promo p, .promo a {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .article,
+            #additional-info {
+                border: 0px;
+                flex-basis: 100%;
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 160%;
+            }
+
+            .article a.button,
+            .article .article-meta a.tag li {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 120%;
+            }
+
+            .content-width {
+                width: 90%;
+            }
+
+            .content {
+                padding: 30px 0px;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            header {
+                padding: 5px 0px;
+            }
+
+            #article-wrapper {
+                flex-direction: column;
+            }
+
+            .blockquote {
+                margin: 50px 0px;
+                font-size: 100%;
+            }
+
+            .article-meta ul {
+                flex-wrap: wrap;
+            }
+
+            .article-meta a.tag {
+                margin-bottom: 10px;
+            }
+
+            .article a.button {
+                margin: 10px 10px 10px 0px;
+            }
+
+            .branding p, .branding a {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!--sumitstart<script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>sumitend-->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+
+<body>
+    <!--sumitstart<amp-auto-ads type="adsense"
+                  data-ad-client="ca-pub-1068871795581451">
+    </amp-auto-ads>sumitend-->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+            {
+            "vars": {
+            "account": "UA-118778979-1"
+            },
+            "triggers": {
+            "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+            }
+            }
+            }
+        </script>
+    </amp-analytics>
+    <header>
+        <div class="menu content-width">
+            <div class="logo">
+                <a href="https://askgif.com/">
+                    AskGif<sup>TM</sup>
+                </a>
+            </div>
+            <button id="sidebar-menu-btn" on="tap:sidebar.toggle">☰</button>
+        </div>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="amp-custom-sidebar-header">
+            <div role="button" aria-label="close sidebar" on="tap:sidebar.toggle" tabindex="0" id="sidebar-close">✕</div>
+        </div>
+        <ul class="sidebar-menu">
+            <a href="https://askgif.com/" class="sidevar-nav-item">
+                <li>Gifs</li>
+            </a>
+            <a href="https://askgif.com/blog/" class="sidevar-nav-item">
+                <li>Blogs</li>
+            </a>
+        </ul>
+    </amp-sidebar>
+    <section class="content content-width" id="article-wrapper">
+            <div class="article">
+                <a href="/blog/1636/two-strings-hashmap-easy-hackerrank/">
+                    <h2 class="title">
+                        Two Strings - HashMap - Easy - HackerRank
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Oct 24, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1636/two-strings-hashmap-easy-hackerrank/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_b574251c-e9c0-4be6-9bc1-7c86f8da1806.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>Given two strings, determine if they share a common substring. A substring may be as small as one character.&#xA;For example, the words &quot;a&quot;, &quot;and&quot;, &quot;art&quot; share the common substring . The words &quot;be&quot; and &quot;cat&quot; do not share a substring.&#xA;Function Description&#xA;Complete the function two</p>
+                    <p><a href="/blog/1636/two-strings-hashmap-easy-hackerrank/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1474/unique-number-of-occurrences-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Unique Number of Occurrences - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1474/unique-number-of-occurrences-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_e2af6f47-de8c-4573-95cb-8391d1fcb6e9.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>Given an array of integers arr, write a function that returns true if and only if the number of occurrences of each value in the array is unique.&#xA;Example 1:&#xA;Input: arr = [1,2,2,1,1,3]&lt;br /&gt;Output: true&lt;br /&gt;Explanation: The value 1 has 3 occurrences, 2 has 2 and 3 has 1. No two valu</p>
+                    <p><a href="/blog/1474/unique-number-of-occurrences-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1473/occurrences-after-bigram-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Occurrences After Bigram - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1473/occurrences-after-bigram-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_92ce66be-e50f-44e8-bb1a-241696066fab.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>Given words first and second, consider occurrences in some text of the form &quot;first second third&quot;, where second comes immediately after first, and third comes immediately after second.&#xA;For each such occurrence, add &quot;third&quot; to the answer, and return the answer.&#xA;&amp;nbsp;&#xA;Example 1</p>
+                    <p><a href="/blog/1473/occurrences-after-bigram-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1472/powerful-integers-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Powerful Integers - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1472/powerful-integers-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_656f9aa0-59e7-4cd0-90f5-8c0af90756b6.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>Given two positive integers x and y, an integer is powerful if it is equal to x^i &#x2B; y^j for some integers i &amp;gt;= 0 and j &amp;gt;= 0.&#xA;Return a list of all powerful integers that have value less than or equal to bound.&#xA;You may return the answer in any order. &amp;nbsp;In your answer, each v</p>
+                    <p><a href="/blog/1472/powerful-integers-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1471/n-repeated-element-in-size-2n-array-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        N-Repeated Element in Size 2N Array - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1471/n-repeated-element-in-size-2n-array-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_4e4169ca-87e7-434d-8b54-0eeb07735bd6.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>In an array A of size 2N, there are N&#x2B;1 unique elements, and exactly one of these elements is repeated N times.&#xA;Return the element repeated N times.&#xA;&amp;nbsp;&#xA;Example 1:&#xA;Input: [1,2,3,3]&lt;br /&gt;Output: 3&lt;br /&gt;Example 2:&#xA;Input: [2,1,2,5,3,2]&lt;br /&gt;Output: 2&lt;br /&gt;Exampl</p>
+                    <p><a href="/blog/1471/n-repeated-element-in-size-2n-array-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1470/verifying-an-alien-dictionary-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Verifying an Alien Dictionary - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1470/verifying-an-alien-dictionary-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_caaa6a37-2dda-43c5-b9ab-28a3018ff410.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.&#xA;Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only</p>
+                    <p><a href="/blog/1470/verifying-an-alien-dictionary-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1469/uncommon-words-from-two-sentences-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Uncommon Words from Two Sentences - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1469/uncommon-words-from-two-sentences-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_43f1b22f-c025-4087-a3d7-13e09e09af7b.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>We are given two sentences A and B. &amp;nbsp;(A sentence is a string of space separated words. &amp;nbsp;Each word consists only of lowercase letters.)&#xA;A word is uncommon if it appears exactly once in one of the sentences, and does not appear in the other sentence.&#xA;Return a list of all unc</p>
+                    <p><a href="/blog/1469/uncommon-words-from-two-sentences-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1468/subdomain-visit-count-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Subdomain Visit Count - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1468/subdomain-visit-count-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_1e180439-33c8-48a6-a66e-cccb59e28e28.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>A website domain like &quot;discuss.leetcode.com&quot; consists of various subdomains. At the top level, we have &quot;com&quot;, at the next level, we have &quot;leetcode.com&quot;, and at the lowest level, &quot;discuss.leetcode.com&quot;. When we visit a domain like &quot;discuss.leetcode.com&quot;, we will also visit the parent domains &quot;leet</p>
+                    <p><a href="/blog/1468/subdomain-visit-count-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1467/jewels-and-stones-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Jewels and Stones - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1467/jewels-and-stones-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_5a747969-e0b5-4c23-8130-fa2917011c4b.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>You&#x27;re given strings J representing the types of stones that are jewels, and S representing the stones you have. &amp;nbsp;Each character in S is a type of stone you have. &amp;nbsp;You want to know how many of the stones you have are also jewels.&#xA;The letters in J are guaranteed distinct, and all </p>
+                    <p><a href="/blog/1467/jewels-and-stones-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1466/shortest-completing-word/">
+                    <h2 class="title">
+                        Shortest Completing Word
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 30, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1466/shortest-completing-word/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_106f9cca-fb20-4894-91c6-0b6645098163.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>Given a string licensePlate and an array of strings words, find the shortest completing word in words.&#xA;A completing word is a word that contains all the letters in licensePlate. Ignore numbers and spaces in licensePlate, and treat letters as case insensitive. If a letter appears more than </p>
+                    <p><a href="/blog/1466/shortest-completing-word/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1464/longest-word-in-dictionary-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Longest Word in Dictionary - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 29, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1464/longest-word-in-dictionary-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_ab2ba357-1eb6-473a-a75e-b16072ccf447.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>Given a list of strings words representing an English Dictionary, find the longest word in words that can be built one character at a time by other words in words. If there is more than one possible answer, return the longest word with the smallest lexicographical order.&#xA;If there is no ans</p>
+                    <p><a href="/blog/1464/longest-word-in-dictionary-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+            <div class="article">
+                <a href="/blog/1463/design-hashmap-hash-table-easy-leetcode/">
+                    <h2 class="title">
+                        Design HashMap - Hash Table - Easy - LeetCode
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Sep 29, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1463/design-hashmap-hash-table-easy-leetcode/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_078ed58a-35ea-4193-badc-1ba6ca82c796.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category//"><li></li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p>Design a HashMap without using any built-in hash table libraries.&#xA;To be specific, your design should include these functions:&#xA;put(key, value) : Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value.&lt;br /&gt;get(key): Returns the value</p>
+                    <p><a href="/blog/1463/design-hashmap-hash-table-easy-leetcode/">read more...</a></p>
+                </div>
+            </div>
+
+        <!--sumitstart<amp-ad width="100vw" height="320"
+                type="adsense"
+                data-ad-client="ca-pub-1068871795581451"
+                data-ad-slot="7001708883"
+                data-auto-format="rspv"
+                data-full-width="">
+            <div overflow=""></div>
+        </amp-ad>sumitend-->
+
+        <div class="article">
+            <div class="article-meta">
+                <ul class="tags">
+                                    <a class="tag" href="https://askgif.com/blog/tags/hash-table/?page=1"><li>1</li></a>
+                                    <a class="tag" href="https://askgif.com/blog/tags/hash-table/?page=2"><li>2</li></a>
+                                    <a class="tag" href="https://askgif.com/blog/tags/hash-table/?page=3"><li>3</li></a>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="additional-info">
+            <div class="related-box">
+                <h3>Categories</h3>
+                <ul>
+                </ul>
+            </div>
+            <div class="related-box promo">
+                <!--sumitstart<amp-ad width="100vw" height="320"
+                        type="adsense"
+                        data-ad-client="ca-pub-1068871795581451"
+                        data-ad-slot="7001708883"
+                        data-auto-format="rspv"
+                        data-full-width="">
+                    <div overflow=""></div>
+                </amp-ad>sumitend-->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content content-width">
+            <div class="footer-menu">
+                <div class="footer-item">
+                    <h2>About AskGif</h2>
+                    <p>
+                        AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission
+                        to make people smile. Keep smiling and keep sharing
+                    </p><br>
+                    <a href="https://askgif.com/about-us/">Read More</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Sarkari Support &amp; Help</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/faq/">FAQs</a></li>
+                        <li>Have Questions? Email us @ support[at]askgif[dot]com</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2>Follow us</h2>
+                    <p>Adhe Idhar Jao Adhe Udhar Jao</p>
+                    <p>Baki hamare piche ao</p>
+                </div>
+                <div class="footer-item">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/?lang=en">English</a></li>
+                        <li><a href="https://askgif.com/?lang=hi">हिंदी</a></li>
+                        <li><a href="https://askgif.com/terms-of-service/">Terms of Service</a></li>
+                        <li><a href="https://askgif.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://askgif.com/editor/">Editor</a></li>
+                        <li><a href="https://askgif.com/contributors/">Developers & Contributors</a></li>
+                        <li><a href="https://askgif.com/sitemap.xml">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a rel="ugc nofollow" href="https://www.facebook.com/askgifdotcom/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://twitter.com/askgifdotcom"><i class="fab fa-twitter"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.pinterest.com/askgifdotcom/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.instagram.com/askgifdotcom/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.tumblr.com/blog/askgifdotcom"><i class="fab fa-tumblr"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="meta-content">
+                <p>Copyright 2021 | Designed by <a href="https://askgif.com/">Askgif</a> | Last Cached: 10/30/2021 8:53:12 AM | A</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

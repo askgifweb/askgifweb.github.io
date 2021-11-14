@@ -1,0 +1,789 @@
+﻿
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <link rel="shortcut icon" href="https://shotcutdotcom.github.io/static/images/favicon.ico" type="image/png">
+    <title>How to Design a system that scales to millions of users on AWS - Blog - Find Best Reads of All Time on AskGif</title>
+
+    <link rel="canonical" href="https://askgif.com/blog/1690/how-to-design-a-system-that-scales-to-millions-of-users-on-aws/">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://askgif.com/",
+        "headline": "AskGif",
+        "datePublished": "2020/11/20",
+        "dateModified":  "2020/11/20",
+        "description": "Share this How to Design a system that scales to millions of users on AWS Blog and explore more",
+        "author": {
+        "@type": "Person",
+        "name": "Sumit Chourasia"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Askgif",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/data/master/askgif-static/askgif_logo.png"
+        }
+        },
+        "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/AmpImage/main/Blogs/c4c206e1-63c2-46f8-a9b3-076b94e481a7.png",
+        "height": 1280,
+        "width": 857
+        }
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom=''>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            transition: all 0.2s linear;
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content-width {
+            width: 80%;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 50px 0px;
+            line-height: 160%;
+        }
+
+        h1 {
+            font-size: 240%;
+            line-height: 120%;
+            margin: 20px 0px;
+        }
+
+        h2 {
+            font-size: 140%;
+            margin: 30px 0px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .subtext {
+            text-align: left;
+            font-weight: 400;
+            color: #a5a5a5;
+            font-size: 90%;
+        }
+
+        .branding {
+            font-size: 90%;
+            color: #fff;
+        }
+
+            .branding a {
+                color: inherit;
+            }
+
+                .branding a:hover {
+                    color: #19B5FE;
+                }
+
+        .button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #19B5FE;
+            font-weight: 700;
+            text-align: center;
+        }
+
+            .button:hover {
+                background: #3ebf43;
+            }
+
+        /* Header */
+        header,
+        footer,
+        #sidebar {
+            background: #2c3e50;
+        }
+
+        header {
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        #sidebar {
+            width: 300px;
+            padding: 1.5rem;
+        }
+
+        .sidebar-menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .amp-custom-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem;
+            color: #fff;
+        }
+
+        #sidebar-close {
+            cursor: pointer;
+        }
+
+        .sidevar-nav-item {
+            padding: 10px 0px;
+            margin: 0px;
+            display: block;
+            list-style: none;
+            color: #021425;
+            text-transform: capitalize;
+            letter-spacing: .6px;
+            line-height: 2.0625;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .sidevar-nav-item:hover {
+                color: #19B5FE;
+            }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        #sidebar-menu-btn {
+            background: 0 0;
+            border: 0;
+            color: #fff;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        /* POST */
+        #article-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .article {
+            flex-basis: 70%;
+            padding-right: 30px;
+            border-right: 1px solid #e3e3e3;
+        }
+
+            .article h1 {
+                margin-top: 0px;
+            }
+
+        .article-image,
+        .article-body {
+            margin: 20px 0px;
+            width: 340px;
+        }
+
+        .author-info {
+            color: #9d9d9d;
+            font-weight: bold;
+        }
+
+        .article a {
+            color: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        pre {
+            font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            margin-bottom: 10px;
+            overflow: auto;
+            width: auto;
+            padding: 5px;
+            background-color: #eee;
+            width: 650px !ie7;
+            padding-bottom: 20px !ie7;
+            max-height: 600px;
+        }
+
+        .article a.button {
+            margin: 20px 10px 20px 0px;
+            display: inline-block;
+            width: 120px;
+        }
+
+            .article a.button,
+            .article a.button:hover {
+                color: #fff;
+            }
+
+        .article a:hover {
+            color: #19B5FE;
+        }
+
+        #additional-info {
+            flex-basis: 30%;
+            padding-left: 30px;
+        }
+
+            #additional-info:before {
+                display: block;
+                height: 6px;
+                background-color: #2c3e50;
+                content: ' ';
+                width: 50px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+        .promo,
+        .related-box ul li {
+            border: 1px solid #e3e3e3;
+        }
+
+        .promo {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .article-meta ul,
+        .related-box ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .related-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+            .related-box a.imp-link {
+                color: #3ebf43;
+                font-weight: 700;
+            }
+
+        .related-box ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+            .related-box ul li:hover,
+            .related-box a:hover {
+                text-decoration: underline;
+                background: #ebebeb;
+            }
+
+        .article-meta {
+            margin: 30px 0px;
+        }
+
+            .article-meta ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+        .article .article-meta a.tag {
+            margin-right: 5px;
+            background: #ebebeb;
+            font-size: 90%;
+            text-decoration: none;
+            padding: 5px;
+            color: #414141;
+            text-transform: uppercase;
+        }
+
+        .article .article-meta .tag:hover {
+            background: #dadada;
+        }
+
+        .article-meta li {
+            list-style: none;
+        }
+
+        .blockquote-wrapper {
+            position: relative;
+        }
+
+        .blockquote {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 90%;
+            font-style: italic;
+            text-align: justify;
+        }
+
+            .blockquote::before {
+                content: "“";
+                position: absolute;
+                top: 0.25em;
+                left: -0.15em;
+                color: #e7e6e4;
+                font-size: 170px;
+                z-index: -1;
+            }
+
+        cite {
+            display: block;
+            text-align: right;
+            padding: 10px 0px;
+        }
+
+        .amp-components .component {
+            margin: 30px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-darkturquoise {
+            background-color: darkturquoise;
+        }
+        /* Footer */
+        footer {
+            color: #fff;
+            text-align: center;
+        }
+
+        .article {
+            width: 100%;
+        }
+
+        #additional-info {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            h1 {
+                font-size: 140%;
+            }
+
+            .article {
+                padding-right: 20px;
+            }
+
+            #additional-info {
+                padding-left: 20px;
+            }
+
+            .related-box ul li, .promo p, .promo a {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .article,
+            #additional-info {
+                border: 0px;
+                flex-basis: 100%;
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 160%;
+            }
+
+            .article a.button,
+            .article .article-meta a.tag li {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 120%;
+            }
+
+            .content-width {
+                width: 90%;
+            }
+
+            .content {
+                padding: 30px 0px;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            header {
+                padding: 5px 0px;
+            }
+
+            #article-wrapper {
+                flex-direction: column;
+            }
+
+            .blockquote {
+                margin: 50px 0px;
+                font-size: 100%;
+            }
+
+            .article-meta ul {
+                flex-wrap: wrap;
+            }
+
+            .article-meta a.tag {
+                margin-bottom: 10px;
+            }
+
+            .article a.button {
+                margin: 10px 10px 10px 0px;
+            }
+
+            .branding p, .branding a {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!--sumitstart<script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>sumitend-->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+
+<body>
+    <!--sumitstart<amp-auto-ads type="adsense"
+                  data-ad-client="ca-pub-1068871795581451">
+    </amp-auto-ads>sumitend-->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+            {
+            "vars": {
+            "account": "UA-118778979-1"
+            },
+            "triggers": {
+            "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+            }
+            }
+            }
+        </script>
+    </amp-analytics>
+    <header>
+        <div class="menu content-width">
+            <div class="logo">
+                <a href="https://askgif.com/">
+                    AskGif<sup>TM</sup>
+                </a>
+            </div>
+            <button id="sidebar-menu-btn" on="tap:sidebar.toggle">☰</button>
+        </div>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="amp-custom-sidebar-header">
+            <div role="button" aria-label="close sidebar" on="tap:sidebar.toggle" tabindex="0" id="sidebar-close">✕</div>
+        </div>
+        <ul class="sidebar-menu">
+            <a href="https://askgif.com/" class="sidevar-nav-item">
+                <li>Gifs</li>
+            </a>
+            <a href="https://askgif.com/blog/" class="sidevar-nav-item">
+                <li>Blogs</li>
+            </a>
+        </ul>
+    </amp-sidebar>
+    <section class="content content-width" id="article-wrapper">
+            <div class="article">
+                <a href="/blog/1690/how-to-design-a-system-that-scales-to-millions-of-users-on-aws">
+                    <h2 class="title">
+                        How to Design a system that scales to millions of users on AWS
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Nov 20, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1690/how-to-design-a-system-that-scales-to-millions-of-users-on-aws/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/c4c206e1-63c2-46f8-a9b3-076b94e481a7.png" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category/tutorials/"><li>tutorials</li></a>
+                            <a class="tag" href="/blog/tags/design/"><li>design</li></a>
+                            <a class="tag" href="/blog/tags/interview/"><li>interview</li></a>
+                            <a class="tag" href="/blog/tags/system-design/"><li>system-design</li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p><p>Step 1: Outline use cases and constraints<br />Gather requirements and scope the problem. Ask questions to clarify use cases and constraints. Discuss assumptions.</p>
+<p>Without an interviewer to address clarifying questions, we'll define some use cases and constraints.</p>
+<p>Use cases<br />Solving this problem takes an iterative approach of: 1) Benchmark/Load Test, 2) Profile for bottlenecks 3) address bottlenecks while evaluating alternatives and trade-offs, and 4) repeat, which is good pattern for evolving basic designs to scalable designs.</p>
+<p>Unless you have a background in AWS or are applying for a position that requires AWS knowledge, AWS-specific details are not a requirement. However, much of the principles discussed in this exercise can apply more generally outside of the AWS ecosystem.</p>
+<p>We'll scope the problem to handle only the following use cases<br />User makes a read or write request<br />Service does processing, stores user data, then returns the results<br />Service needs to evolve from serving a small amount of users to millions of users<br />Discuss general scaling patterns as we evolve an architecture to handle a large number of users and requests<br />Service has high availability</p>
+<p><br />Constraints and assumptions<br />State assumptions<br />Traffic is not evenly distributed<br />Need for relational data<br />Scale from 1 user to tens of millions of users<br />Denote increase of users as:<br />Users+<br />Users++<br />Users+++<br />...<br />10 million users<br />1 billion writes per month<br />100 billion reads per month<br />100:1 read to write ratio<br />1 KB content per write<br />Calculate usage<br />Clarify with your interviewer if you should run back-of-the-envelope usage calculations.</p>
+<p>1 TB of new content per month<br />1 KB per write * 1 billion writes per month<br />36 TB of new content in 3 years<br />Assume most writes are from new content instead of updates to existing ones<br />400 writes per second on average<br />40,000 reads per second on average<br />Handy conversion guide:</p>
+<p>2.5 million seconds per month<br />1 request per second = 2.5 million requests per month<br />40 requests per second = 100 million requests per month<br />400 requests per second = 1 billion requests per month<br />Step 2: Create a high level design<br />Outline a high level design with all important components.</p>
+<p>Imgur</p>
+<p>Step 3: Design core components<br />Dive into details for each core component.</p>
+<p>Use case: User makes a read or write request<br />Goals<br />With only 1-2 users, you only need a basic setup<br />Single box for simplicity<br />Vertical scaling when needed<br />Monitor to determine bottlenecks<br />Start with a single box<br />Web server on EC2<br />Storage for user data<br />MySQL Database<br />Use Vertical Scaling:</p>
+<p>Simply choose a bigger box<br />Keep an eye on metrics to determine how to scale up<br />Use basic monitoring to determine bottlenecks: CPU, memory, IO, network, etc<br />CloudWatch, top, nagios, statsd, graphite, etc<br />Scaling vertically can get very expensive<br />No redundancy/failover<br />Trade-offs, alternatives, and additional details:</p>
+<p>The alternative to Vertical Scaling is Horizontal scaling<br />Start with SQL, consider NoSQL<br />The constraints assume there is a need for relational data. We can start off using a MySQL Database on the single box.</p>
+<p>Trade-offs, alternatives, and additional details:</p>
+<p>See the Relational database management system (RDBMS) section<br />Discuss reasons to use SQL or NoSQL<br />Assign a public static IP<br />Elastic IPs provide a public endpoint whose IP doesn't change on reboot<br />Helps with failover, just point the domain to a new IP<br />Use a DNS<br />Add a DNS such as Route 53 to map the domain to the instance's public IP.</p>
+<p>Trade-offs, alternatives, and additional details:</p>
+<p>See the Domain name system section<br />Secure the web server<br />Open up only necessary ports<br />Allow the web server to respond to incoming requests from:<br />80 for HTTP<br />443 for HTTPS<br />22 for SSH to only whitelisted IPs<br />Prevent the web server from initiating outbound connections<br />Trade-offs, alternatives, and additional details:</p>
+<p>See the Security section<br />Step 4: Scale the design<br />Identify and address bottlenecks, given the constraints.</p>
+<p>Users+<br />Imgur</p>
+<p>Assumptions<br />Our user count is starting to pick up and the load is increasing on our single box. Our Benchmarks/Load Tests and Profiling are pointing to the MySQL Database taking up more and more memory and CPU resources, while the user content is filling up disk space.</p>
+<p>We've been able to address these issues with Vertical Scaling so far. Unfortunately, this has become quite expensive and it doesn't allow for independent scaling of the MySQL Database and Web Server.</p>
+<p>Goals<br />Lighten load on the single box and allow for independent scaling<br />Store static content separately in an Object Store<br />Move the MySQL Database to a separate box<br />Disadvantages<br />These changes would increase complexity and would require changes to the Web Server to point to the Object Store and the MySQL Database<br />Additional security measures must be taken to secure the new components<br />AWS costs could also increase, but should be weighed with the costs of managing similar systems on your own<br />Store static content separately<br />Consider using a managed Object Store like S3 to store static content<br />Highly scalable and reliable<br />Server side encryption<br />Move static content to S3<br />User files<br />JS<br />CSS<br />Images<br />Videos<br />Move the MySQL database to a separate box<br />Consider using a service like RDS to manage the MySQL Database<br />Simple to administer, scale<br />Multiple availability zones<br />Encryption at rest<br />Secure the system<br />Encrypt data in transit and at rest<br />Use a Virtual Private Cloud<br />Create a public subnet for the single Web Server so it can send and receive traffic from the internet<br />Create a private subnet for everything else, preventing outside access<br />Only open ports from whitelisted IPs for each component<br />These same patterns should be implemented for new components in the remainder of the exercise<br />Trade-offs, alternatives, and additional details:</p>
+<p>See the Security section<br />Users++<br />Imgur</p>
+<p>Assumptions<br />Our Benchmarks/Load Tests and Profiling show that our single Web Server bottlenecks during peak hours, resulting in slow responses and in some cases, downtime. As the service matures, we'd also like to move towards higher availability and redundancy.</p>
+<p>Goals<br />The following goals attempt to address the scaling issues with the Web Server<br />Based on the Benchmarks/Load Tests and Profiling, you might only need to implement one or two of these techniques<br />Use Horizontal Scaling to handle increasing loads and to address single points of failure<br />Add a Load Balancer such as Amazon's ELB or HAProxy<br />ELB is highly available<br />If you are configuring your own Load Balancer, setting up multiple servers in active-active or active-passive in multiple availability zones will improve availability<br />Terminate SSL on the Load Balancer to reduce computational load on backend servers and to simplify certificate administration<br />Use multiple Web Servers spread out over multiple availability zones<br />Use multiple MySQL instances in Master-Slave Failover mode across multiple availability zones to improve redundancy<br />Separate out the Web Servers from the Application Servers<br />Scale and configure both layers independently<br />Web Servers can run as a Reverse Proxy<br />For example, you can add Application Servers handling Read APIs while others handle Write APIs<br />Move static (and some dynamic) content to a Content Delivery Network (CDN) such as CloudFront to reduce load and latency<br />Trade-offs, alternatives, and additional details:</p>
+<p>See the linked content above for details<br />Users+++<br />Imgur</p>
+<p>Note: Internal Load Balancers not shown to reduce clutter</p>
+<p>Assumptions<br />Our Benchmarks/Load Tests and Profiling show that we are read-heavy (100:1 with writes) and our database is suffering from poor performance from the high read requests.</p>
+<p>Goals<br />The following goals attempt to address the scaling issues with the MySQL Database<br />Based on the Benchmarks/Load Tests and Profiling, you might only need to implement one or two of these techniques<br />Move the following data to a Memory Cache such as Elasticache to reduce load and latency:<br />Frequently accessed content from MySQL<br />First, try to configure the MySQL Database cache to see if that is sufficient to relieve the bottleneck before implementing a Memory Cache<br />Session data from the Web Servers<br />The Web Servers become stateless, allowing for Autoscaling<br />Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.1<br />Add MySQL Read Replicas to reduce load on the write master<br />Add more Web Servers and Application Servers to improve responsiveness<br />Trade-offs, alternatives, and additional details:</p>
+<p>See the linked content above for details<br />Add MySQL read replicas<br />In addition to adding and scaling a Memory Cache, MySQL Read Replicas can also help relieve load on the MySQL Write Master<br />Add logic to Web Server to separate out writes and reads<br />Add Load Balancers in front of MySQL Read Replicas (not pictured to reduce clutter)<br />Most services are read-heavy vs write-heavy<br />Trade-offs, alternatives, and additional details:</p>
+<p>See the Relational database management system (RDBMS) section<br />Users++++<br />Imgur</p>
+<p>Assumptions<br />Our Benchmarks/Load Tests and Profiling show that our traffic spikes during regular business hours in the U.S. and drop significantly when users leave the office. We think we can cut costs by automatically spinning up and down servers based on actual load. We're a small shop so we'd like to automate as much of the DevOps as possible for Autoscaling and for the general operations.</p>
+<p>Goals<br />Add Autoscaling to provision capacity as needed<br />Keep up with traffic spikes<br />Reduce costs by powering down unused instances<br />Automate DevOps<br />Chef, Puppet, Ansible, etc<br />Continue monitoring metrics to address bottlenecks<br />Host level - Review a single EC2 instance<br />Aggregate level - Review load balancer stats<br />Log analysis - CloudWatch, CloudTrail, Loggly, Splunk, Sumo<br />External site performance - Pingdom or New Relic<br />Handle notifications and incidents - PagerDuty<br />Error Reporting - Sentry<br />Add autoscaling<br />Consider a managed service such as AWS Autoscaling<br />Create one group for each Web Server and one for each Application Server type, place each group in multiple availability zones<br />Set a min and max number of instances<br />Trigger to scale up and down through CloudWatch<br />Simple time of day metric for predictable loads or<br />Metrics over a time period:<br />CPU load<br />Latency<br />Network traffic<br />Custom metric<br />Disadvantages<br />Autoscaling can introduce complexity<br />It could take some time before a system appropriately scales up to meet increased demand, or to scale down when demand drops<br />Users+++++<br />Imgur</p>
+<p>Note: Autoscaling groups not shown to reduce clutter</p>
+<p>Assumptions<br />As the service continues to grow towards the figures outlined in the constraints, we iteratively run Benchmarks/Load Tests and Profiling to uncover and address new bottlenecks.</p>
+<p>Goals<br />We'll continue to address scaling issues due to the problem's constraints:</p>
+<p>If our MySQL Database starts to grow too large, we might consider only storing a limited time period of data in the database, while storing the rest in a data warehouse such as Redshift<br />A data warehouse such as Redshift can comfortably handle the constraint of 1 TB of new content per month<br />With 40,000 average read requests per second, read traffic for popular content can be addressed by scaling the Memory Cache, which is also useful for handling the unevenly distributed traffic and traffic spikes<br />The SQL Read Replicas might have trouble handling the cache misses, we'll probably need to employ additional SQL scaling patterns<br />400 average writes per second (with presumably significantly higher peaks) might be tough for a single SQL Write Master-Slave, also pointing to a need for additional scaling techniques<br />SQL scaling patterns include:</p>
+<p>Federation<br />Sharding<br />Denormalization<br />SQL Tuning<br />To further address the high read and write requests, we should also consider moving appropriate data to a NoSQL Database such as DynamoDB.</p>
+<p>We can further separate out our Application Servers to allow for independent scaling. Batch processes or computations that do not need to be done in real-time can be done Asynchronously with Queues and Workers:</p>
+<p>For example, in a photo service, the photo upload and the thumbnail creation can be separated:<br />Client uploads photo<br />Application Server puts a job in a Queue such as SQS<br />The Worker Service on EC2 or Lambda pulls work off the Queue then:<br />Creates a thumbnail<br />Updates a Database<br />Stores the thumbnail in the Object Store<br />Trade-offs, alternatives, and additional details:</p>
+<p>See the linked content above for details</p></p>
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+                </div>
+            </div>
+
+        <div class="article">
+            <div class="article-meta">
+                <ul class="tags">
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="additional-info">
+                <div class="related-box promo">
+                    <a href="/blog/85/discuss-towers-of-hanoi-puzzle./">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/c0163425-be46-4869-b182-865969bc6dee_tower-of-hanoi.gif" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/85/discuss-towers-of-hanoi-puzzle./">Discuss Towers of Hanoi Puzzle.</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/93/how-will-you-display-a-linked-list-from-the-end/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/34a6fa21-0896-44c8-a8c2-686bacb89acc_linked-list-reverse.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/93/how-will-you-display-a-linked-list-from-the-end/">How will you display a linked list from the end?</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/1686/how-to-design-a-web-crawler/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_f983d8a0-6ee2-4024-8702-47973c582627.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/1686/how-to-design-a-web-crawler/">How to Design a web crawler</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/1689/how-to-design-amazons-sales-rank-by-category-feature/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_6a724e39-5b07-478b-a4ae-af8ecae9210e.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/1689/how-to-design-amazons-sales-rank-by-category-feature/">How to Design Amazon&#x27;s sales rank by category feature</a></p>
+                </div>
+            <!--sumitstart<amp-ad width="100vw" height="320"
+                    type="adsense"
+                    data-ad-client="ca-pub-1068871795581451"
+                    data-ad-slot="7001708883"
+                    data-auto-format="rspv"
+                    data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>sumitend-->
+
+            <div class="related-box">
+                <h3>Categories</h3>
+                <ul>
+                </ul>
+            </div>
+            <div class="related-box promo">
+                <!--sumitstart<amp-ad width="100vw" height="320"
+                        type="adsense"
+                        data-ad-client="ca-pub-1068871795581451"
+                        data-ad-slot="7001708883"
+                        data-auto-format="rspv"
+                        data-full-width="">
+                    <div overflow=""></div>
+                </amp-ad>sumitend-->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content content-width">
+            <div class="footer-menu">
+                <div class="footer-item">
+                    <h2>About AskGif</h2>
+                    <p>
+                        AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission
+                        to make people smile. Keep smiling and keep sharing
+                    </p><br>
+                    <a href="https://askgif.com/about-us/">Read More</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Sarkari Support &amp; Help</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/faq/">FAQs</a></li>
+                        <li>Have Questions? Email us @ support[at]askgif[dot]com</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2>Follow us</h2>
+                    <p>Adhe Idhar Jao Adhe Udhar Jao</p>
+                    <p>Baki hamare piche ao</p>
+                </div>
+                <div class="footer-item">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/?lang=en">English</a></li>
+                        <li><a href="https://askgif.com/?lang=hi">हिंदी</a></li>
+                        <li><a href="https://askgif.com/terms-of-service/">Terms of Service</a></li>
+                        <li><a href="https://askgif.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://askgif.com/editor/">Editor</a></li>
+                        <li><a href="https://askgif.com/contributors/">Developers & Contributors</a></li>
+                        <li><a href="https://askgif.com/sitemap.xml">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a rel="ugc nofollow" href="https://www.facebook.com/askgifdotcom/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://twitter.com/askgifdotcom"><i class="fab fa-twitter"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.pinterest.com/askgifdotcom/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.instagram.com/askgifdotcom/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.tumblr.com/blog/askgifdotcom"><i class="fab fa-tumblr"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="meta-content">
+                <p>Copyright 2021 | Designed by <a href="https://askgif.com/">Askgif</a> | Last Cached: 10/30/2021 9:42:29 AM | A</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

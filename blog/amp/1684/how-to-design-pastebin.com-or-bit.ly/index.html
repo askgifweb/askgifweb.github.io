@@ -1,0 +1,792 @@
+﻿
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <link rel="shortcut icon" href="https://shotcutdotcom.github.io/static/images/favicon.ico" type="image/png">
+    <title>How to Design Pastebin.com (or Bit.ly) - Blog - Find Best Reads of All Time on AskGif</title>
+
+    <link rel="canonical" href="https://askgif.com/blog/1684/how-to-design-pastebin.com-or-bit.ly/">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://askgif.com/",
+        "headline": "AskGif",
+        "datePublished": "2020/11/20",
+        "dateModified":  "2020/11/20",
+        "description": "Share this How to Design Pastebin.com (or Bit.ly) Blog and explore more",
+        "author": {
+        "@type": "Person",
+        "name": "Sumit Chourasia"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Askgif",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/data/master/askgif-static/askgif_logo.png"
+        }
+        },
+        "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/AmpImage/main/Blogs/9d14bd09-d9e3-48e7-8309-9e324e9d51de.jpg",
+        "height": 1280,
+        "width": 857
+        }
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom=''>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            transition: all 0.2s linear;
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content-width {
+            width: 80%;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 50px 0px;
+            line-height: 160%;
+        }
+
+        h1 {
+            font-size: 240%;
+            line-height: 120%;
+            margin: 20px 0px;
+        }
+
+        h2 {
+            font-size: 140%;
+            margin: 30px 0px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .subtext {
+            text-align: left;
+            font-weight: 400;
+            color: #a5a5a5;
+            font-size: 90%;
+        }
+
+        .branding {
+            font-size: 90%;
+            color: #fff;
+        }
+
+            .branding a {
+                color: inherit;
+            }
+
+                .branding a:hover {
+                    color: #19B5FE;
+                }
+
+        .button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #19B5FE;
+            font-weight: 700;
+            text-align: center;
+        }
+
+            .button:hover {
+                background: #3ebf43;
+            }
+
+        /* Header */
+        header,
+        footer,
+        #sidebar {
+            background: #2c3e50;
+        }
+
+        header {
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        #sidebar {
+            width: 300px;
+            padding: 1.5rem;
+        }
+
+        .sidebar-menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .amp-custom-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem;
+            color: #fff;
+        }
+
+        #sidebar-close {
+            cursor: pointer;
+        }
+
+        .sidevar-nav-item {
+            padding: 10px 0px;
+            margin: 0px;
+            display: block;
+            list-style: none;
+            color: #021425;
+            text-transform: capitalize;
+            letter-spacing: .6px;
+            line-height: 2.0625;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .sidevar-nav-item:hover {
+                color: #19B5FE;
+            }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        #sidebar-menu-btn {
+            background: 0 0;
+            border: 0;
+            color: #fff;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        /* POST */
+        #article-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .article {
+            flex-basis: 70%;
+            padding-right: 30px;
+            border-right: 1px solid #e3e3e3;
+        }
+
+            .article h1 {
+                margin-top: 0px;
+            }
+
+        .article-image,
+        .article-body {
+            margin: 20px 0px;
+            width: 340px;
+        }
+
+        .author-info {
+            color: #9d9d9d;
+            font-weight: bold;
+        }
+
+        .article a {
+            color: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        pre {
+            font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            margin-bottom: 10px;
+            overflow: auto;
+            width: auto;
+            padding: 5px;
+            background-color: #eee;
+            width: 650px !ie7;
+            padding-bottom: 20px !ie7;
+            max-height: 600px;
+        }
+
+        .article a.button {
+            margin: 20px 10px 20px 0px;
+            display: inline-block;
+            width: 120px;
+        }
+
+            .article a.button,
+            .article a.button:hover {
+                color: #fff;
+            }
+
+        .article a:hover {
+            color: #19B5FE;
+        }
+
+        #additional-info {
+            flex-basis: 30%;
+            padding-left: 30px;
+        }
+
+            #additional-info:before {
+                display: block;
+                height: 6px;
+                background-color: #2c3e50;
+                content: ' ';
+                width: 50px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+        .promo,
+        .related-box ul li {
+            border: 1px solid #e3e3e3;
+        }
+
+        .promo {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .article-meta ul,
+        .related-box ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .related-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+            .related-box a.imp-link {
+                color: #3ebf43;
+                font-weight: 700;
+            }
+
+        .related-box ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+            .related-box ul li:hover,
+            .related-box a:hover {
+                text-decoration: underline;
+                background: #ebebeb;
+            }
+
+        .article-meta {
+            margin: 30px 0px;
+        }
+
+            .article-meta ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+        .article .article-meta a.tag {
+            margin-right: 5px;
+            background: #ebebeb;
+            font-size: 90%;
+            text-decoration: none;
+            padding: 5px;
+            color: #414141;
+            text-transform: uppercase;
+        }
+
+        .article .article-meta .tag:hover {
+            background: #dadada;
+        }
+
+        .article-meta li {
+            list-style: none;
+        }
+
+        .blockquote-wrapper {
+            position: relative;
+        }
+
+        .blockquote {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 90%;
+            font-style: italic;
+            text-align: justify;
+        }
+
+            .blockquote::before {
+                content: "“";
+                position: absolute;
+                top: 0.25em;
+                left: -0.15em;
+                color: #e7e6e4;
+                font-size: 170px;
+                z-index: -1;
+            }
+
+        cite {
+            display: block;
+            text-align: right;
+            padding: 10px 0px;
+        }
+
+        .amp-components .component {
+            margin: 30px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-darkturquoise {
+            background-color: darkturquoise;
+        }
+        /* Footer */
+        footer {
+            color: #fff;
+            text-align: center;
+        }
+
+        .article {
+            width: 100%;
+        }
+
+        #additional-info {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            h1 {
+                font-size: 140%;
+            }
+
+            .article {
+                padding-right: 20px;
+            }
+
+            #additional-info {
+                padding-left: 20px;
+            }
+
+            .related-box ul li, .promo p, .promo a {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .article,
+            #additional-info {
+                border: 0px;
+                flex-basis: 100%;
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 160%;
+            }
+
+            .article a.button,
+            .article .article-meta a.tag li {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 120%;
+            }
+
+            .content-width {
+                width: 90%;
+            }
+
+            .content {
+                padding: 30px 0px;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            header {
+                padding: 5px 0px;
+            }
+
+            #article-wrapper {
+                flex-direction: column;
+            }
+
+            .blockquote {
+                margin: 50px 0px;
+                font-size: 100%;
+            }
+
+            .article-meta ul {
+                flex-wrap: wrap;
+            }
+
+            .article-meta a.tag {
+                margin-bottom: 10px;
+            }
+
+            .article a.button {
+                margin: 10px 10px 10px 0px;
+            }
+
+            .branding p, .branding a {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!--sumitstart<script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>sumitend-->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+
+<body>
+    <!--sumitstart<amp-auto-ads type="adsense"
+                  data-ad-client="ca-pub-1068871795581451">
+    </amp-auto-ads>sumitend-->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+            {
+            "vars": {
+            "account": "UA-118778979-1"
+            },
+            "triggers": {
+            "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+            }
+            }
+            }
+        </script>
+    </amp-analytics>
+    <header>
+        <div class="menu content-width">
+            <div class="logo">
+                <a href="https://askgif.com/">
+                    AskGif<sup>TM</sup>
+                </a>
+            </div>
+            <button id="sidebar-menu-btn" on="tap:sidebar.toggle">☰</button>
+        </div>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="amp-custom-sidebar-header">
+            <div role="button" aria-label="close sidebar" on="tap:sidebar.toggle" tabindex="0" id="sidebar-close">✕</div>
+        </div>
+        <ul class="sidebar-menu">
+            <a href="https://askgif.com/" class="sidevar-nav-item">
+                <li>Gifs</li>
+            </a>
+            <a href="https://askgif.com/blog/" class="sidevar-nav-item">
+                <li>Blogs</li>
+            </a>
+        </ul>
+    </amp-sidebar>
+    <section class="content content-width" id="article-wrapper">
+            <div class="article">
+                <a href="/blog/1684/how-to-design-pastebin.com-or-bit.ly">
+                    <h2 class="title">
+                        How to Design Pastebin.com (or Bit.ly)
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Nov 20, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1684/how-to-design-pastebin.com-or-bit.ly/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/9d14bd09-d9e3-48e7-8309-9e324e9d51de.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category/tutorials/"><li>tutorials</li></a>
+                            <a class="tag" href="/blog/tags/design/"><li>design</li></a>
+                            <a class="tag" href="/blog/tags/interview/"><li>interview</li></a>
+                            <a class="tag" href="/blog/tags/system-design/"><li>system-design</li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p><p>Design Bit.ly - is a similar question, except pastebin requires storing the paste contents instead of the original unshortened url.</p>
+<p>Step 1: Outline use cases and constraints<br />Gather requirements and scope the problem. Ask questions to clarify use cases and constraints. Discuss assumptions.</p>
+<p>Without an interviewer to address clarifying questions, we'll define some use cases and constraints.</p>
+<p>Use cases<br />We'll scope the problem to handle only the following use cases<br />User enters a block of text and gets a randomly generated link<br />Expiration<br />Default setting does not expire<br />Can optionally set a timed expiration<br />User enters a paste's url and views the contents<br />User is anonymous<br />Service tracks analytics of pages<br />Monthly visit stats<br />Service deletes expired pastes<br />Service has high availability</p>
+<p><br />Out of scope<br />User registers for an account<br />User verifies email<br />User logs into a registered account<br />User edits the document<br />User can set visibility<br />User can set the shortlink<br />Constraints and assumptions</p>
+<p><br />State assumptions<br />Traffic is not evenly distributed<br />Following a short link should be fast<br />Pastes are text only<br />Page view analytics do not need to be realtime<br />10 million users<br />10 million paste writes per month<br />100 million paste reads per month<br />10:1 read to write ratio<br />Calculate usage<br />Clarify with your interviewer if you should run back-of-the-envelope usage calculations.</p>
+<p>Size per paste<br />1 KB content per paste<br />shortlink - 7 bytes<br />expiration_length_in_minutes - 4 bytes<br />created_at - 5 bytes<br />paste_path - 255 bytes<br />total = ~1.27 KB<br />12.7 GB of new paste content per month<br />1.27 KB per paste * 10 million pastes per month<br />~450 GB of new paste content in 3 years<br />360 million shortlinks in 3 years<br />Assume most are new pastes instead of updates to existing ones<br />4 paste writes per second on average<br />40 read requests per second on average<br />Handy conversion guide:</p>
+<p>2.5 million seconds per month<br />1 request per second = 2.5 million requests per month<br />40 requests per second = 100 million requests per month<br />400 requests per second = 1 billion requests per month<br />Step 2: Create a high level design<br />Outline a high level design with all important components.</p>
+<p>Imgur</p>
+<p>Step 3: Design core components<br />Dive into details for each core component.</p>
+<p>Use case: User enters a block of text and gets a randomly generated link<br />We could use a relational database as a large hash table, mapping the generated url to a file server and path containing the paste file.</p>
+<p>Instead of managing a file server, we could use a managed Object Store such as Amazon S3 or a NoSQL document store.</p>
+<p>An alternative to a relational database acting as a large hash table, we could use a NoSQL key-value store. We should discuss the tradeoffs between choosing SQL or NoSQL. The following discussion uses the relational database approach.</p>
+<p>The Client sends a create paste request to the Web Server, running as a reverse proxy<br />The Web Server forwards the request to the Write API server<br />The Write API server does the following:<br />Generates a unique url<br />Checks if the url is unique by looking at the SQL Database for a duplicate<br />If the url is not unique, it generates another url<br />If we supported a custom url, we could use the user-supplied (also check for a duplicate)<br />Saves to the SQL Database pastes table<br />Saves the paste data to the Object Store<br />Returns the url<br />Clarify with your interviewer how much code you are expected to write.</p>
+<p>The pastes table could have the following structure:</p>
+<p>shortlink char(7) NOT NULL<br />expiration_length_in_minutes int NOT NULL<br />created_at datetime NOT NULL<br />paste_path varchar(255) NOT NULL<br />PRIMARY KEY(shortlink)<br />Setting the primary key to be based on the shortlink column creates an index that the database uses to enforce uniqueness. We'll create an additional index on created_at to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory. Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.1</p>
+<p>To generate the unique url, we could:</p>
+<p>Take the MD5 hash of the user's ip_address + timestamp<br />MD5 is a widely used hashing function that produces a 128-bit hash value<br />MD5 is uniformly distributed<br />Alternatively, we could also take the MD5 hash of randomly-generated data<br />Base 62 encode the MD5 hash<br />Base 62 encodes to [a-zA-Z0-9] which works well for urls, eliminating the need for escaping special characters<br />There is only one hash result for the original input and Base 62 is deterministic (no randomness involved)<br />Base 64 is another popular encoding but provides issues for urls because of the additional + and / characters<br />The following Base 62 pseudocode runs in O(k) time where k is the number of digits = 7:<br />def base_encode(num, base=62):<br />&nbsp; &nbsp; digits = []<br />&nbsp; &nbsp; while num &gt; 0<br />&nbsp; &nbsp; &nbsp; remainder = modulo(num, base)<br />&nbsp; &nbsp; &nbsp; digits.push(remainder)<br />&nbsp; &nbsp; &nbsp; num = divide(num, base)<br />&nbsp; &nbsp; digits = digits.reverse<br />Take the first 7 characters of the output, which results in 62^7 possible values and should be sufficient to handle our constraint of 360 million shortlinks in 3 years:<br />url = base_encode(md5(ip_address+timestamp))[:URL_LENGTH]<br />We'll use a public REST API:</p>
+<p>$ curl -X POST --data '{ "expiration_length_in_minutes": "60", \<br />&nbsp; &nbsp; "paste_contents": "Hello World!" }' https://pastebin.com/api/v1/paste<br />Response:</p>
+<p>{<br />&nbsp; &nbsp; "shortlink": "foobar"<br />}<br />For internal communications, we could use Remote Procedure Calls.</p>
+<p>Use case: User enters a paste's url and views the contents<br />The Client sends a get paste request to the Web Server<br />The Web Server forwards the request to the Read API server<br />The Read API server does the following:<br />Checks the SQL Database for the generated url<br />If the url is in the SQL Database, fetch the paste contents from the Object Store<br />Else, return an error message for the user<br />REST API:</p>
+<p>$ curl https://pastebin.com/api/v1/paste?shortlink=foobar<br />Response:</p>
+<p>{<br />&nbsp; &nbsp; "paste_contents": "Hello World"<br />&nbsp; &nbsp; "created_at": "YYYY-MM-DD HH:MM:SS"<br />&nbsp; &nbsp; "expiration_length_in_minutes": "60"<br />}<br />Use case: Service tracks analytics of pages<br />Since realtime analytics are not a requirement, we could simply MapReduce the Web Server logs to generate hit counts.</p>
+<p>Clarify with your interviewer how much code you are expected to write.</p>
+<p>class HitCounts(MRJob):</p>
+<p>&nbsp; &nbsp; def extract_url(self, line):<br />&nbsp; &nbsp; &nbsp; &nbsp; """Extract the generated url from the log line."""<br />&nbsp; &nbsp; &nbsp; &nbsp; ...</p>
+<p>&nbsp; &nbsp; def extract_year_month(self, line):<br />&nbsp; &nbsp; &nbsp; &nbsp; """Return the year and month portions of the timestamp."""<br />&nbsp; &nbsp; &nbsp; &nbsp; ...</p>
+<p>&nbsp; &nbsp; def mapper(self, _, line):<br />&nbsp; &nbsp; &nbsp; &nbsp; """Parse each log line, extract and transform relevant lines.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Emit key value pairs of the form:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; (2016-01, url0), 1<br />&nbsp; &nbsp; &nbsp; &nbsp; (2016-01, url0), 1<br />&nbsp; &nbsp; &nbsp; &nbsp; (2016-01, url1), 1<br />&nbsp; &nbsp; &nbsp; &nbsp; """<br />&nbsp; &nbsp; &nbsp; &nbsp; url = self.extract_url(line)<br />&nbsp; &nbsp; &nbsp; &nbsp; period = self.extract_year_month(line)<br />&nbsp; &nbsp; &nbsp; &nbsp; yield (period, url), 1</p>
+<p>&nbsp; &nbsp; def reducer(self, key, values):<br />&nbsp; &nbsp; &nbsp; &nbsp; """Sum values for each key.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; (2016-01, url0), 2<br />&nbsp; &nbsp; &nbsp; &nbsp; (2016-01, url1), 1<br />&nbsp; &nbsp; &nbsp; &nbsp; """<br />&nbsp; &nbsp; &nbsp; &nbsp; yield key, sum(values)<br />Use case: Service deletes expired pastes<br />To delete expired pastes, we could just scan the SQL Database for all entries whose expiration timestamp are older than the current timestamp. All expired entries would then be deleted (or marked as expired) from the table.</p>
+<p>Step 4: Scale the design<br />Identify and address bottlenecks, given the constraints.</p>
+<p>Imgur</p>
+<p>Important: Do not simply jump right into the final design from the initial design!</p>
+<p>State you would do this iteratively: 1) Benchmark/Load Test, 2) Profile for bottlenecks 3) address bottlenecks while evaluating alternatives and trade-offs, and 4) repeat. See Design a system that scales to millions of users on AWS as a sample on how to iteratively scale the initial design.</p>
+<p>It's important to discuss what bottlenecks you might encounter with the initial design and how you might address each of them. For example, what issues are addressed by adding a Load Balancer with multiple Web Servers? CDN? Master-Slave Replicas? What are the alternatives and Trade-Offs for each?</p>
+<p>We'll introduce some components to complete the design and to address scalability issues. Internal load balancers are not shown to reduce clutter.</p>
+<p>To avoid repeating discussions, refer to the following system design topics for main talking points, tradeoffs, and alternatives:</p>
+<p>DNS<br />CDN<br />Load balancer<br />Horizontal scaling<br />Web server (reverse proxy)<br />API server (application layer)<br />Cache<br />Relational database management system (RDBMS)<br />SQL write master-slave failover<br />Master-slave replication<br />Consistency patterns<br />Availability patterns<br />The Analytics Database could use a data warehousing solution such as Amazon Redshift or Google BigQuery.</p>
+<p>An Object Store such as Amazon S3 can comfortably handle the constraint of 12.7 GB of new content per month.</p>
+<p>To address the 40 average read requests per second (higher at peak), traffic for popular content should be handled by the Memory Cache instead of the database. The Memory Cache is also useful for handling the unevenly distributed traffic and traffic spikes. The SQL Read Replicas should be able to handle the cache misses, as long as the replicas are not bogged down with replicating writes.</p>
+<p>4 average paste writes per second (with higher at peak) should be do-able for a single SQL Write Master-Slave. Otherwise, we'll need to employ additional SQL scaling patterns:</p>
+<p>Federation<br />Sharding<br />Denormalization<br />SQL Tuning<br />We should also consider moving some data to a NoSQL Database.</p></p>
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+                </div>
+            </div>
+
+        <div class="article">
+            <div class="article-meta">
+                <ul class="tags">
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="additional-info">
+                <div class="related-box promo">
+                    <a href="/blog/72/what-is-facade-pattern/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/509c3ba4-0943-4aba-aa8e-7bbf8cdad079_Facade_design_pattern.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/72/what-is-facade-pattern/">What is Facade pattern?</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/105/how-to-implement-postorder-traversal-in-binary-tree/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/d82cf369-0894-48fd-ba39-de927c3291d9_post-order-traversal.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/105/how-to-implement-postorder-traversal-in-binary-tree/">How to implement PostOrder Traversal in Binary Tree?</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/1689/how-to-design-amazons-sales-rank-by-category-feature/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_6a724e39-5b07-478b-a4ae-af8ecae9210e.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/1689/how-to-design-amazons-sales-rank-by-category-feature/">How to Design Amazon&#x27;s sales rank by category feature</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/1699/database-tutorial/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_c7cd88d2-763e-4ef9-9beb-362cd1bf07b7.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/1699/database-tutorial/">Database Tutorial</a></p>
+                </div>
+            <!--sumitstart<amp-ad width="100vw" height="320"
+                    type="adsense"
+                    data-ad-client="ca-pub-1068871795581451"
+                    data-ad-slot="7001708883"
+                    data-auto-format="rspv"
+                    data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>sumitend-->
+
+            <div class="related-box">
+                <h3>Categories</h3>
+                <ul>
+                </ul>
+            </div>
+            <div class="related-box promo">
+                <!--sumitstart<amp-ad width="100vw" height="320"
+                        type="adsense"
+                        data-ad-client="ca-pub-1068871795581451"
+                        data-ad-slot="7001708883"
+                        data-auto-format="rspv"
+                        data-full-width="">
+                    <div overflow=""></div>
+                </amp-ad>sumitend-->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content content-width">
+            <div class="footer-menu">
+                <div class="footer-item">
+                    <h2>About AskGif</h2>
+                    <p>
+                        AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission
+                        to make people smile. Keep smiling and keep sharing
+                    </p><br>
+                    <a href="https://askgif.com/about-us/">Read More</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Sarkari Support &amp; Help</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/faq/">FAQs</a></li>
+                        <li>Have Questions? Email us @ support[at]askgif[dot]com</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2>Follow us</h2>
+                    <p>Adhe Idhar Jao Adhe Udhar Jao</p>
+                    <p>Baki hamare piche ao</p>
+                </div>
+                <div class="footer-item">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/?lang=en">English</a></li>
+                        <li><a href="https://askgif.com/?lang=hi">हिंदी</a></li>
+                        <li><a href="https://askgif.com/terms-of-service/">Terms of Service</a></li>
+                        <li><a href="https://askgif.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://askgif.com/editor/">Editor</a></li>
+                        <li><a href="https://askgif.com/contributors/">Developers & Contributors</a></li>
+                        <li><a href="https://askgif.com/sitemap.xml">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a rel="ugc nofollow" href="https://www.facebook.com/askgifdotcom/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://twitter.com/askgifdotcom"><i class="fab fa-twitter"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.pinterest.com/askgifdotcom/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.instagram.com/askgifdotcom/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.tumblr.com/blog/askgifdotcom"><i class="fab fa-tumblr"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="meta-content">
+                <p>Copyright 2021 | Designed by <a href="https://askgif.com/">Askgif</a> | Last Cached: 10/30/2021 9:42:28 AM | A</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

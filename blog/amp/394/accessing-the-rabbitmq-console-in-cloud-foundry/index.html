@@ -1,0 +1,833 @@
+﻿
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <link rel="shortcut icon" href="https://shotcutdotcom.github.io/static/images/favicon.ico" type="image/png">
+    <title>Accessing the RabbitMQ Console in Cloud Foundry - Blog - Find Best Reads of All Time on AskGif</title>
+
+    <link rel="canonical" href="https://askgif.com/blog/394/accessing-the-rabbitmq-console-in-cloud-foundry/">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://askgif.com/",
+        "headline": "AskGif",
+        "datePublished": "2019/06/19",
+        "dateModified":  "2019/06/19",
+        "description": "Share this Accessing the RabbitMQ Console in Cloud Foundry Blog and explore more",
+        "author": {
+        "@type": "Person",
+        "name": "Sumit Chourasia"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Askgif",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/data/master/askgif-static/askgif_logo.png"
+        }
+        },
+        "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/AmpImage/main/Blogs/362fdc56-8bd4-4e3d-9a4f-f0fa18f39e55_Header_Post_RabbitMQ_EN.jpg",
+        "height": 1280,
+        "width": 857
+        }
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom=''>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            transition: all 0.2s linear;
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content-width {
+            width: 80%;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 50px 0px;
+            line-height: 160%;
+        }
+
+        h1 {
+            font-size: 240%;
+            line-height: 120%;
+            margin: 20px 0px;
+        }
+
+        h2 {
+            font-size: 140%;
+            margin: 30px 0px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .subtext {
+            text-align: left;
+            font-weight: 400;
+            color: #a5a5a5;
+            font-size: 90%;
+        }
+
+        .branding {
+            font-size: 90%;
+            color: #fff;
+        }
+
+            .branding a {
+                color: inherit;
+            }
+
+                .branding a:hover {
+                    color: #19B5FE;
+                }
+
+        .button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #19B5FE;
+            font-weight: 700;
+            text-align: center;
+        }
+
+            .button:hover {
+                background: #3ebf43;
+            }
+
+        /* Header */
+        header,
+        footer,
+        #sidebar {
+            background: #2c3e50;
+        }
+
+        header {
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        #sidebar {
+            width: 300px;
+            padding: 1.5rem;
+        }
+
+        .sidebar-menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .amp-custom-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem;
+            color: #fff;
+        }
+
+        #sidebar-close {
+            cursor: pointer;
+        }
+
+        .sidevar-nav-item {
+            padding: 10px 0px;
+            margin: 0px;
+            display: block;
+            list-style: none;
+            color: #021425;
+            text-transform: capitalize;
+            letter-spacing: .6px;
+            line-height: 2.0625;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .sidevar-nav-item:hover {
+                color: #19B5FE;
+            }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        #sidebar-menu-btn {
+            background: 0 0;
+            border: 0;
+            color: #fff;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        /* POST */
+        #article-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .article {
+            flex-basis: 70%;
+            padding-right: 30px;
+            border-right: 1px solid #e3e3e3;
+        }
+
+            .article h1 {
+                margin-top: 0px;
+            }
+
+        .article-image,
+        .article-body {
+            margin: 20px 0px;
+            width: 340px;
+        }
+
+        .author-info {
+            color: #9d9d9d;
+            font-weight: bold;
+        }
+
+        .article a {
+            color: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        pre {
+            font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            margin-bottom: 10px;
+            overflow: auto;
+            width: auto;
+            padding: 5px;
+            background-color: #eee;
+            width: 650px !ie7;
+            padding-bottom: 20px !ie7;
+            max-height: 600px;
+        }
+
+        .article a.button {
+            margin: 20px 10px 20px 0px;
+            display: inline-block;
+            width: 120px;
+        }
+
+            .article a.button,
+            .article a.button:hover {
+                color: #fff;
+            }
+
+        .article a:hover {
+            color: #19B5FE;
+        }
+
+        #additional-info {
+            flex-basis: 30%;
+            padding-left: 30px;
+        }
+
+            #additional-info:before {
+                display: block;
+                height: 6px;
+                background-color: #2c3e50;
+                content: ' ';
+                width: 50px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+        .promo,
+        .related-box ul li {
+            border: 1px solid #e3e3e3;
+        }
+
+        .promo {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .article-meta ul,
+        .related-box ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .related-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+            .related-box a.imp-link {
+                color: #3ebf43;
+                font-weight: 700;
+            }
+
+        .related-box ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+            .related-box ul li:hover,
+            .related-box a:hover {
+                text-decoration: underline;
+                background: #ebebeb;
+            }
+
+        .article-meta {
+            margin: 30px 0px;
+        }
+
+            .article-meta ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+        .article .article-meta a.tag {
+            margin-right: 5px;
+            background: #ebebeb;
+            font-size: 90%;
+            text-decoration: none;
+            padding: 5px;
+            color: #414141;
+            text-transform: uppercase;
+        }
+
+        .article .article-meta .tag:hover {
+            background: #dadada;
+        }
+
+        .article-meta li {
+            list-style: none;
+        }
+
+        .blockquote-wrapper {
+            position: relative;
+        }
+
+        .blockquote {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 90%;
+            font-style: italic;
+            text-align: justify;
+        }
+
+            .blockquote::before {
+                content: "“";
+                position: absolute;
+                top: 0.25em;
+                left: -0.15em;
+                color: #e7e6e4;
+                font-size: 170px;
+                z-index: -1;
+            }
+
+        cite {
+            display: block;
+            text-align: right;
+            padding: 10px 0px;
+        }
+
+        .amp-components .component {
+            margin: 30px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-darkturquoise {
+            background-color: darkturquoise;
+        }
+        /* Footer */
+        footer {
+            color: #fff;
+            text-align: center;
+        }
+
+        .article {
+            width: 100%;
+        }
+
+        #additional-info {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            h1 {
+                font-size: 140%;
+            }
+
+            .article {
+                padding-right: 20px;
+            }
+
+            #additional-info {
+                padding-left: 20px;
+            }
+
+            .related-box ul li, .promo p, .promo a {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .article,
+            #additional-info {
+                border: 0px;
+                flex-basis: 100%;
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 160%;
+            }
+
+            .article a.button,
+            .article .article-meta a.tag li {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 120%;
+            }
+
+            .content-width {
+                width: 90%;
+            }
+
+            .content {
+                padding: 30px 0px;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            header {
+                padding: 5px 0px;
+            }
+
+            #article-wrapper {
+                flex-direction: column;
+            }
+
+            .blockquote {
+                margin: 50px 0px;
+                font-size: 100%;
+            }
+
+            .article-meta ul {
+                flex-wrap: wrap;
+            }
+
+            .article-meta a.tag {
+                margin-bottom: 10px;
+            }
+
+            .article a.button {
+                margin: 10px 10px 10px 0px;
+            }
+
+            .branding p, .branding a {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!--sumitstart<script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>sumitend-->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+
+<body>
+    <!--sumitstart<amp-auto-ads type="adsense"
+                  data-ad-client="ca-pub-1068871795581451">
+    </amp-auto-ads>sumitend-->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+            {
+            "vars": {
+            "account": "UA-118778979-1"
+            },
+            "triggers": {
+            "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+            }
+            }
+            }
+        </script>
+    </amp-analytics>
+    <header>
+        <div class="menu content-width">
+            <div class="logo">
+                <a href="https://askgif.com/">
+                    AskGif<sup>TM</sup>
+                </a>
+            </div>
+            <button id="sidebar-menu-btn" on="tap:sidebar.toggle">☰</button>
+        </div>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="amp-custom-sidebar-header">
+            <div role="button" aria-label="close sidebar" on="tap:sidebar.toggle" tabindex="0" id="sidebar-close">✕</div>
+        </div>
+        <ul class="sidebar-menu">
+            <a href="https://askgif.com/" class="sidevar-nav-item">
+                <li>Gifs</li>
+            </a>
+            <a href="https://askgif.com/blog/" class="sidevar-nav-item">
+                <li>Blogs</li>
+            </a>
+        </ul>
+    </amp-sidebar>
+    <section class="content content-width" id="article-wrapper">
+            <div class="article">
+                <a href="/blog/394/accessing-the-rabbitmq-console-in-cloud-foundry">
+                    <h2 class="title">
+                        Accessing the RabbitMQ Console in Cloud Foundry
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Jun 19, 2019
+                </div>
+                <div class="article-image">
+                    <a href="/blog/394/accessing-the-rabbitmq-console-in-cloud-foundry/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/362fdc56-8bd4-4e3d-9a4f-f0fa18f39e55_Header_Post_RabbitMQ_EN.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category/coding/"><li>coding</li></a>
+                            <a class="tag" href="/blog/tags/java/"><li>java</li></a>
+                            <a class="tag" href="/blog/tags/rabbitmq/"><li>rabbitmq</li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p><p>Each Cloud Foundry instance is a self-contained environment (cloud) that is generally intended to be used as a black box application container. It is implemented in a virtualized environment that hides the actual virtual/physical topology from the deployer.&nbsp; Service configuration, provisioning, log viewing and application deployment are done from outside the cloud through external tools.&nbsp; Cloud services may use any ports or other resources and use unique usernames and passwords for each instance. Applications rendezvous with services, at run time, via declared service names. Cloud services are not visible outside the container.&nbsp; All system monitoring must be done through log files, through code deployed in the application or through tooling provided by Cloud Foundry.</p>
+<p>&nbsp;</p>
+<p>Service tunneling, where you can bind to the data port of a provisioned service, will be added to Cloud Foundry in a post 1.0 release.&nbsp; This blog article describes how it will work and how you can use it today.</p>
+<p>&nbsp;</p>
+<p>Cloud Foundry supports a broad set of services that can be discovered through the service catalog.&nbsp; Those services are provisioned, making them available to applications, via the VMC command line tool or through the STS Cloud Foundry plug-in.&nbsp; Multiple instances of any service may be provisioned in a single cloud/container.&nbsp; Service instances start as soon as they are provisioned. This screenshot shows the output of the VMC services command run against a (Micro) Cloud Foundry instance. There are 5 services types available for provisioning and one RabbitMQ instance started.</p>
+<p>&nbsp;</p>
+<p>Applications can be made up of multiple custom code components each of which can be bound to some subset of the provisioned services.&nbsp; Individual application components can communicate with each other or share data through services that they share.</p>
+<p>&nbsp;</p>
+<p>Example:&nbsp; A coffee shop workflow involving 5 people.&nbsp; One places the order, one takes the order, one person processes hot drinks, one cold drinks and one delivers the order.&nbsp; Those 5 components (people) might be implemented as separate processes that could be independently deployed.&nbsp; The 5 processes could communicate via a previously provisioned message broker that is service bound to each application.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Micro Cloud Foundry is a self-contained, Virtual Machine (VM), version of Cloud Foundry running on a Linux Operating System (OS).&nbsp; It comes pre-loaded and configured to enable the various services without any installation hassle.&nbsp; Micro Cloud Foundry does not implement all of the isolation levels of the public cloud. We will use this feature to gain access to the RabbitMQ management console.</p>
+<p>&nbsp;</p>
+<p>RabbitMQ in Cloud Foundry</p>
+<p>&nbsp;</p>
+<p>Cloud Foundry supports several different services including RabbitMQ.&nbsp; &nbsp;You can see available services via the VMC services command line tool described above.&nbsp; A service like RabbitMQ can be provisioned (started) via VMC or SpringToolSuite (STS).&nbsp; That service is then bound a deployed application when the application is deployed and started.&nbsp; The application finds the service at run-time with a service name resolution process.&nbsp; Java/Spring users can see these as spring beans whose ids match the service name. The following screenshot shows a single RabbitMQ service instance that is called loanshark-rabbitmq.&nbsp; The instance is bound to the cafe-create-order-web application.</p>
+<p>&nbsp;</p>
+<p>Each entry in the "Services" tab represents a different service instance with its own name, resource pool, ports and user ids.&nbsp; The application in the "Applications" tab shows that "cafe-create-order-web" is selected.&nbsp; The information on the right is tied to that application. You can see that "loanshark-rabbitmq" is an application service for this application.</p>
+<p>&nbsp;</p>
+<p>The RabbitMQ Management Console</p>
+<p>&nbsp;</p>
+<p>RabbitMQ supports extension via plugins.&nbsp; The Management Console plug-in provides information and control functions for it's associated, broker.&nbsp; Users can view queue depth, create exchanges and queues and set up security functions.&nbsp; Queued messages can be de-queued, viewed or deleted.&nbsp; This picture shows two queues each with 200 undelivered messages.&nbsp; Port 55672 is the standard admin port.&nbsp; &nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The Management Console plugin is configured and enabled in Cloud Foundry but is not publicly available.&nbsp; Cloud Foundry assigns random ports so to each RabbitMQ instance and management server.&nbsp; This lets it support multiple brokers on a single host and removes consumers assumptions about the environment.</p>
+<p>&nbsp;</p>
+<p>Accessing the Management Console in Micro Cloud Foundry</p>
+<p>&nbsp;</p>
+<p>Micro Cloud Foundry is designed to do local development and small deployments.&nbsp; It is not as "locked down" as the public or hosted Cloud Foundry environments letting us log in and access internal web services. RabbitMQ in the MCF runs with the management console enabled.&nbsp; The problem is finding the port number and username/password for running RabbitMQ instances.&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p>This section assumes that you have a working Micro Cloud Foundry VM version 1.1.&nbsp; You should know the hostname of that instance and the password you gave it at time of configuration.&nbsp; The hostname will be something like &lt;your cluster name&gt;.cloudfoundry.me that is set by CloudFoundry.com when you got your token. You can see the hostname in the VM console at the top of the screen.</p>
+<p>Connect to the Micro Cloud Foundry instance with VMC. You may have run a set of commands to connect to the right cloud foundry instance, using vmc target, and register a user id with VMC register to create a useable user id.</p>
+<p>Verify that rabbitmq is an available service with vmc services.</p>
+<p>Provision a rabbitmq instance using either STS or VMC.&nbsp; The VMC command would be something like VMC create-service rabbitmq &lt;instance name&gt;&nbsp; where &lt;instance name&gt; is the name the running instance is registered under.&nbsp; STS users should use the server configuration screen that you get by double-clicking on your cloud foundry server in the Servers tab.</p>
+<p>ssh into the MCF virtual machine as root ssh root@&lt;your cluster name&gt;.cloudfoundry.me using the vcap password you entered when you started up the MCF virtual machine.</p>
+<p>Find the running instance of Rabbit.&nbsp; All instances are located in /var/vcap/store/rabbitmq_srs/agent/instance/ There should be only one instance unless you provisioned rabbit more than once.</p>
+<p>Look in the rabbitmq.log file for the instance at /var/vcap/store/rabbitmq_srs/agent/instance/&lt;rabbit_instance_id&gt;/log/rabbitmq.log. Look for a line that gives the name and port.&nbsp; You'll need that to connect with the browser.</p>
+<p>Look in the configuring_users log file to see what user id and password the cloud gave to your service instance. It should be a line that includes rabbitmqctl add_user.&nbsp; The full path to the file should be /var/vcap/store/rabbitmq_srs/agent/instance/&lt;rabbit_instance_id&gt;/log/configuring_users.log They will look similar to encrypted passwords.</p>
+<p>&nbsp;Connect to the management server with your web browser.&nbsp; Use the URL http://&lt;cluster_name&gt;.cloudfoundry.me Authenticate with the user name and password you got from the log file. You should now have full access to the management web interface. The user interface should initially show now exchanges or queues.</p>
+<p>Deploy an application bound to rabbit. You should see traffic in the management console you just connected to.</p>
+<p>&nbsp;</p>
+<p>Using Spring to Simplify Cloud Migration</p>
+<p>&nbsp;</p>
+<p>The opaque/proprietary nature of cloud deployments often means a developer has to code to the cloud.&nbsp; They end up with one version that uses the local deployment APIs and one that version that uses the Cloud APIs with the associated problems of determining which version to run at any given time. Spring's Dependency Injection (DI) architecture makes it easy for Java developers to flip between Non-Cloud and Cloud configurations by decoupling the module connection process. The following XML config shows how an AMQP connection bean could be configured Cloud Foundry and for a standard environment. The consuming code that is injected with or looks up this bean has no idea when version it is getting.</p>
+<pre class="language-markup"><code>&lt;!-- Obtain a connection to the RabbitMQ via cloudfoundry-runtime: --&gt;
+    &lt;beans profile="cloud"&gt;
+        &lt;cloud:rabbit-connection-factory
+            id="rabbitConnectionFactory" /&gt;
+    &lt;/beans&gt;
+
+    &lt;!-- connect to the local broker using the default user name and password --&gt;
+    &lt;beans profile="dev"&gt;
+        &lt;bean id="rabbitConnectionFactory"
+            class="org.springframework.amqp.rabbit.connection.CachingConnectionFactory"&gt;
+            &lt;constructor-arg value="localhost" /&gt;
+            &lt;property name="username" value="guest" /&gt;
+            &lt;property name="password" value="guest" /&gt;
+        &lt;/bean&gt;
+    &lt;/beans&gt;</code></pre>
+<p>The XML uses Spring Profiles to pick the correct bean definition at initialization time.&nbsp; The originating example runs as a java program in development and in a Cloud Foundry environment for deployment testing.&nbsp; All Java code in Cloud Foundry is deployed in a container so we use a web application listener to do spring initialization in the cloud and a traditional Main() when running on a local machine. These two entry points provide a simple place to set the profile without having to create separate config files.</p>
+<p>&nbsp;</p>
+<p>This code shows how the profile is used for the stand-alone program:&nbsp;</p>
+<pre class="language-java"><code>public static void main(String[] args) {
+        AbstractApplicationContext context = 
+            CafeDemoAppUtilities.loadProfileContext(
+                    "/META-INF/spring/integration/amqp/cafeDemo-amqp-xml.xml", 
+                    CafeDemoAppAmqp.class,"dev");
+                   ...
+        context.close();
+    }</code></pre>
+<p>This code shows how the profile is used in the web application listener:&nbsp;</p>
+<pre class="language-java"><code>public void contextInitialized(ServletContextEvent arg0) {
+        AbstractApplicationContext context = 
+                CafeDemoAppUtilities.loadProfileContext(
+                        "/META-INF/spring/integration/amqp/cafeDemo-amqp-xml.xml", 
+                        CafeDemoAppAmqp.class,"cloud");
+        ...
+   }
+
+</code></pre>
+<p>Conclusion</p>
+<p>&nbsp;</p>
+<p>Micro Cloud Foundry provides a simple way of deploying and testing applications along with their associated services without the headaches of manually installing all the components. It provides more open access than an external cloud making it possible to accesses tools and monitors that would not otherwise be available.</p></p>
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+                </div>
+            </div>
+
+        <div class="article">
+            <div class="article-meta">
+                <ul class="tags">
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="additional-info">
+                <div class="related-box promo">
+                    <a href="/blog/43/find-minimum-path-sum-in-a-given-2d-array./">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/21f4c7b9-3c4a-41bc-b7ff-5e7538352285_minimum-path-sum.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/43/find-minimum-path-sum-in-a-given-2d-array./">Find Minimum Path Sum in a given 2D Array.</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/58/how-to-solve-knapsack-problem-using-dynamic-programming/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/b6cbe28d-ef39-4235-aa96-015ea58e9991_knapsack.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/58/how-to-solve-knapsack-problem-using-dynamic-programming/">How to solve Knapsack problem using Dynamic Programming</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/59/how-to-solve-coin-change-problem-using-dynamic-programming-for-minimum-number-of-ways-possible/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/450a3f20-633e-4f13-aa8e-dce34b85cf72_make-change.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/59/how-to-solve-coin-change-problem-using-dynamic-programming-for-minimum-number-of-ways-possible/">How to Solve Coin Change Problem using Dynamic Programming for Minimum number of ways possible?</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/89/how-to-check-if-a-linked-list-is-either-null-terminated-or-ends-in-a-cycle-cyclic/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/6ff093e0-9c78-4bb2-861e-5b96b8c47fcc_linkedlist-circle.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/89/how-to-check-if-a-linked-list-is-either-null-terminated-or-ends-in-a-cycle-cyclic/">How to Check if a linked list is either NULL-terminated or ends in a cycle (cyclic)</a></p>
+                </div>
+            <!--sumitstart<amp-ad width="100vw" height="320"
+                    type="adsense"
+                    data-ad-client="ca-pub-1068871795581451"
+                    data-ad-slot="7001708883"
+                    data-auto-format="rspv"
+                    data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>sumitend-->
+
+            <div class="related-box">
+                <h3>Categories</h3>
+                <ul>
+                </ul>
+            </div>
+            <div class="related-box promo">
+                <!--sumitstart<amp-ad width="100vw" height="320"
+                        type="adsense"
+                        data-ad-client="ca-pub-1068871795581451"
+                        data-ad-slot="7001708883"
+                        data-auto-format="rspv"
+                        data-full-width="">
+                    <div overflow=""></div>
+                </amp-ad>sumitend-->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content content-width">
+            <div class="footer-menu">
+                <div class="footer-item">
+                    <h2>About AskGif</h2>
+                    <p>
+                        AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission
+                        to make people smile. Keep smiling and keep sharing
+                    </p><br>
+                    <a href="https://askgif.com/about-us/">Read More</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Sarkari Support &amp; Help</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/faq/">FAQs</a></li>
+                        <li>Have Questions? Email us @ support[at]askgif[dot]com</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2>Follow us</h2>
+                    <p>Adhe Idhar Jao Adhe Udhar Jao</p>
+                    <p>Baki hamare piche ao</p>
+                </div>
+                <div class="footer-item">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/?lang=en">English</a></li>
+                        <li><a href="https://askgif.com/?lang=hi">हिंदी</a></li>
+                        <li><a href="https://askgif.com/terms-of-service/">Terms of Service</a></li>
+                        <li><a href="https://askgif.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://askgif.com/editor/">Editor</a></li>
+                        <li><a href="https://askgif.com/contributors/">Developers & Contributors</a></li>
+                        <li><a href="https://askgif.com/sitemap.xml">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a rel="ugc nofollow" href="https://www.facebook.com/askgifdotcom/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://twitter.com/askgifdotcom"><i class="fab fa-twitter"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.pinterest.com/askgifdotcom/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.instagram.com/askgifdotcom/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.tumblr.com/blog/askgifdotcom"><i class="fab fa-tumblr"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="meta-content">
+                <p>Copyright 2021 | Designed by <a href="https://askgif.com/">Askgif</a> | Last Cached: 10/30/2021 9:09:35 AM | A</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

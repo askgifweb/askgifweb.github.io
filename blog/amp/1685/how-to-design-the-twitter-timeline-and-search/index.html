@@ -1,0 +1,790 @@
+﻿
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <link rel="shortcut icon" href="https://shotcutdotcom.github.io/static/images/favicon.ico" type="image/png">
+    <title>How to Design the Twitter timeline and search - Blog - Find Best Reads of All Time on AskGif</title>
+
+    <link rel="canonical" href="https://askgif.com/blog/1685/how-to-design-the-twitter-timeline-and-search/">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://askgif.com/",
+        "headline": "AskGif",
+        "datePublished": "2020/11/20",
+        "dateModified":  "2020/11/20",
+        "description": "Share this How to Design the Twitter timeline and search Blog and explore more",
+        "author": {
+        "@type": "Person",
+        "name": "Sumit Chourasia"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Askgif",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/data/master/askgif-static/askgif_logo.png"
+        }
+        },
+        "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/sumitc91/AmpImage/main/Blogs/4cffb0b1-c317-4027-9ff2-188ac3240e74.jpg",
+        "height": 1280,
+        "width": 857
+        }
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom=''>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            transition: all 0.2s linear;
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content-width {
+            width: 80%;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 50px 0px;
+            line-height: 160%;
+        }
+
+        h1 {
+            font-size: 240%;
+            line-height: 120%;
+            margin: 20px 0px;
+        }
+
+        h2 {
+            font-size: 140%;
+            margin: 30px 0px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .subtext {
+            text-align: left;
+            font-weight: 400;
+            color: #a5a5a5;
+            font-size: 90%;
+        }
+
+        .branding {
+            font-size: 90%;
+            color: #fff;
+        }
+
+            .branding a {
+                color: inherit;
+            }
+
+                .branding a:hover {
+                    color: #19B5FE;
+                }
+
+        .button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #19B5FE;
+            font-weight: 700;
+            text-align: center;
+        }
+
+            .button:hover {
+                background: #3ebf43;
+            }
+
+        /* Header */
+        header,
+        footer,
+        #sidebar {
+            background: #2c3e50;
+        }
+
+        header {
+            padding: 10px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        #sidebar {
+            width: 300px;
+            padding: 1.5rem;
+        }
+
+        .sidebar-menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .amp-custom-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem;
+            color: #fff;
+        }
+
+        #sidebar-close {
+            cursor: pointer;
+        }
+
+        .sidevar-nav-item {
+            padding: 10px 0px;
+            margin: 0px;
+            display: block;
+            list-style: none;
+            color: #021425;
+            text-transform: capitalize;
+            letter-spacing: .6px;
+            line-height: 2.0625;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .sidevar-nav-item:hover {
+                color: #19B5FE;
+            }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        #sidebar-menu-btn {
+            background: 0 0;
+            border: 0;
+            color: #fff;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        /* POST */
+        #article-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .article {
+            flex-basis: 70%;
+            padding-right: 30px;
+            border-right: 1px solid #e3e3e3;
+        }
+
+            .article h1 {
+                margin-top: 0px;
+            }
+
+        .article-image,
+        .article-body {
+            margin: 20px 0px;
+            width: 340px;
+        }
+
+        .author-info {
+            color: #9d9d9d;
+            font-weight: bold;
+        }
+
+        .article a {
+            color: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        pre {
+            font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            margin-bottom: 10px;
+            overflow: auto;
+            width: auto;
+            padding: 5px;
+            background-color: #eee;
+            width: 650px !ie7;
+            padding-bottom: 20px !ie7;
+            max-height: 600px;
+        }
+
+        .article a.button {
+            margin: 20px 10px 20px 0px;
+            display: inline-block;
+            width: 120px;
+        }
+
+            .article a.button,
+            .article a.button:hover {
+                color: #fff;
+            }
+
+        .article a:hover {
+            color: #19B5FE;
+        }
+
+        #additional-info {
+            flex-basis: 30%;
+            padding-left: 30px;
+        }
+
+            #additional-info:before {
+                display: block;
+                height: 6px;
+                background-color: #2c3e50;
+                content: ' ';
+                width: 50px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+        .promo,
+        .related-box ul li {
+            border: 1px solid #e3e3e3;
+        }
+
+        .promo {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .article-meta ul,
+        .related-box ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .related-box a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+            .related-box a.imp-link {
+                color: #3ebf43;
+                font-weight: 700;
+            }
+
+        .related-box ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+            .related-box ul li:hover,
+            .related-box a:hover {
+                text-decoration: underline;
+                background: #ebebeb;
+            }
+
+        .article-meta {
+            margin: 30px 0px;
+        }
+
+            .article-meta ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+        .article .article-meta a.tag {
+            margin-right: 5px;
+            background: #ebebeb;
+            font-size: 90%;
+            text-decoration: none;
+            padding: 5px;
+            color: #414141;
+            text-transform: uppercase;
+        }
+
+        .article .article-meta .tag:hover {
+            background: #dadada;
+        }
+
+        .article-meta li {
+            list-style: none;
+        }
+
+        .blockquote-wrapper {
+            position: relative;
+        }
+
+        .blockquote {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 90%;
+            font-style: italic;
+            text-align: justify;
+        }
+
+            .blockquote::before {
+                content: "“";
+                position: absolute;
+                top: 0.25em;
+                left: -0.15em;
+                color: #e7e6e4;
+                font-size: 170px;
+                z-index: -1;
+            }
+
+        cite {
+            display: block;
+            text-align: right;
+            padding: 10px 0px;
+        }
+
+        .amp-components .component {
+            margin: 30px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-darkturquoise {
+            background-color: darkturquoise;
+        }
+        /* Footer */
+        footer {
+            color: #fff;
+            text-align: center;
+        }
+
+        .article {
+            width: 100%;
+        }
+
+        #additional-info {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            h1 {
+                font-size: 140%;
+            }
+
+            .article {
+                padding-right: 20px;
+            }
+
+            #additional-info {
+                padding-left: 20px;
+            }
+
+            .related-box ul li, .promo p, .promo a {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .article,
+            #additional-info {
+                border: 0px;
+                flex-basis: 100%;
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 160%;
+            }
+
+            .article a.button,
+            .article .article-meta a.tag li {
+                font-size: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 120%;
+            }
+
+            .content-width {
+                width: 90%;
+            }
+
+            .content {
+                padding: 30px 0px;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            header {
+                padding: 5px 0px;
+            }
+
+            #article-wrapper {
+                flex-direction: column;
+            }
+
+            .blockquote {
+                margin: 50px 0px;
+                font-size: 100%;
+            }
+
+            .article-meta ul {
+                flex-wrap: wrap;
+            }
+
+            .article-meta a.tag {
+                margin-bottom: 10px;
+            }
+
+            .article a.button {
+                margin: 10px 10px 10px 0px;
+            }
+
+            .branding p, .branding a {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!--sumitstart<script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>sumitend-->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+
+<body>
+    <!--sumitstart<amp-auto-ads type="adsense"
+                  data-ad-client="ca-pub-1068871795581451">
+    </amp-auto-ads>sumitend-->
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+            {
+            "vars": {
+            "account": "UA-118778979-1"
+            },
+            "triggers": {
+            "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+            }
+            }
+            }
+        </script>
+    </amp-analytics>
+    <header>
+        <div class="menu content-width">
+            <div class="logo">
+                <a href="https://askgif.com/">
+                    AskGif<sup>TM</sup>
+                </a>
+            </div>
+            <button id="sidebar-menu-btn" on="tap:sidebar.toggle">☰</button>
+        </div>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="amp-custom-sidebar-header">
+            <div role="button" aria-label="close sidebar" on="tap:sidebar.toggle" tabindex="0" id="sidebar-close">✕</div>
+        </div>
+        <ul class="sidebar-menu">
+            <a href="https://askgif.com/" class="sidevar-nav-item">
+                <li>Gifs</li>
+            </a>
+            <a href="https://askgif.com/blog/" class="sidevar-nav-item">
+                <li>Blogs</li>
+            </a>
+        </ul>
+    </amp-sidebar>
+    <section class="content content-width" id="article-wrapper">
+            <div class="article">
+                <a href="/blog/1685/how-to-design-the-twitter-timeline-and-search">
+                    <h2 class="title">
+                        How to Design the Twitter timeline and search
+                    </h2>
+                </a>
+
+                <div class="author-info">
+                    By <a href="">AskGif</a> | Nov 20, 2020
+                </div>
+                <div class="article-image">
+                    <a href="/blog/1685/how-to-design-the-twitter-timeline-and-search/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/4cffb0b1-c317-4027-9ff2-188ac3240e74.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                        <p class="subtext">
+                            Source : AskGif
+                        </p>
+                    </a>
+                </div>
+                <div class="article-meta">
+                    <ul class="tags">
+                        <a class="tag" href="/blog/category/tutorials/"><li>tutorials</li></a>
+                            <a class="tag" href="/blog/tags/design/"><li>design</li></a>
+                            <a class="tag" href="/blog/tags/interview/"><li>interview</li></a>
+                            <a class="tag" href="/blog/tags/system-design/"><li>system-design</li></a>
+                            <a class="tag" href="/blog/tags/twitter/"><li>twitter</li></a>
+                    </ul>
+                </div>
+                <div class="article-body">
+                    <p><p>Design the Facebook feed and Design Facebook search are similar questions.</p>
+<p>Step 1: Outline use cases and constraints<br />Gather requirements and scope the problem. Ask questions to clarify use cases and constraints. Discuss assumptions.</p>
+<p>Without an interviewer to address clarifying questions, we'll define some use cases and constraints.</p>
+<p>Use cases<br />We'll scope the problem to handle only the following use cases<br />User posts a tweet<br />Service pushes tweets to followers, sending push notifications and emails<br />User views the user timeline (activity from the user)<br />User views the home timeline (activity from people the user is following)<br />User searches keywords<br />Service has high availability</p>
+<p><br />Out of scope<br />Service pushes tweets to the Twitter Firehose and other streams<br />Service strips out tweets based on users' visibility settings<br />Hide @reply if the user is not also following the person being replied to<br />Respect 'hide retweets' setting<br />Analytics</p>
+<p><br />Constraints and assumptions<br />State assumptions<br />General</p>
+<p>Traffic is not evenly distributed<br />Posting a tweet should be fast<br />Fanning out a tweet to all of your followers should be fast, unless you have millions of followers<br />100 million active users<br />500 million tweets per day or 15 billion tweets per month<br />Each tweet averages a fanout of 10 deliveries<br />5 billion total tweets delivered on fanout per day<br />150 billion tweets delivered on fanout per month<br />250 billion read requests per month<br />10 billion searches per month<br />Timeline</p>
+<p>Viewing the timeline should be fast<br />Twitter is more read heavy than write heavy<br />Optimize for fast reads of tweets<br />Ingesting tweets is write heavy<br />Search</p>
+<p>Searching should be fast<br />Search is read-heavy<br />Calculate usage<br />Clarify with your interviewer if you should run back-of-the-envelope usage calculations.</p>
+<p>Size per tweet:<br />tweet_id - 8 bytes<br />user_id - 32 bytes<br />text - 140 bytes<br />media - 10 KB average<br />Total: ~10 KB<br />150 TB of new tweet content per month<br />10 KB per tweet * 500 million tweets per day * 30 days per month<br />5.4 PB of new tweet content in 3 years<br />100 thousand read requests per second<br />250 billion read requests per month * (400 requests per second / 1 billion requests per month)<br />6,000 tweets per second<br />15 billion tweets per month * (400 requests per second / 1 billion requests per month)<br />60 thousand tweets delivered on fanout per second<br />150 billion tweets delivered on fanout per month * (400 requests per second / 1 billion requests per month)<br />4,000 search requests per second<br />10 billion searches per month * (400 requests per second / 1 billion requests per month)<br />Handy conversion guide:</p>
+<p>2.5 million seconds per month<br />1 request per second = 2.5 million requests per month<br />40 requests per second = 100 million requests per month<br />400 requests per second = 1 billion requests per month<br />Step 2: Create a high level design<br />Outline a high level design with all important components.</p>
+<p>Imgur</p>
+<p>Step 3: Design core components<br />Dive into details for each core component.</p>
+<p>Use case: User posts a tweet<br />We could store the user's own tweets to populate the user timeline (activity from the user) in a relational database. We should discuss the use cases and tradeoffs between choosing SQL or NoSQL.</p>
+<p>Delivering tweets and building the home timeline (activity from people the user is following) is trickier. Fanning out tweets to all followers (60 thousand tweets delivered on fanout per second) will overload a traditional relational database. We'll probably want to choose a data store with fast writes such as a NoSQL database or Memory Cache. Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.1</p>
+<p>We could store media such as photos or videos on an Object Store.</p>
+<p>The Client posts a tweet to the Web Server, running as a reverse proxy<br />The Web Server forwards the request to the Write API server<br />The Write API stores the tweet in the user's timeline on a SQL database<br />The Write API contacts the Fan Out Service, which does the following:<br />Queries the User Graph Service to find the user's followers stored in the Memory Cache<br />Stores the tweet in the home timeline of the user's followers in a Memory Cache<br />O(n) operation: 1,000 followers = 1,000 lookups and inserts<br />Stores the tweet in the Search Index Service to enable fast searching<br />Stores media in the Object Store<br />Uses the Notification Service to send out push notifications to followers:<br />Uses a Queue (not pictured) to asynchronously send out notifications<br />Clarify with your interviewer how much code you are expected to write.</p>
+<p>If our Memory Cache is Redis, we could use a native Redis list with the following structure:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tweet n+2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tweet n+1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tweet n<br />| 8 bytes &nbsp; 8 bytes &nbsp;1 byte | 8 bytes &nbsp; 8 bytes &nbsp;1 byte | 8 bytes &nbsp; 8 bytes &nbsp;1 byte |<br />| tweet_id &nbsp;user_id &nbsp;meta &nbsp; | tweet_id &nbsp;user_id &nbsp;meta &nbsp; | tweet_id &nbsp;user_id &nbsp;meta &nbsp; |<br />The new tweet would be placed in the Memory Cache, which populates the user's home timeline (activity from people the user is following).</p>
+<p>We'll use a public REST API:</p>
+<p>$ curl -X POST --data '{ "user_id": "123", "auth_token": "ABC123", \<br />&nbsp; &nbsp; "status": "hello world!", "media_ids": "ABC987" }' \<br />&nbsp; &nbsp; https://twitter.com/api/v1/tweet<br />Response:</p>
+<p>{<br />&nbsp; &nbsp; "created_at": "Wed Sep 05 00:37:15 +0000 2012",<br />&nbsp; &nbsp; "status": "hello world!",<br />&nbsp; &nbsp; "tweet_id": "987",<br />&nbsp; &nbsp; "user_id": "123",<br />&nbsp; &nbsp; ...<br />}<br />For internal communications, we could use Remote Procedure Calls.</p>
+<p>Use case: User views the home timeline<br />The Client posts a home timeline request to the Web Server<br />The Web Server forwards the request to the Read API server<br />The Read API server contacts the Timeline Service, which does the following:<br />Gets the timeline data stored in the Memory Cache, containing tweet ids and user ids - O(1)<br />Queries the Tweet Info Service with a multiget to obtain additional info about the tweet ids - O(n)<br />Queries the User Info Service with a multiget to obtain additional info about the user ids - O(n)<br />REST API:</p>
+<p>$ curl https://twitter.com/api/v1/home_timeline?user_id=123<br />Response:</p>
+<p>{<br />&nbsp; &nbsp; "user_id": "456",<br />&nbsp; &nbsp; "tweet_id": "123",<br />&nbsp; &nbsp; "status": "foo"<br />},<br />{<br />&nbsp; &nbsp; "user_id": "789",<br />&nbsp; &nbsp; "tweet_id": "456",<br />&nbsp; &nbsp; "status": "bar"<br />},<br />{<br />&nbsp; &nbsp; "user_id": "789",<br />&nbsp; &nbsp; "tweet_id": "579",<br />&nbsp; &nbsp; "status": "baz"<br />},<br />Use case: User views the user timeline<br />The Client posts a user timeline request to the Web Server<br />The Web Server forwards the request to the Read API server<br />The Read API retrieves the user timeline from the SQL Database<br />The REST API would be similar to the home timeline, except all tweets would come from the user as opposed to the people the user is following.</p>
+<p>Use case: User searches keywords<br />The Client sends a search request to the Web Server<br />The Web Server forwards the request to the Search API server<br />The Search API contacts the Search Service, which does the following:<br />Parses/tokenizes the input query, determining what needs to be searched<br />Removes markup<br />Breaks up the text into terms<br />Fixes typos<br />Normalizes capitalization<br />Converts the query to use boolean operations<br />Queries the Search Cluster (ie Lucene) for the results:<br />Scatter gathers each server in the cluster to determine if there are any results for the query<br />Merges, ranks, sorts, and returns the results<br />REST API:</p>
+<p>$ curl https://twitter.com/api/v1/search?query=hello+world<br />The response would be similar to that of the home timeline, except for tweets matching the given query.</p>
+<p>Step 4: Scale the design<br />Identify and address bottlenecks, given the constraints.</p>
+<p>Imgur</p>
+<p>Important: Do not simply jump right into the final design from the initial design!</p>
+<p>State you would 1) Benchmark/Load Test, 2) Profile for bottlenecks 3) address bottlenecks while evaluating alternatives and trade-offs, and 4) repeat. See Design a system that scales to millions of users on AWS as a sample on how to iteratively scale the initial design.</p>
+<p>It's important to discuss what bottlenecks you might encounter with the initial design and how you might address each of them. For example, what issues are addressed by adding a Load Balancer with multiple Web Servers? CDN? Master-Slave Replicas? What are the alternatives and Trade-Offs for each?</p>
+<p>We'll introduce some components to complete the design and to address scalability issues. Internal load balancers are not shown to reduce clutter.</p>
+<p>To avoid repeating discussions, refer to the following system design topics for main talking points, tradeoffs, and alternatives:</p>
+<p>DNS<br />CDN<br />Load balancer<br />Horizontal scaling<br />Web server (reverse proxy)<br />API server (application layer)<br />Cache<br />Relational database management system (RDBMS)<br />SQL write master-slave failover<br />Master-slave replication<br />Consistency patterns<br />Availability patterns<br />The Fanout Service is a potential bottleneck. Twitter users with millions of followers could take several minutes to have their tweets go through the fanout process. This could lead to race conditions with @replies to the tweet, which we could mitigate by re-ordering the tweets at serve time.</p>
+<p>We could also avoid fanning out tweets from highly-followed users. Instead, we could search to find tweets for highly-followed users, merge the search results with the user's home timeline results, then re-order the tweets at serve time.</p>
+<p>Additional optimizations include:</p>
+<p>Keep only several hundred tweets for each home timeline in the Memory Cache<br />Keep only active users' home timeline info in the Memory Cache<br />If a user was not previously active in the past 30 days, we could rebuild the timeline from the SQL Database<br />Query the User Graph Service to determine who the user is following<br />Get the tweets from the SQL Database and add them to the Memory Cache<br />Store only a month of tweets in the Tweet Info Service<br />Store only active users in the User Info Service<br />The Search Cluster would likely need to keep the tweets in memory to keep latency low<br />We'll also want to address the bottleneck with the SQL Database.</p>
+<p>Although the Memory Cache should reduce the load on the database, it is unlikely the SQL Read Replicas alone would be enough to handle the cache misses. We'll probably need to employ additional SQL scaling patterns.</p>
+<p>The high volume of writes would overwhelm a single SQL Write Master-Slave, also pointing to a need for additional scaling techniques.</p>
+<p>Federation<br />Sharding<br />Denormalization<br />SQL Tuning<br />We should also consider moving some data to a NoSQL Database.</p></p>
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+
+                    <!--sumitstart<amp-ad width="100vw" height="320"
+                            type="adsense"
+                            data-ad-client="ca-pub-1068871795581451"
+                            data-ad-slot="7001708883"
+                            data-auto-format="rspv"
+                            data-full-width="">
+                        <div overflow=""></div>
+                    </amp-ad>sumitend-->
+                </div>
+            </div>
+
+        <div class="article">
+            <div class="article-meta">
+                <ul class="tags">
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="additional-info">
+                <div class="related-box promo">
+                    <a href="/blog/100/what-is-a-queue/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/f653b2fa-6790-4d95-b5cf-1eafcce38bda_Data_Queue.png" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/100/what-is-a-queue/">What is a Queue?</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/111/find-maximum-element-in-binary-tree-without-recursion./">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/852f8357-9b87-4af3-9054-484bbc13f1fd_BST_Example.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/111/find-maximum-element-in-binary-tree-without-recursion./">Find maximum element in binary tree without recursion.</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/1692/latency-vs-throughput/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_9e97e6f4-fec4-4e60-8bb0-618e048a04a5.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/1692/latency-vs-throughput/">Latency vs throughput</a></p>
+                </div>
+                <div class="related-box promo">
+                    <a href="/blog/1697/what-is-reverse-proxy-web-server/">
+                        <amp-img src="https://raw.githubusercontent.com/sumitc91/sumitc91.github.io/master/Blogs/icon_c9b9941f-ccf0-43b6-8c8d-af837fe0b02d.jpg" layout="responsive" width="1484" height="600"></amp-img>
+                    </a>
+                    <p><a href="/blog/1697/what-is-reverse-proxy-web-server/">What is Reverse proxy (web server)</a></p>
+                </div>
+            <!--sumitstart<amp-ad width="100vw" height="320"
+                    type="adsense"
+                    data-ad-client="ca-pub-1068871795581451"
+                    data-ad-slot="7001708883"
+                    data-auto-format="rspv"
+                    data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>sumitend-->
+
+            <div class="related-box">
+                <h3>Categories</h3>
+                <ul>
+                </ul>
+            </div>
+            <div class="related-box promo">
+                <!--sumitstart<amp-ad width="100vw" height="320"
+                        type="adsense"
+                        data-ad-client="ca-pub-1068871795581451"
+                        data-ad-slot="7001708883"
+                        data-auto-format="rspv"
+                        data-full-width="">
+                    <div overflow=""></div>
+                </amp-ad>sumitend-->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content content-width">
+            <div class="footer-menu">
+                <div class="footer-item">
+                    <h2>About AskGif</h2>
+                    <p>
+                        AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission
+                        to make people smile. Keep smiling and keep sharing
+                    </p><br>
+                    <a href="https://askgif.com/about-us/">Read More</a>
+                </div>
+                <div class="footer-item">
+                    <h2>Sarkari Support &amp; Help</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/faq/">FAQs</a></li>
+                        <li>Have Questions? Email us @ support[at]askgif[dot]com</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h2>Follow us</h2>
+                    <p>Adhe Idhar Jao Adhe Udhar Jao</p>
+                    <p>Baki hamare piche ao</p>
+                </div>
+                <div class="footer-item">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="https://askgif.com/?lang=en">English</a></li>
+                        <li><a href="https://askgif.com/?lang=hi">हिंदी</a></li>
+                        <li><a href="https://askgif.com/terms-of-service/">Terms of Service</a></li>
+                        <li><a href="https://askgif.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://askgif.com/editor/">Editor</a></li>
+                        <li><a href="https://askgif.com/contributors/">Developers & Contributors</a></li>
+                        <li><a href="https://askgif.com/sitemap.xml">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a rel="ugc nofollow" href="https://www.facebook.com/askgifdotcom/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://twitter.com/askgifdotcom"><i class="fab fa-twitter"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.pinterest.com/askgifdotcom/"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.instagram.com/askgifdotcom/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a rel="ugc nofollow" href="https://www.tumblr.com/blog/askgifdotcom"><i class="fab fa-tumblr"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="meta-content">
+                <p>Copyright 2021 | Designed by <a href="https://askgif.com/">Askgif</a> | Last Cached: 10/30/2021 9:42:28 AM | A</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
