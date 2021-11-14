@@ -418,6 +418,7 @@
                 'Content-Type': 'application/json'
             };
 
+            gaWeb('PageType', 'blog', 'single');
             $http({
                 method: 'GET',
                 url: blogApiUrl + '/blog/id/'+ $scope.id +'-'+lang+'.json'
@@ -439,6 +440,7 @@
                 $.unblockUI();
             }, function (error) {
                     console.log("failed");
+                    gaWeb('AjaxError', 'blog', blogApiUrl + '/blog/id/'+ $scope.id +'-'+lang+'.json');
                     $.unblockUI();
             });
 
