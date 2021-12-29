@@ -152,11 +152,11 @@
                                                 
                                             </div>
                                             <div class="card-body pt-0">
-                                                <a href="/gif/{{gif.id}}/{{gif.slug}}/{{Model.lang == 'hi' ? '&lang=hi' : ''}}">
+                                                <a href="/gif/{{gif.id}}/{{gif.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">
                                                 <img class="full-height-width" ng-src="{{siteConfig.gifCdn}}/{{gif.imageUrl}}" alt="{{gif.title}}" /></a>
                                             </div>
                                             <div class="card-footer">
-                                                <a href="/gif/{{gif.id}}/{{gif.slug}}/{{Model.lang == 'hi' ? '&lang=hi' : ''}}">{{gif.title}}</a>
+                                                <a href="/gif/{{gif.id}}/{{gif.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">{{gif.title}}</a>
                                             </div>
                                             <div class="card-footer">
                                                 <span class="small">Contributed By: <b>{{ gif.contributedBy}}</b></span>
