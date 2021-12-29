@@ -1,0 +1,495 @@
+<html lang="en" ng-app="app" ng-controller="HelloWorldCtrl">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118778979-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118778979-1');
+    </script>
+
+    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1068871795581451",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="author" content="Sumit Chourasia">
+    <meta name="description" content="Psychic Investigators (2006–) Series - Find All Movies Information at Single Place" />
+    <meta name="keywords" content="{{Model.MetaTags.Keywords}}" />
+
+    <meta name="robots" content="{{Model.MetaTags.Robots}}">
+
+    <meta property="og:image" content="{{Model.MetaTags.OgImage}}" />
+    <meta property="og:title" content="Psychic Investigators (2006–) Series - Find All Movies Information at Single Place" />
+    <meta property="og:description" content="Psychic Investigators (2006–) Series - Find All Movies Information at Single Place" />
+
+    <meta name="twitter:image" content="{{Model.MetaTags.OgImage}}" />
+    <meta name="twitter:title" content="Psychic Investigators (2006–) Series - Find All Movies Information at Single Place" />
+    <meta name="twitter:description" content="Psychic Investigators (2006–) Series - Find All Movies Information at Single Place" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@@askgifdotcom">
+
+    <title ng-bind="Model.MetaTags.Title">Psychic Investigators (2006–) Series - Find All Movies Information at Single Place</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{siteInfo.favicon}}">
+
+    <!-- this styles only adds some repairs on idevices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/AdminLTE-3/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/AdminLTE-3/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/jquery-ui.css">
+
+    <link href="/AdminLTE-3/css/style.css" rel="stylesheet" />
+
+    <script async src="//platform-api.sharethis.com/js/sharethis.js#property=5b0d8f8e27d17e001197493c&product=inline-share-buttons"></script>
+    <script type="text/javascript" src="/static/js/common.js"></script>
+    <script src="/static/js/pace.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script src="/App/js/askgifi18n.js"></script>
+
+</head>
+<body class="hold-transition layout-top-nav layout-navbar-fixed">
+    <div id="floater">
+
+        <!-- BlogRightSide -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1068871795581451"
+             data-ad-slot="4962704681"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div id="floater-left">
+
+        <!-- BlogRightSide -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1068871795581451"
+             data-ad-slot="4962704681"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+            <div class="container">
+                <a href="/{{Model.lang == 'hi' ? '?lang=hi' : ''}}" class="navbar-brand">
+                    <img ng-src="{{siteInfo.companyLogo}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                         style="opacity: .8">
+                    <span class="brand-text font-weight-light" ng-bind="siteInfo.companyName"></span>
+                </a>
+
+                <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse order-3 width100perc" id="navbarCollapse">
+                    <!-- SEARCH FORM -->
+
+                    <div class="gcse-search" enableAutoComplete="true"></div>
+                </div>
+                <!-- Right navbar links -->
+                <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+                    <li class="nav-item" ng-repeat="menu in Model.TopMenuList">
+                        <a href="{{menu.url}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}" class="nav-link">{{menu.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="container">
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Gifs Hub</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">Gifs</a></li>
+                                <li class="breadcrumb-item active">Gifs Hub</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            <div class="row">
+                <div class="col-12 col-sm-1"></div>
+                <div class="col-12 col-sm-10">
+                    <hr />
+                    <div class="row">
+                        
+                
+                        <div ng-repeat="ratings in movie.ratings" class="col-12 col-sm-4">
+                            <div class="info-box bg-light">
+                                <div class="info-box-content">
+                                    <span class="info-box-text text-center text-muted"><b>{{ratings.Source}}</b></span>
+                                    <h2><span class="info-box-number text-center text-muted mb-0">{{ratings.Value}}</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+
+                    <!-- Main content -->
+                    <section class="content">
+                        <!-- Default box -->
+                        <div class="card card-solid">
+                            <div class="card-body pb-0">
+                                <div class="row d-flex align-items-stretch">
+                                    
+                                
+                                    <div class="col-12 col-sm-3">
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>&nbsp; <b>Genre</b></a>
+                                            
+                                            <a ng-repeat="genre in movie.genre" class="list-group-item no-padding" href="/movie/genre/{{genre.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><i class="fa fa-tag fa-fw" aria-hidden="true"></i>&nbsp;  {{genre.name}}</a>
+                                            
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>&nbsp; <b>Actors</b></a>
+                                            
+                                            <a ng-repeat="actor in movie.actors" class="list-group-item no-padding" href="/movie/actor/{{actor.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><i class="fa fa-tag fa-fw" aria-hidden="true"></i>&nbsp; {{actor.name}}</a>
+                                            
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>&nbsp; <b>Director</b></a>
+                                            
+                                            <div ng-repeat="director in movie.director">
+                                                <a class="list-group-item no-padding" href="/movie/director/{{director.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><i class="fa fa-tag fa-fw" aria-hidden="true"></i>&nbsp;{{director.name}}</a>
+
+                                                <span class="small yellow">{{director.info}}</span>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>&nbsp; <b>Writer</b></a>
+                                            
+                                            <div ng-repeat="writer in movie.writer">
+                                                
+                                                <a class=" list-group-item no-padding small yellow">{{writer.info}}</a>
+                                                
+                                                <a class="list-group-item no-padding" href="/movie/writer/{{writer.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><i class="fa fa-tag fa-fw" aria-hidden="true"></i>&nbsp; {{writer.name}}</a>
+                                            </div>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>&nbsp; <b>Ratings</b></a>
+                                            
+                                            <a ng-repeat="ratings in movie.ratings" class="list-group-item no-padding small yellow">{{ratings.Source}} ({{ratings.Value}})</a>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="col-12">
+                                            <a href="/movie/{{movie.id}}/{{movie.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><img class="maxHeight450px width100perc" ng-src="{{siteConfig.movieCdn}}/{{movie.imageUrl}}" alt="{{movie.title}}" /></a>
+                                        </div>
+                                        <div class="callout callout-info">
+                                            <h5>{{movie.title}}</h5>
+                                            <p>{{movie.plot}}</p>
+                                        </div>
+                                        <div class="callout callout-info">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-9">
+                                                    <div class="sharethis-inline-share-buttons share-buttons-customize"></div>
+                                                </div>
+                                                <div class="col-12 col-sm-3">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-3">
+
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp; Year: <b>{{movie.year}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>&nbsp; Rated: <b>{{movie.rated}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp; Released: <b>{{movie.released}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-clock fa-fw" aria-hidden="true"></i>&nbsp; Runtime: <b>{{movie.runtime}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-language fa-fw" aria-hidden="true"></i>&nbsp; Language: <b>{{movie.language}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-map fa-fw" aria-hidden="true"></i>&nbsp; Country: <b>{{movie.country}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-award fa-fw" aria-hidden="true"></i>&nbsp; Awards: <b>{{movie.awards}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-database fa-fw" aria-hidden="true"></i>&nbsp; Metascore: <b>{{movie.metascore}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-thumbs-up fa-fw" aria-hidden="true"></i>&nbsp; imdbRating: <b>{{movie.imdbRating}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>&nbsp; Type: <b>{{movie.type}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-video fa-fw" aria-hidden="true"></i>&nbsp; DVD: <b>{{movie.DVD}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-inbox fa-fw" aria-hidden="true"></i>&nbsp; BoxOffice: <b>{{movie.boxOffice}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-inbox fa-fw" aria-hidden="true"></i>&nbsp; Production: <b>{{movie.production}}</b></a>
+                                        </div>
+                                        <div class="list-group">
+                                            <a class="list-group-item no-padding"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>&nbsp; Website: <b>{{movie.website}}</b></a>
+                                        </div>
+                                    </div>
+                                
+
+                                    <div class="col-12 col-sm-12">
+                                        <div class="card-body pb-0">
+                                            Recommendations:
+                                            <div class="row d-flex align-items-stretch">
+                                                
+                                                <div class="col-12 col-sm-6 col-md-3 d-flex align-items-stretch" ng-repeat="imageAsset in movie.recommendations">
+                                                    <div class="card bg-light">
+                                                        <div class="card-header text-muted border-bottom-0">
+
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <a href="/movie/{{imageAsset.id}}/{{imageAsset.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}"><img class="full-height-width" ng-src="{{siteConfig.movieCdn}}/{{imageAsset.imageUrl}}" alt="{{imageAsset.title}}" /></a>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="/movie/{{imageAsset.id}}/{{imageAsset.slug}}/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">{{imageAsset.title}}</a>
+                                                        </div>
+                                                        <div class="card-footer">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="small">source: www.omdbapi.com</span>
+                            <!-- /.card-body -->
+                            <!-- /.card-footer -->
+                        </div>
+                        <div class="container">
+
+                            <!-- HorizontalAdBlock -->
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-1068871795581451"
+                                 data-ad-slot="9883858879"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                        <!-- /.card -->
+                    </section>
+                    <!-- /.content -->
+                </div>
+                <div class="col-12 col-sm-1"></div>
+            </div>
+        </div>
+
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <!--footer starts from here-->
+        <footer class="footer">
+            <div class="container bottom_border">
+                <div class="row">
+                    <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+
+                        <h5 class="headin5_amrc col_white_amrc pt2">{{footerContent.heading1}}</h5>
+                        <p>
+                            {{footerContent.content1}}
+                        </p><br>
+                        <a href="/about-us/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">Read More</a>
+
+                    </div>
+
+                    <div class=" col-sm-4 col-md  col-6 col">
+                        <h5 class="headin5_amrc col_white_amrc pt2">Links</h5>
+                        <p ng-repeat="link in footerContent.links">
+                            <a href="{{link.url}}">{{link.name}}</a>
+                        </p>
+
+                        <!--footer_ul_amrc ends here-->
+                    </div>
+
+                    <div class="col_white_amrc col-sm-4 col-md  col-6 col">
+                        <h5 class="headin5_amrc col_white_amrc pt2">Sarkari Support &amp; Help</h5>
+                        <!--headin5_amrc-->
+                        <ul class="footer_ul_amrc">
+                            <li><a href="/faq/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">FAQs</a></li>
+                            <li>Have Questions? Email us @@ support[at]askgif[dot]com</li>
+                        </ul>
+                        <!--footer_ul_amrc ends here-->
+                    </div>
+
+                    <div class="col_white_amrc col-sm-4 col-md  col-12 col">
+                        <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                        <p>Adhe Idhar Jao Adhe Udhar Jao</p>
+                        <p>Baki hamare piche ao</p>
+
+                        <!--footer_ul2_amrc ends here-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="container color-white">
+
+                <h4>{{footerContent.tnc.heading1}}</h4>
+
+                <p>{{footerContent.tnc.content1}}</p>
+
+                <p>&nbsp;</p>
+
+                <h4>{{footerContent.tnc.heading2}}</h4>
+
+                <ol type="a">
+                    <li>
+                        {{footerContent.tnc.content21}}
+                        <ol type="i">
+                            <li ng-repeat="content in footerContent.tnc.contentArr">{{content}}</li>
+                        </ol>
+                    </li>
+                    <li>{{footerContent.tnc.content22}}</li>
+                </ol>
+                <a href="/terms-of-service/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">Read More</a>
+
+            </div>
+
+            <div class="container">
+                <ul class="foote_bottom_ul_amrc">
+                    <li ng-repeat="link in footerContent.links2"><a href="{{link.url}}">{{link.name}}</a></li>
+                </ul>
+                <!--foote_bottom_ul_amrc ends here-->
+                <p class="text-center">Copyright {{siteConfig.copyrightYear}} | Designed by <a href="/{{Model.lang == 'hi' ? '?lang=hi' : ''}}">{{siteInfo.companyName}}</a> | Last Cached: {{siteConfig.lastCached}} UTC | {{siteConfig.site}}</p>
+                <ul class="social_footer_ul">
+                    <li ng-repeat="social in footerContent.social"><a rel="ugc nofollow" href="{{social.url}}"><i class="{{social.uiclass}}"></i></a></li>
+                </ul>
+                <!--social_footer_ul ends here-->
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Bootstrap 4 -->
+    <script src="/AdminLTE-3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="/AdminLTE-3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+    <script type="text/javascript" src="/static/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.blockUI.js"></script>
+
+    <script src="/static/js/angular.js"></script>
+
+    <script>
+        $.blockUI();
+        angular.module("app", []).controller("HelloWorldCtrl", function ($scope, $http) {
+
+            $scope.siteInfo = {
+                companyName: companyName,
+                companyLogo: companyLogo,
+                favicon: favicon,
+                googleSearch: googleSearch
+            };
+            $scope.Model = MovieModel;
+            $scope.siteConfig = siteConfig;
+            $scope.footerContent = footerContent;
+
+            var page = getQueryStringValue('page');
+            var lang = getQueryStringValue('lang');
+
+            if (lang != 'hi') {
+                lang = 'en';
+                $scope.Model.lang = 'en';
+            }
+
+            if (page != null && page != undefined && page != '') {
+                $scope.Model.Pagination.CurrentPage = page;
+                $scope.Model.Pagination.previousPageNumber = page == 1 ? 1 : parseInt(page) - 1;
+                $scope.Model.Pagination.nextPageNumber = page == $scope.Model.Pagination.PageCount ? page : parseInt(page) + 1;
+                $scope.Model.Pagination.hasPrevious = page != 1;
+                $scope.Model.Pagination.hasNext = page != $scope.Model.Pagination.PageCount;
+                $scope.Model.Pagination.pageRange = getPaginationRange(1, $scope.Model.Pagination.PageCount, $scope.Model.Pagination.CurrentPage);
+            }
+            else {
+                page = 1;
+            }
+
+            var titlePostFix = "";
+            if (page != 1) {
+                titlePostFix = " - Page " + page;
+            }
+
+            var url = window.location.href;
+            var arr = url.split("/");
+            $scope.id = arr[4];
+
+            var headers = {
+                'Content-Type': 'application/json'
+            };
+
+            gaWeb('PageType', 'movie', 'single');
+            $http({
+                method: 'GET',
+                url: movieApiUrl + '/movie/id/'+ $scope.id +'-'+lang+'.json'
+            }).then(function (response) {
+                //console.log(response.data);
+                $scope.movie = response.data;
+
+                var movieTitle = $scope.movie.title;
+                $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + "/movie/" + $scope.movie.id + "/" + $scope.movie.slug;
+                $scope.Model.MetaTags.Canonical = canonicalDomain + "/movie/" + $scope.movie.id + "/" + $scope.movie.slug + (lang != 'hi' ? "" : "?lang=hi");
+                $scope.Model.MetaTags.Title = MovieModel.MetaTags.SingleTitle.replace('{title}', movieTitle);
+                $scope.Model.MetaTags.OgTitle = MovieModel.MetaTags.SingleTitle.replace('{title}', movieTitle);
+                $scope.Model.MetaTags.Description = MovieModel.MetaTags.SingleDescription.replace('{title}', movieTitle);
+                $scope.Model.MetaTags.OgDescription = MovieModel.MetaTags.SingleDescription.replace('{title}', movieTitle);
+
+                $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
+                $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
+
+                $.unblockUI();
+            }, function (error) {
+                    console.log("failed");
+                    gaWeb('AjaxError', 'movie', movieApiUrl + '/movie/id/'+ $scope.id +'-'+lang+'.json');
+                $.unblockUI();
+            });
+
+        })
+    </script>
+
+    <script type="text/javascript" src="/static/js/postcommon.js"></script>
+</body>
+</html>
