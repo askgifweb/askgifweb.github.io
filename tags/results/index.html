@@ -367,14 +367,19 @@
                 $scope.Model.Pagination.pageRange = getPaginationRange(1, Model.Pagination.PageCount, Model.Pagination.CurrentPage);
                 $scope.Model.Pagination.urlPrefix = "/tags/" + $scope.tagName;
 
-                $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + (isGifNamePresentInUrlAmp ? "/gif" : "" )  + $scope.Model.Pagination.urlPrefix;
+                $scope.Model.MetaTags.Amphtml = canonicalDomain + "/amp"  + $scope.Model.Pagination.urlPrefix;
                 $scope.Model.MetaTags.Canonical = canonicalDomain + (isGifNamePresentInUrlCanonical ? "/gif" : "" ) + $scope.Model.Pagination.urlPrefix + (lang != 'hi' ? "" : "?lang=hi");
                 $scope.Model.MetaTags.Title = Model.MetaTags.TagTitle.replace('{tag}', titleCaseTag) + titlePostFix;
                 $scope.Model.MetaTags.Description = Model.MetaTags.TagDescription.replace('{tag}', titleCaseTag);
                 $scope.Model.MetaTags.OgDescription = Model.MetaTags.TagDescription.replace('{tag}', titleCaseTag);
 
-                $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
-                $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
+                 if (enableAmpLink) {
+                    $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
+                }
+
+                if (enableCanonicalLink) {
+                    $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
+                }
 
                 $.unblockUI();
             }, function (error) {

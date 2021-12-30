@@ -354,12 +354,18 @@
             }).then(function (response) {
                 //console.log(response.data);
                 $scope.gifList = response.data;
-                $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + "/gif/";
+                $scope.Model.MetaTags.Amphtml = canonicalDomain + "/gif/amp/";
                 $scope.Model.MetaTags.Canonical = canonicalDomain + "/gif/" +(lang != 'hi' ? "" : "?lang=hi");
                 $scope.Model.MetaTags.Title = Model.MetaTags.Title + titlePostFix;
 
-                $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
-                $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
+                if (enableAmpLink) {
+                    $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
+                }
+
+                if (enableCanonicalLink) {
+                    $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
+                }
+                
                 $.unblockUI();
             }, function (error) {
                     console.log("failed");
