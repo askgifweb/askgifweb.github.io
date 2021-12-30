@@ -14,6 +14,9 @@ var blogApiUrl = "https://apitest.askgif.com";
 var movieApiUrl = "https://apitest.askgif.com";
 var companyApiUrl = "https://apitest.askgif.com";
 
+var enableAmpLink = true;
+var enableCanonicalLink = true;
+
 var isGifNamePresentInUrlAmp = true;
 var isGifNamePresentInUrlCanonical = false;
 
@@ -310,7 +313,7 @@ function loadjscssfile(filename) {
     var fileref = document.createElement('script')
     fileref.setAttribute("type", "text/javascript")
     fileref.setAttribute("src", filename)
-    if (typeof fileref != "undefined")
+    if (typeof fileref !== "undefined")
         document.getElementsByTagName("head")[0].appendChild(fileref)
 }
 
