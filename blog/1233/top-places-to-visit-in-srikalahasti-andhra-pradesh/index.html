@@ -427,7 +427,7 @@
                 $scope.blog = response.data;
                 var blogTitle = response.data.title;
 
-                $scope.Model.MetaTags.Amphtml = (lang != 'hi' ? ampDomain : ampDomainHi) + "/blog/" + $scope.blog.id + "/" + $scope.blog.slug;
+                $scope.Model.MetaTags.Amphtml = canonicalDomain + "/blog/amp/" + $scope.blog.id + "/" + $scope.blog.slug;
                 $scope.Model.MetaTags.Canonical = canonicalDomain + "/blog/" + $scope.blog.id + "/" + $scope.blog.slug + (lang != 'hi' ? "" : "?lang=hi");
                 $scope.Model.MetaTags.Title = BlogModel.MetaTags.SingleTitle.replace('{title}', blogTitle);
                 $scope.Model.MetaTags.OgTitle = BlogModel.MetaTags.SingleTitle.replace('{title}', blogTitle);
@@ -435,8 +435,14 @@
                 $scope.Model.MetaTags.OgDescription = BlogModel.MetaTags.SingleDescription.replace('{title}', blogTitle);
                 
 
-                $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
-                $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
+                 if (enableAmpLink) {
+                    $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
+                }
+
+                if (enableCanonicalLink) {
+                    $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
+                }
+
                 $.unblockUI();
             }, function (error) {
                     console.log("failed");
