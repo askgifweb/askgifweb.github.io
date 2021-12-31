@@ -477,7 +477,7 @@
                 $scope.Model.MetaTags.Description = MovieModel.MetaTags.SingleDescription.replace('{title}', movieTitle);
                 $scope.Model.MetaTags.OgDescription = MovieModel.MetaTags.SingleDescription.replace('{title}', movieTitle);
 
-                $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
+                //$("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
                 $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
 
                 $.unblockUI();
