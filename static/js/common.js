@@ -221,10 +221,7 @@ var footerContent = {
     }, 
 
     links: [
-        { name: "Learnings", url: "https://askgif.com/learn" },
-        { name: "GeetCode", url: "https://askgif.com/learn/geetcode" },
-        { name: "Shopping", url: "https://askgif.com/shopping" },
-        { name: "CAFE EL CARPEDIEM4", url: "https://askgif.com/cafe-el-carpediem" }
+        
     ],
 
     links2: [
