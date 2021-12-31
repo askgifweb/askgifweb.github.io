@@ -388,7 +388,7 @@
                 $scope.Model.MetaTags.Description = CompanyModel.MetaTags.TagDescription.replace('{industry}', industryTitleized);
                 $scope.Model.MetaTags.OgDescription = CompanyModel.MetaTags.TagDescription.replace('{industry}', industryTitleized);
 
-                $("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
+                //$("head").append("<link rel=\"amphtml\" href=" + $scope.Model.MetaTags.Amphtml + ">");
                 $("head").append("<link rel=\"canonical\" href=" + $scope.Model.MetaTags.Canonical + ">");
 
                 $.unblockUI();
