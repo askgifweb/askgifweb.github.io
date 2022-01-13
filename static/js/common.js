@@ -27,7 +27,7 @@ var siteConfig = {
     companyCdn: "https://raw.githubusercontent.com/siteA-ask/CompanyLogo/main/Logo/",
     copyrightYear: "2021",
     lastCached: "2020",
-    site: "Test"
+    site: "AskGifDotCom"
 };
 
 var Model = {
@@ -201,7 +201,7 @@ var CompanyModel = {
 };
 
 var footerContent = {
-    heading1: "About AskGif Test Github",
+    heading1: "About AskGif",
     content1: "AskGif is an honest to GOD approach to bring little smile on the tense faces. Make sure to play your part in our mission to make people smile.Keep smiling and keep sharing.",
 
     tnc: {
