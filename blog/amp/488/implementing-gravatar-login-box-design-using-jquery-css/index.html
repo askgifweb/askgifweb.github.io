@@ -534,17 +534,17 @@
             }
         }
     </style>
-    <!--sumitstart<script async custom-element="amp-auto-ads"
+     <script async custom-element="amp-auto-ads"
             src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
     </script>
-    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>sumitend-->
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script> 
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 </head>
 
 <body>
-    <!--sumitstart<amp-auto-ads type="adsense"
+     <amp-auto-ads type="adsense"
                   data-ad-client="ca-pub-1068871795581451">
-    </amp-auto-ads>sumitend-->
+    </amp-auto-ads> 
     <amp-analytics type="googleanalytics">
         <script type="application/json">
             {
@@ -612,23 +612,23 @@
                 </div>
                 <div class="article-body">
                     <p><p>I had designed a simple interesting login box with contains Gravatar image, just importing user avatar from Gravatar.com based on email ID.&nbsp; This post is very basic level CSS implementation and few lines of Jquery and PHP code. I hope this login box design gives a special flavor to your web project.</p> <p>&nbsp;</p> <p>JavaScript</p> <p>Contains javascipt code. $(".user").keyup(function(){}- user is the class name of input text. Using $(this).val() calling input value. If email value is match to email regularexpression syntax the ajax request goes to avatar.php.</p> <pre class="language-javascript"><code>&lt;script type="text/javascript" src="jquery-cdn-url-1.6.2"&gt;&lt;/script&gt;&lt;script type="text/javascript" &gt;$(document).ready(function(){$("#username").focus();$(".user").keyup(function(){var email=$(this).val();var dataString = 'email='+ email ;var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;if(ck_email.test(email)){$.ajax({type: "POST",url: "avatar.php",data: dataString,cache: false,success: function(html){$("#img_box").html("&lt;img src='http://www.gravatar.com/avatar.php?gravatar_id="+html+"?d=mm' /&gt;");}});}});});&lt;/script&gt;</code></pre> <p>&nbsp;</p> <p>HTML Code</p> <pre class="language-markup"><code>&lt;div id='login_container'&gt;&lt;div id='login_box'&gt;&lt;div id='img_box'&gt;&lt;img src='http://www.gravatar.com/avatar/?d=mm' /&gt;&lt;/div&gt;&lt;form method='post' action='login.php'&gt;&lt;input type='text' id='username'  class='input user'/&gt; &lt;input type='password' id='password' class='input passcode'/&gt;&lt;input type='submit' value=' Login ' class='btn' /&gt;&lt;/form&gt;&lt;/div&gt;&lt;/div&gt; </code></pre> <p>&nbsp;</p> <p>avatar.php</p> <p>Contains simple PHP code getting the POST email value and converting into MD5 encoding</p> <pre class="language-javascript"><code>&lt;?phpif($_POST['email']){$email=$_POST['email'];$lowercase = strtolower($email);$image = md5($lowercase);echo $image;}?&gt;</code></pre> <p>&nbsp;</p> <p>CSS</p> <pre class="language-css"><code>#login_container{background:url(blue.jpg) #006699;overflow: auto;width: 300px;}#login_box{padding:60px 30px 30px 30px;border:solid 1px #dedede;width:238px;background-color:#fcfcfc;margin-top:70px;}#img_box{background-color: #FFFFFF;border: 1px solid #DEDEDE;margin-left: 77px;margin-top: -108px;position: absolute;width: 86px;height: 86px;}</code></pre></p>
-                    <!--sumitstart<amp-ad width="100vw" height="320"
+                     <amp-ad width="100vw" height="320"
                             type="adsense"
                             data-ad-client="ca-pub-1068871795581451"
                             data-ad-slot="7001708883"
                             data-auto-format="rspv"
                             data-full-width="">
                         <div overflow=""></div>
-                    </amp-ad>sumitend-->
+                    </amp-ad> 
 
-                    <!--sumitstart<amp-ad width="100vw" height="320"
+                     <amp-ad width="100vw" height="320"
                             type="adsense"
                             data-ad-client="ca-pub-1068871795581451"
                             data-ad-slot="7001708883"
                             data-auto-format="rspv"
                             data-full-width="">
                         <div overflow=""></div>
-                    </amp-ad>sumitend-->
+                    </amp-ad> 
                 </div>
             </div>
 
@@ -665,14 +665,14 @@
                     </a>
                     <p><a href="/blog/746/implementing-comment-system-with-jquery-ajax./">Implementing Comment System with jQuery, Ajax.</a></p>
                 </div>
-            <!--sumitstart<amp-ad width="100vw" height="320"
+             <amp-ad width="100vw" height="320"
                     type="adsense"
                     data-ad-client="ca-pub-1068871795581451"
                     data-ad-slot="7001708883"
                     data-auto-format="rspv"
                     data-full-width="">
                 <div overflow=""></div>
-            </amp-ad>sumitend-->
+            </amp-ad> 
 
             <div class="related-box">
                 <h3>Categories</h3>
@@ -680,14 +680,14 @@
                 </ul>
             </div>
             <div class="related-box promo">
-                <!--sumitstart<amp-ad width="100vw" height="320"
+                 <amp-ad width="100vw" height="320"
                         type="adsense"
                         data-ad-client="ca-pub-1068871795581451"
                         data-ad-slot="7001708883"
                         data-auto-format="rspv"
                         data-full-width="">
                     <div overflow=""></div>
-                </amp-ad>sumitend-->
+                </amp-ad> 
             </div>
         </div>
     </section>
